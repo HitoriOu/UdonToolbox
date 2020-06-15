@@ -1,0 +1,3127 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
+  m_Name: Modify Udon Number (float)
+  m_EditorClassIdentifier: 
+  serializedUdonProgramAsset: {fileID: 11400000, guid: d061dbe2ce6c49149884e2f81841fe44,
+    type: 2}
+  udonAssembly: ".data_start\r\n\r\n    .export Where_to_Modify\r\n    .export What_to_Modify\r\n
+    \   .export Call_Event_Name\r\n    .export Manual_Input\r\n    .export UI_Slider_Input\r\n
+    \   .export Late_Join_Synched\r\n    .export Event_UI_Update\r\n    .export EventInteract\r\n
+    \   .export EventOnCollisionEnter\r\n    .export EventOnCollisionExit\r\n    .export
+    EventOnTriggerEnter\r\n    .export EventOnTriggerExit\r\n    .sync world_init_mem,
+    none\r\n    .sync synch_mem, none\r\n\r\n    __refl_const_intnl_udonTypeID: %SystemInt64,
+    null\r\n    __refl_const_intnl_udonTypeName: %SystemString, null\r\n    Event_UI_Update:
+    %SystemBoolean, null\r\n    EventInteract: %SystemBoolean, null\r\n    EventOnCollisionEnter:
+    %SystemBoolean, null\r\n    EventOnCollisionExit: %SystemBoolean, null\r\n    EventOnTriggerEnter:
+    %SystemBoolean, null\r\n    EventOnTriggerExit: %SystemBoolean, null\r\n    Late_Join_Synched:
+    %SystemBoolean, null\r\n    Where_to_Modify: %UnityEngineComponentArray, null\r\n
+    \   Manual_Input: %SystemSingle, null\r\n    UI_Slider_Input: %UnityEngineUISlider,
+    null\r\n    Call_Event_Name: %SystemString, null\r\n    What_to_Modify: %SystemString,
+    null\r\n    world_init_mem: %SystemBoolean, null\r\n    onTriggerEnterOther: %UnityEngineCollider,
+    null\r\n    onTriggerExitOther: %UnityEngineCollider, null\r\n    onCollisionEnterOther:
+    %UnityEngineCollision, null\r\n    onCollisionExitOther: %UnityEngineCollision,
+    null\r\n    synch_mem: %SystemSingle, null\r\n    __0_this_intnl_ModifyUdonNumberFloat:
+    %VRCUdonUdonBehaviour, this\r\n    __0_other_Collider: %UnityEngineCollider, null\r\n
+    \   __1_other_Collider: %UnityEngineCollider, null\r\n    __0_other_Collision:
+    %UnityEngineCollision, null\r\n    __1_other_Collision: %UnityEngineCollision,
+    null\r\n    __0_i_Int32: %SystemInt32, null\r\n    __0_value_Single: %SystemSingle,
+    null\r\n    __0_const_intnl_SystemBoolean: %SystemBoolean, null\r\n    __0_const_intnl_SystemInt32:
+    %SystemInt32, null\r\n    __1_const_intnl_SystemInt32: %SystemInt32, null\r\n
+    \   __0_const_intnl_SystemObject: %SystemObject, null\r\n    __0_const_intnl_UnityEngineUISlider:
+    %UnityEngineUISlider, null\r\n    __0_const_intnl_SystemString: %SystemString,
+    null\r\n    __1_const_intnl_SystemString: %SystemString, null\r\n    __10_const_intnl_SystemString:
+    %SystemString, null\r\n    __11_const_intnl_SystemString: %SystemString, null\r\n
+    \   __12_const_intnl_SystemString: %SystemString, null\r\n    __2_const_intnl_SystemString:
+    %SystemString, null\r\n    __3_const_intnl_SystemString: %SystemString, null\r\n
+    \   __4_const_intnl_SystemString: %SystemString, null\r\n    __5_const_intnl_SystemString:
+    %SystemString, null\r\n    __6_const_intnl_SystemString: %SystemString, null\r\n
+    \   __7_const_intnl_SystemString: %SystemString, null\r\n    __8_const_intnl_SystemString:
+    %SystemString, null\r\n    __9_const_intnl_SystemString: %SystemString, null\r\n
+    \   __0_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __0_const_intnl_SystemUInt32:
+    %SystemUInt32, null\r\n    __1_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
+    null\r\n    __2_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __3_const_intnl_exitJumpLoc_UInt32:
+    %SystemUInt32, null\r\n    __4_const_intnl_exitJumpLoc_UInt32: %SystemUInt32,
+    null\r\n    __5_const_intnl_exitJumpLoc_UInt32: %SystemUInt32, null\r\n    __0_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __1_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __10_intnl_SystemBoolean: %SystemBoolean, null\r\n    __2_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __3_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __4_intnl_SystemBoolean: %SystemBoolean, null\r\n    __5_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __6_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __7_intnl_SystemBoolean: %SystemBoolean, null\r\n    __8_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __9_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __0_intnl_UdonSharpUdonSharpBehaviourArray: %UnityEngineComponentArray, null\r\n
+    \   __0_intnl_SystemInt32: %SystemInt32, null\r\n    __1_intnl_SystemInt32: %SystemInt32,
+    null\r\n    __0_intnl_returnValSymbol_Single: %SystemSingle, null\r\n    __0_intnl_SystemSingle:
+    %SystemSingle, null\r\n    __1_intnl_SystemSingle: %SystemSingle, null\r\n    __0_intnl_SystemString:
+    %SystemString, null\r\n    __0_intnl_UdonSharpUdonSharpBehaviour: %VRCUdonUdonBehaviour,
+    null\r\n    __1_intnl_UdonSharpUdonSharpBehaviour: %VRCUdonUdonBehaviour, null\r\n
+    \   __0_intnl_returnTarget_UInt32: %SystemUInt32, null\r\n\r\n.data_end\r\n\r\n
+    \       \r\n         # using UdonSharp;\r\n        \r\n         # using UnityEngine;\r\n
+    \       \r\n         # using VRC.SDKBase;\r\n        \r\n         # using VRC.Udon;\r\n
+    \       \r\n         # public class ModifyUdonNumberFloat : UdonSharpBehaviour\r\n.code_start\r\n
+    \       \r\n         # [UdonSynced(UdonSyncMode.None)] bool world_init_mem = false;\r\n
+    \       \r\n         # [UdonSynced(UdonSyncMode.None)] float synch_mem = 0;\r\n
+    \       \r\n         # [Header(\"Modify Target (Udon Behaviour)\")]\r\n        \r\n
+    \        # [Tooltip(\"List of game objects containing a valid Udon Behaviour component\")]\r\n
+    \       \r\n         # public UdonSharpBehaviour[] Where_to_Modify;\r\n        \r\n
+    \        # [Tooltip(\"Name of variable to toggle\")]\r\n        \r\n         #
+    public string What_to_Modify = new string(new char[0]);\r\n        \r\n         #
+    [Tooltip(\"Name of update function to call (Optional)\")]\r\n        \r\n         #
+    public string Call_Event_Name = new string(new char[0]);\r\n        \r\n         #
+    [Header(\"Value Input Setup\")]\r\n        \r\n         # [Tooltip(\"Default input
+    if no UI selected\")]\r\n        \r\n         # public float Manual_Input =0;\r\n
+    \       \r\n         # [Tooltip(\"Use Ui slider\\r\\n(overrides 'Manual_Input')\")]\r\n
+    \       \r\n         # public UnityEngine.UI.Slider UI_Slider_Input=null;\r\n
+    \       \r\n         # [Header(\"Synching\")]\r\n        \r\n         # [Tooltip(\"Players
+    who join will see what others see.\")]\r\n        \r\n         # public bool Late_Join_Synched
+    = true;\r\n        \r\n         # [Header(\"Events\")]\r\n        \r\n         #
+    [Tooltip(\"Custom Event for UI to call/use\")]\r\n        \r\n         # public
+    bool Event_UI_Update = true; /*custom event for UI to use on UI updates*/\r\n
+    \       \r\n         # public bool EventInteract = true;\r\n        \r\n         #
+    public bool EventOnCollisionEnter = false;\r\n        \r\n         # public bool
+    EventOnCollisionExit = false;\r\n        \r\n         # public bool EventOnTriggerEnter
+    = false;\r\n        \r\n         # public bool EventOnTriggerExit = false;\r\n
+    \       \r\n         # public void UI_Update() { if (Event_UI_Update) { SendCustomEvent(\"Run\");
+    } }\r\n    .export UI_Update\r\n        \r\n    UI_Update:\r\n        \r\n        PUSH,
+    __0_const_intnl_SystemUInt32\r\n        PUSH, Event_UI_Update\r\n        JUMP_IF_FALSE,
+    0x00000030\r\n        PUSH, __0_this_intnl_ModifyUdonNumberFloat\r\n        PUSH,
+    __11_const_intnl_SystemString\r\n        EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomEvent__SystemString__SystemVoid\"\r\n
+    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\r\n        COPY\r\n
+    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n        \r\n        \r\n
+    \        # public void Interact() { if (EventInteract) { SendCustomEvent(\"Run\");
+    } }\r\n    .export _interact\r\n        \r\n    _interact:\r\n        \r\n        PUSH,
+    __0_const_intnl_SystemUInt32\r\n        PUSH, EventInteract\r\n        JUMP_IF_FALSE,
+    0x00000074\r\n        PUSH, __0_this_intnl_ModifyUdonNumberFloat\r\n        PUSH,
+    __11_const_intnl_SystemString\r\n        EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomEvent__SystemString__SystemVoid\"\r\n
+    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\r\n        COPY\r\n
+    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n        \r\n        \r\n
+    \        # public void OnCollisionEnter(Collision other) { if (EventOnCollisionEnter)
+    { SendCustomEvent(\"Run\"); } }\r\n    .export _onCollisionEnter\r\n        \r\n
+    \   _onCollisionEnter:\r\n        \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n
+    \       PUSH, onCollisionEnterOther\r\n        PUSH, __0_other_Collision\r\n        COPY\r\n
+    \       PUSH, EventOnCollisionEnter\r\n        JUMP_IF_FALSE, 0x000000CC\r\n        PUSH,
+    __0_this_intnl_ModifyUdonNumberFloat\r\n        PUSH, __11_const_intnl_SystemString\r\n
+    \       EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomEvent__SystemString__SystemVoid\"\r\n
+    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\r\n        COPY\r\n
+    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n        \r\n        \r\n
+    \        # public void OnCollisionExit(Collision other) { if (EventOnCollisionExit)
+    { SendCustomEvent(\"Run\"); } }\r\n    .export _onCollisionExit\r\n        \r\n
+    \   _onCollisionExit:\r\n        \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n
+    \       PUSH, onCollisionExitOther\r\n        PUSH, __1_other_Collision\r\n        COPY\r\n
+    \       PUSH, EventOnCollisionExit\r\n        JUMP_IF_FALSE, 0x00000124\r\n        PUSH,
+    __0_this_intnl_ModifyUdonNumberFloat\r\n        PUSH, __11_const_intnl_SystemString\r\n
+    \       EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomEvent__SystemString__SystemVoid\"\r\n
+    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\r\n        COPY\r\n
+    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n        \r\n        \r\n
+    \        # public void OnTriggerEnter(Collider other) { if (EventOnTriggerEnter)
+    { SendCustomEvent(\"Run\"); } }\r\n    .export _onTriggerEnter\r\n        \r\n
+    \   _onTriggerEnter:\r\n        \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n
+    \       PUSH, onTriggerEnterOther\r\n        PUSH, __0_other_Collider\r\n        COPY\r\n
+    \       PUSH, EventOnTriggerEnter\r\n        JUMP_IF_FALSE, 0x0000017C\r\n        PUSH,
+    __0_this_intnl_ModifyUdonNumberFloat\r\n        PUSH, __11_const_intnl_SystemString\r\n
+    \       EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomEvent__SystemString__SystemVoid\"\r\n
+    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\r\n        COPY\r\n
+    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n        \r\n        \r\n
+    \        # public void OnTriggerExit(Collider other) { if (EventOnTriggerExit)
+    { SendCustomEvent(\"Run\"); } }\r\n    .export _onTriggerExit\r\n        \r\n
+    \   _onTriggerExit:\r\n        \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n
+    \       PUSH, onTriggerExitOther\r\n        PUSH, __1_other_Collider\r\n        COPY\r\n
+    \       PUSH, EventOnTriggerExit\r\n        JUMP_IF_FALSE, 0x000001D4\r\n        PUSH,
+    __0_this_intnl_ModifyUdonNumberFloat\r\n        PUSH, __11_const_intnl_SystemString\r\n
+    \       EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomEvent__SystemString__SystemVoid\"\r\n
+    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\r\n        COPY\r\n
+    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n        \r\n        \r\n
+    \        # void Start()\r\n    .export _start\r\n        \r\n    _start:\r\n        \r\n
+    \       PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n         # {\r\n        \r\n
+    \        # if (world_init_mem && Late_Join_Synched && UI_Slider_Input != null)\r\n
+    \       PUSH, world_init_mem\r\n        PUSH, __1_intnl_SystemBoolean\r\n        COPY\r\n
+    \       PUSH, __1_intnl_SystemBoolean\r\n        JUMP_IF_FALSE, 0x00000248\r\n
+    \       PUSH, __1_intnl_SystemBoolean\r\n        PUSH, Late_Join_Synched\r\n        PUSH,
+    __2_intnl_SystemBoolean\r\n        EXTERN, \"SystemBoolean.__op_ConditionalAnd__SystemBoolean_SystemBoolean__SystemBoolean\"\r\n
+    \       PUSH, __2_intnl_SystemBoolean\r\n        PUSH, __1_intnl_SystemBoolean\r\n
+    \       COPY\r\n        PUSH, __1_intnl_SystemBoolean\r\n        PUSH, __0_intnl_SystemBoolean\r\n
+    \       COPY\r\n        PUSH, __0_intnl_SystemBoolean\r\n        JUMP_IF_FALSE,
+    0x000002C0\r\n        PUSH, UI_Slider_Input\r\n        PUSH, __0_const_intnl_UnityEngineUISlider\r\n
+    \       PUSH, __3_intnl_SystemBoolean\r\n        EXTERN, \"UnityEngineObject.__op_Inequality__UnityEngineObject_UnityEngineObject__SystemBoolean\"\r\n
+    \       PUSH, __0_intnl_SystemBoolean\r\n        PUSH, __3_intnl_SystemBoolean\r\n
+    \       PUSH, __4_intnl_SystemBoolean\r\n        EXTERN, \"SystemBoolean.__op_ConditionalAnd__SystemBoolean_SystemBoolean__SystemBoolean\"\r\n
+    \       PUSH, __4_intnl_SystemBoolean\r\n        PUSH, __0_intnl_SystemBoolean\r\n
+    \       COPY\r\n        PUSH, __0_intnl_SystemBoolean\r\n        JUMP_IF_FALSE,
+    0x00000328\r\n        \r\n         # { Set_Value(synch_mem); UI_Slider_Input.value=
+    synch_mem; }\r\n        PUSH, synch_mem\r\n        PUSH, __0_value_Single\r\n
+    \       COPY\r\n        PUSH, synch_mem\r\n        PUSH, __0_intnl_SystemSingle\r\n
+    \       COPY # Copy-on-write symbol value dirtied\r\n        PUSH, __0_const_intnl_exitJumpLoc_UInt32\r\n
+    \       JUMP, 0x00000438\r\n        PUSH, UI_Slider_Input\r\n        PUSH, synch_mem\r\n
+    \       EXTERN, \"UnityEngineUISlider.__set_value__SystemSingle__SystemVoid\"\r\n
+    \       JUMP, 0x00000370\r\n        \r\n         # else\r\n        \r\n         #
+    { Set_Value(get_input()); }\r\n        PUSH, __1_const_intnl_exitJumpLoc_UInt32\r\n
+    \       JUMP, 0x0000064C\r\n        PUSH, __0_intnl_returnValSymbol_Single\r\n
+    \       PUSH, __0_value_Single\r\n        COPY\r\n        PUSH, __0_intnl_returnValSymbol_Single\r\n
+    \       PUSH, __0_intnl_SystemSingle\r\n        COPY # Copy-on-write symbol value
+    dirtied\r\n        PUSH, __2_const_intnl_exitJumpLoc_UInt32\r\n        JUMP, 0x00000438\r\n
+    \       \r\n         # world_init_mem = true;\r\n        PUSH, __0_const_intnl_SystemBoolean\r\n
+    \       PUSH, world_init_mem\r\n        COPY\r\n        PUSH, __0_intnl_returnTarget_UInt32
+    #Function epilogue\r\n        COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n
+    \       \r\n        \r\n         # public void Run()\r\n    .export Run\r\n        \r\n
+    \   Run:\r\n        \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n
+    \        # {\r\n        \r\n         # if (Late_Join_Synched)\r\n        PUSH,
+    Late_Join_Synched\r\n        JUMP_IF_FALSE, 0x000003D4\r\n        \r\n         #
+    { synch_mem = get_input(); }\r\n        PUSH, __3_const_intnl_exitJumpLoc_UInt32\r\n
+    \       JUMP, 0x0000064C\r\n        PUSH, __0_intnl_returnValSymbol_Single\r\n
+    \       PUSH, synch_mem\r\n        COPY\r\n        \r\n         # Set_Value(get_input());\r\n
+    \       PUSH, __4_const_intnl_exitJumpLoc_UInt32\r\n        JUMP, 0x0000064C\r\n
+    \       PUSH, __0_intnl_returnValSymbol_Single\r\n        PUSH, __0_value_Single\r\n
+    \       COPY\r\n        PUSH, __0_intnl_returnValSymbol_Single\r\n        PUSH,
+    __1_intnl_SystemSingle\r\n        COPY # Copy-on-write symbol value dirtied\r\n
+    \       PUSH, __5_const_intnl_exitJumpLoc_UInt32\r\n        JUMP, 0x00000438\r\n
+    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\r\n        COPY\r\n
+    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n        \r\n        \r\n
+    \        # private void Set_Value(float value)\r\n    Set_Value:\r\n        \r\n
+    \       PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n         # {\r\n        \r\n
+    \        # for (int i = 0; i < Where_to_Modify.Length; i++)\r\n        PUSH, __0_const_intnl_SystemInt32\r\n
+    \       PUSH, __0_i_Int32\r\n        COPY\r\n        PUSH, Where_to_Modify\r\n
+    \       PUSH, __0_intnl_SystemInt32\r\n        EXTERN, \"UnityEngineComponentArray.__get_Length__SystemInt32\"\r\n
+    \       PUSH, __0_i_Int32\r\n        PUSH, __0_intnl_SystemInt32\r\n        PUSH,
+    __5_intnl_SystemBoolean\r\n        EXTERN, \"SystemInt32.__op_LessThan__SystemInt32_SystemInt32__SystemBoolean\"\r\n
+    \       PUSH, __5_intnl_SystemBoolean\r\n        JUMP_IF_FALSE, 0x00000630\r\n
+    \       \r\n         # {\r\n        \r\n         # Where_to_Modify[i].SetProgramVariable(What_to_Modify,
+    value);\r\n        PUSH, Where_to_Modify\r\n        PUSH, __0_i_Int32\r\n        PUSH,
+    __0_intnl_UdonSharpUdonSharpBehaviour\r\n        EXTERN, \"UnityEngineComponentArray.__Get__SystemInt32__UnityEngineComponent\"\r\n
+    \       PUSH, __0_intnl_UdonSharpUdonSharpBehaviour\r\n        PUSH, What_to_Modify\r\n
+    \       PUSH, __0_value_Single\r\n        EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SetProgramVariable__SystemString_SystemObject__SystemVoid\"\r\n
+    \       \r\n         # if(Call_Event_Name!=null && Call_Event_Name.Length>0)\r\n
+    \       PUSH, Call_Event_Name\r\n        PUSH, __12_const_intnl_SystemString\r\n
+    \       PUSH, __7_intnl_SystemBoolean\r\n        EXTERN, \"SystemString.__op_Inequality__SystemString_SystemString__SystemBoolean\"\r\n
+    \       PUSH, __7_intnl_SystemBoolean\r\n        PUSH, __6_intnl_SystemBoolean\r\n
+    \       COPY\r\n        PUSH, __6_intnl_SystemBoolean\r\n        JUMP_IF_FALSE,
+    0x00000584\r\n        PUSH, Call_Event_Name\r\n        PUSH, __1_intnl_SystemInt32\r\n
+    \       EXTERN, \"SystemString.__get_Length__SystemInt32\"\r\n        PUSH, __1_intnl_SystemInt32\r\n
+    \       PUSH, __0_const_intnl_SystemInt32\r\n        PUSH, __8_intnl_SystemBoolean\r\n
+    \       EXTERN, \"SystemInt32.__op_GreaterThan__SystemInt32_SystemInt32__SystemBoolean\"\r\n
+    \       PUSH, __6_intnl_SystemBoolean\r\n        PUSH, __8_intnl_SystemBoolean\r\n
+    \       PUSH, __9_intnl_SystemBoolean\r\n        EXTERN, \"SystemBoolean.__op_ConditionalAnd__SystemBoolean_SystemBoolean__SystemBoolean\"\r\n
+    \       PUSH, __9_intnl_SystemBoolean\r\n        PUSH, __6_intnl_SystemBoolean\r\n
+    \       COPY\r\n        PUSH, __6_intnl_SystemBoolean\r\n        JUMP_IF_FALSE,
+    0x000005F4\r\n        \r\n         # { Where_to_Modify[i].SendCustomEvent(Call_Event_Name);
+    }\r\n        PUSH, Where_to_Modify\r\n        PUSH, __0_i_Int32\r\n        PUSH,
+    __1_intnl_UdonSharpUdonSharpBehaviour\r\n        EXTERN, \"UnityEngineComponentArray.__Get__SystemInt32__UnityEngineComponent\"\r\n
+    \       PUSH, __1_intnl_UdonSharpUdonSharpBehaviour\r\n        PUSH, Where_to_Modify\r\n
+    \       PUSH, __0_intnl_UdonSharpUdonSharpBehaviourArray\r\n        COPY # Copy-on-write
+    symbol value dirtied\r\n        PUSH, Call_Event_Name\r\n        PUSH, __0_intnl_SystemString\r\n
+    \       COPY # Copy-on-write symbol value dirtied\r\n        PUSH, Call_Event_Name\r\n
+    \       EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomEvent__SystemString__SystemVoid\"\r\n
+    \       PUSH, __0_i_Int32\r\n        PUSH, __1_intnl_SystemInt32\r\n        COPY\r\n
+    \       PUSH, __0_i_Int32\r\n        PUSH, __1_const_intnl_SystemInt32\r\n        PUSH,
+    __0_i_Int32\r\n        EXTERN, \"SystemInt32.__op_Addition__SystemInt32_SystemInt32__SystemInt32\"\r\n
+    \       JUMP, 0x0000044C\r\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
+    epilogue\r\n        COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n
+    \       \r\n        \r\n         # private float get_input()\r\n    get_input:\r\n
+    \       \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n         #
+    {\r\n        \r\n         # if(UI_Slider_Input != null)\r\n        PUSH, UI_Slider_Input\r\n
+    \       PUSH, __0_const_intnl_UnityEngineUISlider\r\n        PUSH, __10_intnl_SystemBoolean\r\n
+    \       EXTERN, \"UnityEngineObject.__op_Inequality__UnityEngineObject_UnityEngineObject__SystemBoolean\"\r\n
+    \       PUSH, __10_intnl_SystemBoolean\r\n        JUMP_IF_FALSE, 0x000006B0\r\n
+    \       \r\n         # { return UI_Slider_Input.value; }\r\n        PUSH, UI_Slider_Input\r\n
+    \       PUSH, __0_intnl_returnValSymbol_Single\r\n        EXTERN, \"UnityEngineUISlider.__get_value__SystemSingle\"\r\n
+    \       PUSH, __0_intnl_returnTarget_UInt32 #Explicit return sequence\r\n        COPY\r\n
+    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n        JUMP, 0x000006D8\r\n
+    \       \r\n         # else\r\n        \r\n         # { return Manual_Input; }\r\n
+    \       PUSH, Manual_Input\r\n        PUSH, __0_intnl_returnValSymbol_Single\r\n
+    \       COPY\r\n        PUSH, __0_intnl_returnTarget_UInt32 #Explicit return sequence\r\n
+    \       COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n        PUSH,
+    __0_intnl_returnTarget_UInt32 #Function epilogue\r\n        COPY\r\n        JUMP_INDIRECT,
+    __0_intnl_returnTarget_UInt32\r\n        \r\n.code_end\r\n"
+  assemblyError: 
+  sourceCsScript: {fileID: 11500000, guid: 19d1e484d5a3f5d48b66f0ad036cd725, type: 3}
+  behaviourIDHeapVarName: __refl_const_intnl_udonTypeID
+  compileErrors: []
+  debugInfo:
+    serializedDebugSpans:
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 0
+      endSourceChar: 2
+      line: 0
+      lineChar: 0
+      spanCodeSection: "\r\n"
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 2
+      endSourceChar: 2
+      line: 1
+      lineChar: 0
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 2
+      endSourceChar: 8
+      line: 1
+      lineChar: 0
+      spanCodeSection: 'using '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 8
+      endSourceChar: 20
+      line: 1
+      lineChar: 6
+      spanCodeSection: "UdonSharp;\r\n"
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 20
+      endSourceChar: 26
+      line: 2
+      lineChar: 0
+      spanCodeSection: 'using '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 26
+      endSourceChar: 40
+      line: 2
+      lineChar: 6
+      spanCodeSection: "UnityEngine;\r\n"
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 40
+      endSourceChar: 46
+      line: 3
+      lineChar: 0
+      spanCodeSection: 'using '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 46
+      endSourceChar: 46
+      line: 3
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 46
+      endSourceChar: 50
+      line: 3
+      lineChar: 6
+      spanCodeSection: VRC.
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 50
+      endSourceChar: 60
+      line: 3
+      lineChar: 10
+      spanCodeSection: "SDKBase;\r\n"
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 60
+      endSourceChar: 66
+      line: 4
+      lineChar: 0
+      spanCodeSection: 'using '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 66
+      endSourceChar: 66
+      line: 4
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 66
+      endSourceChar: 70
+      line: 4
+      lineChar: 6
+      spanCodeSection: VRC.
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 70
+      endSourceChar: 79
+      line: 4
+      lineChar: 10
+      spanCodeSection: "Udon;\r\n\r\n"
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 79
+      endSourceChar: 114
+      line: 6
+      lineChar: 0
+      spanCodeSection: 'public class ModifyUdonNumberFloat '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 114
+      endSourceChar: 116
+      line: 6
+      lineChar: 35
+      spanCodeSection: ': '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 116
+      endSourceChar: 116
+      line: 6
+      lineChar: 37
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 116
+      endSourceChar: 143
+      line: 6
+      lineChar: 37
+      spanCodeSection: "UdonSharpBehaviour\r\n{\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 143
+      endSourceChar: 144
+      line: 8
+      lineChar: 4
+      spanCodeSection: '['
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 144
+      endSourceChar: 155
+      line: 8
+      lineChar: 5
+      spanCodeSection: UdonSynced(
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 155
+      endSourceChar: 155
+      line: 8
+      lineChar: 16
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 155
+      endSourceChar: 168
+      line: 8
+      lineChar: 16
+      spanCodeSection: UdonSyncMode.
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 168
+      endSourceChar: 168
+      line: 8
+      lineChar: 29
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 168
+      endSourceChar: 175
+      line: 8
+      lineChar: 29
+      spanCodeSection: 'None)] '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 175
+      endSourceChar: 175
+      line: 8
+      lineChar: 36
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 175
+      endSourceChar: 209
+      line: 8
+      lineChar: 36
+      spanCodeSection: "bool world_init_mem = false;\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 209
+      endSourceChar: 210
+      line: 9
+      lineChar: 4
+      spanCodeSection: '['
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 210
+      endSourceChar: 221
+      line: 9
+      lineChar: 5
+      spanCodeSection: UdonSynced(
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 221
+      endSourceChar: 221
+      line: 9
+      lineChar: 16
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 221
+      endSourceChar: 234
+      line: 9
+      lineChar: 16
+      spanCodeSection: UdonSyncMode.
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 234
+      endSourceChar: 234
+      line: 9
+      lineChar: 29
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 234
+      endSourceChar: 241
+      line: 9
+      lineChar: 29
+      spanCodeSection: 'None)] '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 241
+      endSourceChar: 241
+      line: 9
+      lineChar: 36
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 241
+      endSourceChar: 269
+      line: 9
+      lineChar: 36
+      spanCodeSection: "float synch_mem = 0;\r\n\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 269
+      endSourceChar: 270
+      line: 11
+      lineChar: 4
+      spanCodeSection: '['
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 270
+      endSourceChar: 318
+      line: 11
+      lineChar: 5
+      spanCodeSection: "Header(\"Modify Target (Udon Behaviour)\")]\r\n    ["
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 318
+      endSourceChar: 318
+      line: 12
+      lineChar: 5
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 318
+      endSourceChar: 326
+      line: 12
+      lineChar: 5
+      spanCodeSection: Tooltip(
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 326
+      endSourceChar: 326
+      line: 12
+      lineChar: 13
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 326
+      endSourceChar: 407
+      line: 12
+      lineChar: 13
+      spanCodeSection: "\"List of game objects containing a valid Udon Behaviour component\")]\r\n
+        \   public "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 407
+      endSourceChar: 407
+      line: 13
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 407
+      endSourceChar: 407
+      line: 13
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 407
+      endSourceChar: 450
+      line: 13
+      lineChar: 11
+      spanCodeSection: "UdonSharpBehaviour[] Where_to_Modify;\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 450
+      endSourceChar: 451
+      line: 14
+      lineChar: 4
+      spanCodeSection: '['
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 451
+      endSourceChar: 451
+      line: 14
+      lineChar: 5
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 451
+      endSourceChar: 459
+      line: 14
+      lineChar: 5
+      spanCodeSection: Tooltip(
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 459
+      endSourceChar: 459
+      line: 14
+      lineChar: 13
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 459
+      endSourceChar: 502
+      line: 14
+      lineChar: 13
+      spanCodeSection: "\"Name of variable to toggle\")]\r\n    public "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 502
+      endSourceChar: 502
+      line: 15
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 502
+      endSourceChar: 556
+      line: 15
+      lineChar: 11
+      spanCodeSection: "string What_to_Modify = new string(new char[0]);\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 556
+      endSourceChar: 557
+      line: 16
+      lineChar: 4
+      spanCodeSection: '['
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 557
+      endSourceChar: 557
+      line: 16
+      lineChar: 5
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 557
+      endSourceChar: 565
+      line: 16
+      lineChar: 5
+      spanCodeSection: Tooltip(
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 565
+      endSourceChar: 565
+      line: 16
+      lineChar: 13
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 565
+      endSourceChar: 624
+      line: 16
+      lineChar: 13
+      spanCodeSection: "\"Name of update function to call (Optional)\")]\r\n    public "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 624
+      endSourceChar: 624
+      line: 17
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 624
+      endSourceChar: 681
+      line: 17
+      lineChar: 11
+      spanCodeSection: "string Call_Event_Name = new string(new char[0]);\r\n\r\n
+        \   "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 681
+      endSourceChar: 682
+      line: 19
+      lineChar: 4
+      spanCodeSection: '['
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 682
+      endSourceChar: 717
+      line: 19
+      lineChar: 5
+      spanCodeSection: "Header(\"Value Input Setup\")]\r\n    ["
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 717
+      endSourceChar: 717
+      line: 20
+      lineChar: 5
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 717
+      endSourceChar: 725
+      line: 20
+      lineChar: 5
+      spanCodeSection: Tooltip(
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 725
+      endSourceChar: 725
+      line: 20
+      lineChar: 13
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 725
+      endSourceChar: 773
+      line: 20
+      lineChar: 13
+      spanCodeSection: "\"Default input if no UI selected\")]\r\n    public "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 773
+      endSourceChar: 773
+      line: 21
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 773
+      endSourceChar: 801
+      line: 21
+      lineChar: 11
+      spanCodeSection: "float Manual_Input =0;\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 801
+      endSourceChar: 802
+      line: 22
+      lineChar: 4
+      spanCodeSection: '['
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 802
+      endSourceChar: 802
+      line: 22
+      lineChar: 5
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 802
+      endSourceChar: 810
+      line: 22
+      lineChar: 5
+      spanCodeSection: Tooltip(
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 810
+      endSourceChar: 810
+      line: 22
+      lineChar: 13
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 810
+      endSourceChar: 870
+      line: 22
+      lineChar: 13
+      spanCodeSection: "\"Use Ui slider\\r\\n(overrides 'Manual_Input')\")]\r\n    public "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 870
+      endSourceChar: 870
+      line: 23
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 870
+      endSourceChar: 870
+      line: 23
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 870
+      endSourceChar: 870
+      line: 23
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 870
+      endSourceChar: 882
+      line: 23
+      lineChar: 11
+      spanCodeSection: UnityEngine.
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 882
+      endSourceChar: 885
+      line: 23
+      lineChar: 23
+      spanCodeSection: UI.
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 885
+      endSourceChar: 921
+      line: 23
+      lineChar: 26
+      spanCodeSection: "Slider UI_Slider_Input=null;\r\n\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 921
+      endSourceChar: 922
+      line: 25
+      lineChar: 4
+      spanCodeSection: '['
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 922
+      endSourceChar: 1045
+      line: 25
+      lineChar: 5
+      spanCodeSection: "Header(\"Synching\")]\r\n    //[Tooltip(\"All players in world
+        are affected.\")]\r\n    //public bool Global_Synched = true;\r\n    ["
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 1045
+      endSourceChar: 1045
+      line: 28
+      lineChar: 5
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 1045
+      endSourceChar: 1053
+      line: 28
+      lineChar: 5
+      spanCodeSection: Tooltip(
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 1053
+      endSourceChar: 1053
+      line: 28
+      lineChar: 13
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 1053
+      endSourceChar: 1112
+      line: 28
+      lineChar: 13
+      spanCodeSection: "\"Players who join will see what others see.\")]\r\n    public "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 1112
+      endSourceChar: 1112
+      line: 29
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 1112
+      endSourceChar: 1150
+      line: 29
+      lineChar: 11
+      spanCodeSection: "bool Late_Join_Synched = true;\r\n\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 1150
+      endSourceChar: 1151
+      line: 31
+      lineChar: 4
+      spanCodeSection: '['
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 1151
+      endSourceChar: 1175
+      line: 31
+      lineChar: 5
+      spanCodeSection: "Header(\"Events\")]\r\n    ["
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 1175
+      endSourceChar: 1175
+      line: 32
+      lineChar: 5
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 1175
+      endSourceChar: 1183
+      line: 32
+      lineChar: 5
+      spanCodeSection: Tooltip(
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 1183
+      endSourceChar: 1183
+      line: 32
+      lineChar: 13
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 1183
+      endSourceChar: 1231
+      line: 32
+      lineChar: 13
+      spanCodeSection: "\"Custom Event for UI to call/use\")]\r\n    public "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 1231
+      endSourceChar: 1231
+      line: 33
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 1231
+      endSourceChar: 1310
+      line: 33
+      lineChar: 11
+      spanCodeSection: "bool Event_UI_Update = true; /*custom event for UI to use
+        on UI updates*/\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 1310
+      endSourceChar: 1317
+      line: 34
+      lineChar: 4
+      spanCodeSection: 'public '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 1317
+      endSourceChar: 1317
+      line: 34
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 1317
+      endSourceChar: 1349
+      line: 34
+      lineChar: 11
+      spanCodeSection: "bool EventInteract = true;\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 1349
+      endSourceChar: 1356
+      line: 35
+      lineChar: 4
+      spanCodeSection: 'public '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 1356
+      endSourceChar: 1356
+      line: 35
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 1356
+      endSourceChar: 1397
+      line: 35
+      lineChar: 11
+      spanCodeSection: "bool EventOnCollisionEnter = false;\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 1397
+      endSourceChar: 1404
+      line: 36
+      lineChar: 4
+      spanCodeSection: 'public '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 1404
+      endSourceChar: 1404
+      line: 36
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 1404
+      endSourceChar: 1444
+      line: 36
+      lineChar: 11
+      spanCodeSection: "bool EventOnCollisionExit = false;\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 1444
+      endSourceChar: 1451
+      line: 37
+      lineChar: 4
+      spanCodeSection: 'public '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 1451
+      endSourceChar: 1451
+      line: 37
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 1451
+      endSourceChar: 1490
+      line: 37
+      lineChar: 11
+      spanCodeSection: "bool EventOnTriggerEnter = false;\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 1490
+      endSourceChar: 1497
+      line: 38
+      lineChar: 4
+      spanCodeSection: 'public '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 1497
+      endSourceChar: 1497
+      line: 38
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 1497
+      endSourceChar: 1537
+      line: 38
+      lineChar: 11
+      spanCodeSection: "bool EventOnTriggerExit = false;\r\n\r\n    "
+    - startInstruction: 0
+      endInstruction: 7
+      startSourceChar: 1537
+      endSourceChar: 1561
+      line: 40
+      lineChar: 4
+      spanCodeSection: 'public void UI_Update() '
+    - startInstruction: 8
+      endInstruction: 7
+      startSourceChar: 1561
+      endSourceChar: 1563
+      line: 40
+      lineChar: 28
+      spanCodeSection: '{ '
+    - startInstruction: 8
+      endInstruction: 7
+      startSourceChar: 1563
+      endSourceChar: 1567
+      line: 40
+      lineChar: 30
+      spanCodeSection: if (
+    - startInstruction: 8
+      endInstruction: 23
+      startSourceChar: 1567
+      endSourceChar: 1584
+      line: 40
+      lineChar: 34
+      spanCodeSection: 'Event_UI_Update) '
+    - startInstruction: 24
+      endInstruction: 23
+      startSourceChar: 1584
+      endSourceChar: 1586
+      line: 40
+      lineChar: 51
+      spanCodeSection: '{ '
+    - startInstruction: 24
+      endInstruction: 23
+      startSourceChar: 1586
+      endSourceChar: 1586
+      line: 40
+      lineChar: 53
+      spanCodeSection: 
+    - startInstruction: 24
+      endInstruction: 23
+      startSourceChar: 1586
+      endSourceChar: 1586
+      line: 40
+      lineChar: 53
+      spanCodeSection: 
+    - startInstruction: 24
+      endInstruction: 23
+      startSourceChar: 1586
+      endSourceChar: 1602
+      line: 40
+      lineChar: 53
+      spanCodeSection: SendCustomEvent(
+    - startInstruction: 24
+      endInstruction: 67
+      startSourceChar: 1602
+      endSourceChar: 1619
+      line: 40
+      lineChar: 69
+      spanCodeSection: "\"Run\"); } }\r\n    "
+    - startInstruction: 68
+      endInstruction: 75
+      startSourceChar: 1619
+      endSourceChar: 1642
+      line: 41
+      lineChar: 4
+      spanCodeSection: 'public void Interact() '
+    - startInstruction: 76
+      endInstruction: 75
+      startSourceChar: 1642
+      endSourceChar: 1644
+      line: 41
+      lineChar: 27
+      spanCodeSection: '{ '
+    - startInstruction: 76
+      endInstruction: 75
+      startSourceChar: 1644
+      endSourceChar: 1648
+      line: 41
+      lineChar: 29
+      spanCodeSection: if (
+    - startInstruction: 76
+      endInstruction: 91
+      startSourceChar: 1648
+      endSourceChar: 1663
+      line: 41
+      lineChar: 33
+      spanCodeSection: 'EventInteract) '
+    - startInstruction: 92
+      endInstruction: 91
+      startSourceChar: 1663
+      endSourceChar: 1665
+      line: 41
+      lineChar: 48
+      spanCodeSection: '{ '
+    - startInstruction: 92
+      endInstruction: 91
+      startSourceChar: 1665
+      endSourceChar: 1665
+      line: 41
+      lineChar: 50
+      spanCodeSection: 
+    - startInstruction: 92
+      endInstruction: 91
+      startSourceChar: 1665
+      endSourceChar: 1665
+      line: 41
+      lineChar: 50
+      spanCodeSection: 
+    - startInstruction: 92
+      endInstruction: 91
+      startSourceChar: 1665
+      endSourceChar: 1681
+      line: 41
+      lineChar: 50
+      spanCodeSection: SendCustomEvent(
+    - startInstruction: 92
+      endInstruction: 135
+      startSourceChar: 1681
+      endSourceChar: 1698
+      line: 41
+      lineChar: 66
+      spanCodeSection: "\"Run\"); } }\r\n    "
+    - startInstruction: 136
+      endInstruction: 135
+      startSourceChar: 1698
+      endSourceChar: 1727
+      line: 42
+      lineChar: 4
+      spanCodeSection: public void OnCollisionEnter(
+    - startInstruction: 136
+      endInstruction: 163
+      startSourceChar: 1727
+      endSourceChar: 1744
+      line: 42
+      lineChar: 33
+      spanCodeSection: 'Collision other) '
+    - startInstruction: 164
+      endInstruction: 163
+      startSourceChar: 1744
+      endSourceChar: 1746
+      line: 42
+      lineChar: 50
+      spanCodeSection: '{ '
+    - startInstruction: 164
+      endInstruction: 163
+      startSourceChar: 1746
+      endSourceChar: 1750
+      line: 42
+      lineChar: 52
+      spanCodeSection: if (
+    - startInstruction: 164
+      endInstruction: 179
+      startSourceChar: 1750
+      endSourceChar: 1773
+      line: 42
+      lineChar: 56
+      spanCodeSection: 'EventOnCollisionEnter) '
+    - startInstruction: 180
+      endInstruction: 179
+      startSourceChar: 1773
+      endSourceChar: 1775
+      line: 42
+      lineChar: 79
+      spanCodeSection: '{ '
+    - startInstruction: 180
+      endInstruction: 179
+      startSourceChar: 1775
+      endSourceChar: 1775
+      line: 42
+      lineChar: 81
+      spanCodeSection: 
+    - startInstruction: 180
+      endInstruction: 179
+      startSourceChar: 1775
+      endSourceChar: 1775
+      line: 42
+      lineChar: 81
+      spanCodeSection: 
+    - startInstruction: 180
+      endInstruction: 179
+      startSourceChar: 1775
+      endSourceChar: 1791
+      line: 42
+      lineChar: 81
+      spanCodeSection: SendCustomEvent(
+    - startInstruction: 180
+      endInstruction: 223
+      startSourceChar: 1791
+      endSourceChar: 1808
+      line: 42
+      lineChar: 97
+      spanCodeSection: "\"Run\"); } }\r\n    "
+    - startInstruction: 224
+      endInstruction: 223
+      startSourceChar: 1808
+      endSourceChar: 1836
+      line: 43
+      lineChar: 4
+      spanCodeSection: public void OnCollisionExit(
+    - startInstruction: 224
+      endInstruction: 251
+      startSourceChar: 1836
+      endSourceChar: 1853
+      line: 43
+      lineChar: 32
+      spanCodeSection: 'Collision other) '
+    - startInstruction: 252
+      endInstruction: 251
+      startSourceChar: 1853
+      endSourceChar: 1855
+      line: 43
+      lineChar: 49
+      spanCodeSection: '{ '
+    - startInstruction: 252
+      endInstruction: 251
+      startSourceChar: 1855
+      endSourceChar: 1859
+      line: 43
+      lineChar: 51
+      spanCodeSection: if (
+    - startInstruction: 252
+      endInstruction: 267
+      startSourceChar: 1859
+      endSourceChar: 1881
+      line: 43
+      lineChar: 55
+      spanCodeSection: 'EventOnCollisionExit) '
+    - startInstruction: 268
+      endInstruction: 267
+      startSourceChar: 1881
+      endSourceChar: 1883
+      line: 43
+      lineChar: 77
+      spanCodeSection: '{ '
+    - startInstruction: 268
+      endInstruction: 267
+      startSourceChar: 1883
+      endSourceChar: 1883
+      line: 43
+      lineChar: 79
+      spanCodeSection: 
+    - startInstruction: 268
+      endInstruction: 267
+      startSourceChar: 1883
+      endSourceChar: 1883
+      line: 43
+      lineChar: 79
+      spanCodeSection: 
+    - startInstruction: 268
+      endInstruction: 267
+      startSourceChar: 1883
+      endSourceChar: 1899
+      line: 43
+      lineChar: 79
+      spanCodeSection: SendCustomEvent(
+    - startInstruction: 268
+      endInstruction: 311
+      startSourceChar: 1899
+      endSourceChar: 1916
+      line: 43
+      lineChar: 95
+      spanCodeSection: "\"Run\"); } }\r\n    "
+    - startInstruction: 312
+      endInstruction: 311
+      startSourceChar: 1916
+      endSourceChar: 1943
+      line: 44
+      lineChar: 4
+      spanCodeSection: public void OnTriggerEnter(
+    - startInstruction: 312
+      endInstruction: 339
+      startSourceChar: 1943
+      endSourceChar: 1959
+      line: 44
+      lineChar: 31
+      spanCodeSection: 'Collider other) '
+    - startInstruction: 340
+      endInstruction: 339
+      startSourceChar: 1959
+      endSourceChar: 1961
+      line: 44
+      lineChar: 47
+      spanCodeSection: '{ '
+    - startInstruction: 340
+      endInstruction: 339
+      startSourceChar: 1961
+      endSourceChar: 1965
+      line: 44
+      lineChar: 49
+      spanCodeSection: if (
+    - startInstruction: 340
+      endInstruction: 355
+      startSourceChar: 1965
+      endSourceChar: 1986
+      line: 44
+      lineChar: 53
+      spanCodeSection: 'EventOnTriggerEnter) '
+    - startInstruction: 356
+      endInstruction: 355
+      startSourceChar: 1986
+      endSourceChar: 1988
+      line: 44
+      lineChar: 74
+      spanCodeSection: '{ '
+    - startInstruction: 356
+      endInstruction: 355
+      startSourceChar: 1988
+      endSourceChar: 1988
+      line: 44
+      lineChar: 76
+      spanCodeSection: 
+    - startInstruction: 356
+      endInstruction: 355
+      startSourceChar: 1988
+      endSourceChar: 1988
+      line: 44
+      lineChar: 76
+      spanCodeSection: 
+    - startInstruction: 356
+      endInstruction: 355
+      startSourceChar: 1988
+      endSourceChar: 2004
+      line: 44
+      lineChar: 76
+      spanCodeSection: SendCustomEvent(
+    - startInstruction: 356
+      endInstruction: 399
+      startSourceChar: 2004
+      endSourceChar: 2021
+      line: 44
+      lineChar: 92
+      spanCodeSection: "\"Run\"); } }\r\n    "
+    - startInstruction: 400
+      endInstruction: 399
+      startSourceChar: 2021
+      endSourceChar: 2047
+      line: 45
+      lineChar: 4
+      spanCodeSection: public void OnTriggerExit(
+    - startInstruction: 400
+      endInstruction: 427
+      startSourceChar: 2047
+      endSourceChar: 2063
+      line: 45
+      lineChar: 30
+      spanCodeSection: 'Collider other) '
+    - startInstruction: 428
+      endInstruction: 427
+      startSourceChar: 2063
+      endSourceChar: 2065
+      line: 45
+      lineChar: 46
+      spanCodeSection: '{ '
+    - startInstruction: 428
+      endInstruction: 427
+      startSourceChar: 2065
+      endSourceChar: 2069
+      line: 45
+      lineChar: 48
+      spanCodeSection: if (
+    - startInstruction: 428
+      endInstruction: 443
+      startSourceChar: 2069
+      endSourceChar: 2089
+      line: 45
+      lineChar: 52
+      spanCodeSection: 'EventOnTriggerExit) '
+    - startInstruction: 444
+      endInstruction: 443
+      startSourceChar: 2089
+      endSourceChar: 2091
+      line: 45
+      lineChar: 72
+      spanCodeSection: '{ '
+    - startInstruction: 444
+      endInstruction: 443
+      startSourceChar: 2091
+      endSourceChar: 2091
+      line: 45
+      lineChar: 74
+      spanCodeSection: 
+    - startInstruction: 444
+      endInstruction: 443
+      startSourceChar: 2091
+      endSourceChar: 2091
+      line: 45
+      lineChar: 74
+      spanCodeSection: 
+    - startInstruction: 444
+      endInstruction: 443
+      startSourceChar: 2091
+      endSourceChar: 2107
+      line: 45
+      lineChar: 74
+      spanCodeSection: SendCustomEvent(
+    - startInstruction: 444
+      endInstruction: 487
+      startSourceChar: 2107
+      endSourceChar: 2126
+      line: 45
+      lineChar: 90
+      spanCodeSection: "\"Run\"); } }\r\n\r\n    "
+    - startInstruction: 488
+      endInstruction: 495
+      startSourceChar: 2126
+      endSourceChar: 2144
+      line: 47
+      lineChar: 4
+      spanCodeSection: "void Start()\r\n    "
+    - startInstruction: 496
+      endInstruction: 495
+      startSourceChar: 2144
+      endSourceChar: 2233
+      line: 48
+      lineChar: 4
+      spanCodeSection: "{\r\n       // if (Networking.LocalPlayer == null)  { Global_Synched
+        = false; }\r\n\r\n        "
+    - startInstruction: 496
+      endInstruction: 495
+      startSourceChar: 2233
+      endSourceChar: 2237
+      line: 51
+      lineChar: 8
+      spanCodeSection: if (
+    - startInstruction: 496
+      endInstruction: 495
+      startSourceChar: 2237
+      endSourceChar: 2237
+      line: 51
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 496
+      endInstruction: 495
+      startSourceChar: 2237
+      endSourceChar: 2237
+      line: 51
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 496
+      endInstruction: 531
+      startSourceChar: 2237
+      endSourceChar: 2255
+      line: 51
+      lineChar: 12
+      spanCodeSection: 'world_init_mem && '
+    - startInstruction: 532
+      endInstruction: 619
+      startSourceChar: 2255
+      endSourceChar: 2276
+      line: 51
+      lineChar: 30
+      spanCodeSection: 'Late_Join_Synched && '
+    - startInstruction: 620
+      endInstruction: 619
+      startSourceChar: 2276
+      endSourceChar: 2276
+      line: 51
+      lineChar: 51
+      spanCodeSection: 
+    - startInstruction: 620
+      endInstruction: 619
+      startSourceChar: 2276
+      endSourceChar: 2295
+      line: 51
+      lineChar: 51
+      spanCodeSection: 'UI_Slider_Input != '
+    - startInstruction: 620
+      endInstruction: 719
+      startSourceChar: 2295
+      endSourceChar: 2310
+      line: 51
+      lineChar: 70
+      spanCodeSection: "null)\r\n        "
+    - startInstruction: 720
+      endInstruction: 719
+      startSourceChar: 2310
+      endSourceChar: 2312
+      line: 52
+      lineChar: 8
+      spanCodeSection: '{ '
+    - startInstruction: 720
+      endInstruction: 719
+      startSourceChar: 2312
+      endSourceChar: 2312
+      line: 52
+      lineChar: 10
+      spanCodeSection: 
+    - startInstruction: 720
+      endInstruction: 719
+      startSourceChar: 2312
+      endSourceChar: 2312
+      line: 52
+      lineChar: 10
+      spanCodeSection: 
+    - startInstruction: 720
+      endInstruction: 719
+      startSourceChar: 2312
+      endSourceChar: 2322
+      line: 52
+      lineChar: 10
+      spanCodeSection: Set_Value(
+    - startInstruction: 720
+      endInstruction: 775
+      startSourceChar: 2322
+      endSourceChar: 2334
+      line: 52
+      lineChar: 20
+      spanCodeSection: 'synch_mem); '
+    - startInstruction: 776
+      endInstruction: 775
+      startSourceChar: 2334
+      endSourceChar: 2334
+      line: 52
+      lineChar: 32
+      spanCodeSection: 
+    - startInstruction: 776
+      endInstruction: 775
+      startSourceChar: 2334
+      endSourceChar: 2334
+      line: 52
+      lineChar: 32
+      spanCodeSection: 
+    - startInstruction: 776
+      endInstruction: 775
+      startSourceChar: 2334
+      endSourceChar: 2334
+      line: 52
+      lineChar: 32
+      spanCodeSection: 
+    - startInstruction: 776
+      endInstruction: 775
+      startSourceChar: 2334
+      endSourceChar: 2350
+      line: 52
+      lineChar: 32
+      spanCodeSection: UI_Slider_Input.
+    - startInstruction: 776
+      endInstruction: 775
+      startSourceChar: 2350
+      endSourceChar: 2357
+      line: 52
+      lineChar: 48
+      spanCodeSection: 'value= '
+    - startInstruction: 776
+      endInstruction: 807
+      startSourceChar: 2357
+      endSourceChar: 2379
+      line: 52
+      lineChar: 55
+      spanCodeSection: "synch_mem; }\r\n        "
+    - startInstruction: 808
+      endInstruction: 807
+      startSourceChar: 2379
+      endSourceChar: 2394
+      line: 53
+      lineChar: 8
+      spanCodeSection: "else\r\n         "
+    - startInstruction: 808
+      endInstruction: 807
+      startSourceChar: 2394
+      endSourceChar: 2396
+      line: 54
+      lineChar: 9
+      spanCodeSection: '{ '
+    - startInstruction: 808
+      endInstruction: 807
+      startSourceChar: 2396
+      endSourceChar: 2396
+      line: 54
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 808
+      endInstruction: 807
+      startSourceChar: 2396
+      endSourceChar: 2396
+      line: 54
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 808
+      endInstruction: 807
+      startSourceChar: 2396
+      endSourceChar: 2406
+      line: 54
+      lineChar: 11
+      spanCodeSection: Set_Value(
+    - startInstruction: 808
+      endInstruction: 807
+      startSourceChar: 2406
+      endSourceChar: 2406
+      line: 54
+      lineChar: 21
+      spanCodeSection: 
+    - startInstruction: 808
+      endInstruction: 879
+      startSourceChar: 2406
+      endSourceChar: 2431
+      line: 54
+      lineChar: 21
+      spanCodeSection: "get_input()); }\r\n        "
+    - startInstruction: 880
+      endInstruction: 879
+      startSourceChar: 2431
+      endSourceChar: 2431
+      line: 55
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 880
+      endInstruction: 879
+      startSourceChar: 2431
+      endSourceChar: 2431
+      line: 55
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 880
+      endInstruction: 879
+      startSourceChar: 2431
+      endSourceChar: 2448
+      line: 55
+      lineChar: 8
+      spanCodeSection: 'world_init_mem = '
+    - startInstruction: 880
+      endInstruction: 919
+      startSourceChar: 2448
+      endSourceChar: 2468
+      line: 55
+      lineChar: 25
+      spanCodeSection: "true;\r\n    }\r\n\r\n    "
+    - startInstruction: 920
+      endInstruction: 927
+      startSourceChar: 2468
+      endSourceChar: 2491
+      line: 58
+      lineChar: 4
+      spanCodeSection: "public void Run()\r\n    "
+    - startInstruction: 928
+      endInstruction: 927
+      startSourceChar: 2491
+      endSourceChar: 2503
+      line: 59
+      lineChar: 4
+      spanCodeSection: "{\r\n         "
+    - startInstruction: 928
+      endInstruction: 927
+      startSourceChar: 2503
+      endSourceChar: 2507
+      line: 60
+      lineChar: 9
+      spanCodeSection: if (
+    - startInstruction: 928
+      endInstruction: 943
+      startSourceChar: 2507
+      endSourceChar: 2537
+      line: 60
+      lineChar: 13
+      spanCodeSection: "Late_Join_Synched)\r\n          "
+    - startInstruction: 944
+      endInstruction: 943
+      startSourceChar: 2537
+      endSourceChar: 2539
+      line: 61
+      lineChar: 10
+      spanCodeSection: '{ '
+    - startInstruction: 944
+      endInstruction: 943
+      startSourceChar: 2539
+      endSourceChar: 2539
+      line: 61
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 944
+      endInstruction: 943
+      startSourceChar: 2539
+      endSourceChar: 2539
+      line: 61
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 944
+      endInstruction: 943
+      startSourceChar: 2539
+      endSourceChar: 2551
+      line: 61
+      lineChar: 12
+      spanCodeSection: 'synch_mem = '
+    - startInstruction: 944
+      endInstruction: 943
+      startSourceChar: 2551
+      endSourceChar: 2551
+      line: 61
+      lineChar: 24
+      spanCodeSection: 
+    - startInstruction: 944
+      endInstruction: 979
+      startSourceChar: 2551
+      endSourceChar: 2576
+      line: 61
+      lineChar: 24
+      spanCodeSection: "get_input(); }\r\n         "
+    - startInstruction: 980
+      endInstruction: 979
+      startSourceChar: 2576
+      endSourceChar: 2576
+      line: 62
+      lineChar: 9
+      spanCodeSection: 
+    - startInstruction: 980
+      endInstruction: 979
+      startSourceChar: 2576
+      endSourceChar: 2576
+      line: 62
+      lineChar: 9
+      spanCodeSection: 
+    - startInstruction: 980
+      endInstruction: 979
+      startSourceChar: 2576
+      endSourceChar: 2586
+      line: 62
+      lineChar: 9
+      spanCodeSection: Set_Value(
+    - startInstruction: 980
+      endInstruction: 979
+      startSourceChar: 2586
+      endSourceChar: 2586
+      line: 62
+      lineChar: 19
+      spanCodeSection: 
+    - startInstruction: 980
+      endInstruction: 1071
+      startSourceChar: 2586
+      endSourceChar: 2615
+      line: 62
+      lineChar: 19
+      spanCodeSection: "get_input()); \r\n    }\r\n\r\n    "
+    - startInstruction: 1072
+      endInstruction: 1071
+      startSourceChar: 2615
+      endSourceChar: 2638
+      line: 65
+      lineChar: 4
+      spanCodeSection: private void Set_Value(
+    - startInstruction: 1072
+      endInstruction: 1079
+      startSourceChar: 2638
+      endSourceChar: 2656
+      line: 65
+      lineChar: 27
+      spanCodeSection: "float value)\r\n    "
+    - startInstruction: 1080
+      endInstruction: 1079
+      startSourceChar: 2656
+      endSourceChar: 2667
+      line: 66
+      lineChar: 4
+      spanCodeSection: "{\r\n        "
+    - startInstruction: 1080
+      endInstruction: 1079
+      startSourceChar: 2667
+      endSourceChar: 2672
+      line: 67
+      lineChar: 8
+      spanCodeSection: for (
+    - startInstruction: 1080
+      endInstruction: 1079
+      startSourceChar: 2672
+      endSourceChar: 2672
+      line: 67
+      lineChar: 13
+      spanCodeSection: 
+    - startInstruction: 1080
+      endInstruction: 1079
+      startSourceChar: 2672
+      endSourceChar: 2672
+      line: 67
+      lineChar: 13
+      spanCodeSection: 
+    - startInstruction: 1080
+      endInstruction: 1079
+      startSourceChar: 2672
+      endSourceChar: 2678
+      line: 67
+      lineChar: 13
+      spanCodeSection: 'int i '
+    - startInstruction: 1080
+      endInstruction: 1079
+      startSourceChar: 2678
+      endSourceChar: 2680
+      line: 67
+      lineChar: 19
+      spanCodeSection: '= '
+    - startInstruction: 1080
+      endInstruction: 1099
+      startSourceChar: 2680
+      endSourceChar: 2683
+      line: 67
+      lineChar: 21
+      spanCodeSection: '0; '
+    - startInstruction: 1100
+      endInstruction: 1099
+      startSourceChar: 2683
+      endSourceChar: 2683
+      line: 67
+      lineChar: 24
+      spanCodeSection: 
+    - startInstruction: 1100
+      endInstruction: 1099
+      startSourceChar: 2683
+      endSourceChar: 2687
+      line: 67
+      lineChar: 24
+      spanCodeSection: 'i < '
+    - startInstruction: 1100
+      endInstruction: 1099
+      startSourceChar: 2687
+      endSourceChar: 2687
+      line: 67
+      lineChar: 28
+      spanCodeSection: 
+    - startInstruction: 1100
+      endInstruction: 1099
+      startSourceChar: 2687
+      endSourceChar: 2703
+      line: 67
+      lineChar: 28
+      spanCodeSection: Where_to_Modify.
+    - startInstruction: 1100
+      endInstruction: 1171
+      startSourceChar: 2703
+      endSourceChar: 2725
+      line: 67
+      lineChar: 44
+      spanCodeSection: "Length; i++)\r\n        "
+    - startInstruction: 1172
+      endInstruction: 1171
+      startSourceChar: 2725
+      endSourceChar: 2740
+      line: 68
+      lineChar: 8
+      spanCodeSection: "{\r\n            "
+    - startInstruction: 1172
+      endInstruction: 1171
+      startSourceChar: 2740
+      endSourceChar: 2740
+      line: 69
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 1172
+      endInstruction: 1171
+      startSourceChar: 2740
+      endSourceChar: 2740
+      line: 69
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 1172
+      endInstruction: 1171
+      startSourceChar: 2740
+      endSourceChar: 2740
+      line: 69
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 1172
+      endInstruction: 1171
+      startSourceChar: 2740
+      endSourceChar: 2740
+      line: 69
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 1172
+      endInstruction: 1171
+      startSourceChar: 2740
+      endSourceChar: 2756
+      line: 69
+      lineChar: 12
+      spanCodeSection: Where_to_Modify[
+    - startInstruction: 1172
+      endInstruction: 1171
+      startSourceChar: 2756
+      endSourceChar: 2756
+      line: 69
+      lineChar: 28
+      spanCodeSection: 
+    - startInstruction: 1172
+      endInstruction: 1171
+      startSourceChar: 2756
+      endSourceChar: 2759
+      line: 69
+      lineChar: 28
+      spanCodeSection: i].
+    - startInstruction: 1172
+      endInstruction: 1203
+      startSourceChar: 2759
+      endSourceChar: 2778
+      line: 69
+      lineChar: 31
+      spanCodeSection: SetProgramVariable(
+    - startInstruction: 1204
+      endInstruction: 1203
+      startSourceChar: 2778
+      endSourceChar: 2794
+      line: 69
+      lineChar: 50
+      spanCodeSection: 'What_to_Modify, '
+    - startInstruction: 1204
+      endInstruction: 1235
+      startSourceChar: 2794
+      endSourceChar: 2815
+      line: 69
+      lineChar: 66
+      spanCodeSection: "value);\r\n            "
+    - startInstruction: 1236
+      endInstruction: 1235
+      startSourceChar: 2815
+      endSourceChar: 2818
+      line: 70
+      lineChar: 12
+      spanCodeSection: if(
+    - startInstruction: 1236
+      endInstruction: 1235
+      startSourceChar: 2818
+      endSourceChar: 2818
+      line: 70
+      lineChar: 15
+      spanCodeSection: 
+    - startInstruction: 1236
+      endInstruction: 1235
+      startSourceChar: 2818
+      endSourceChar: 2818
+      line: 70
+      lineChar: 15
+      spanCodeSection: 
+    - startInstruction: 1236
+      endInstruction: 1235
+      startSourceChar: 2818
+      endSourceChar: 2835
+      line: 70
+      lineChar: 15
+      spanCodeSection: Call_Event_Name!=
+    - startInstruction: 1236
+      endInstruction: 1303
+      startSourceChar: 2835
+      endSourceChar: 2843
+      line: 70
+      lineChar: 32
+      spanCodeSection: 'null && '
+    - startInstruction: 1304
+      endInstruction: 1303
+      startSourceChar: 2843
+      endSourceChar: 2843
+      line: 70
+      lineChar: 40
+      spanCodeSection: 
+    - startInstruction: 1304
+      endInstruction: 1303
+      startSourceChar: 2843
+      endSourceChar: 2843
+      line: 70
+      lineChar: 40
+      spanCodeSection: 
+    - startInstruction: 1304
+      endInstruction: 1303
+      startSourceChar: 2843
+      endSourceChar: 2859
+      line: 70
+      lineChar: 40
+      spanCodeSection: Call_Event_Name.
+    - startInstruction: 1304
+      endInstruction: 1327
+      startSourceChar: 2859
+      endSourceChar: 2866
+      line: 70
+      lineChar: 56
+      spanCodeSection: Length>
+    - startInstruction: 1328
+      endInstruction: 1427
+      startSourceChar: 2866
+      endSourceChar: 2883
+      line: 70
+      lineChar: 63
+      spanCodeSection: "0)\r\n             "
+    - startInstruction: 1428
+      endInstruction: 1427
+      startSourceChar: 2883
+      endSourceChar: 2885
+      line: 71
+      lineChar: 13
+      spanCodeSection: '{ '
+    - startInstruction: 1428
+      endInstruction: 1427
+      startSourceChar: 2885
+      endSourceChar: 2885
+      line: 71
+      lineChar: 15
+      spanCodeSection: 
+    - startInstruction: 1428
+      endInstruction: 1427
+      startSourceChar: 2885
+      endSourceChar: 2885
+      line: 71
+      lineChar: 15
+      spanCodeSection: 
+    - startInstruction: 1428
+      endInstruction: 1427
+      startSourceChar: 2885
+      endSourceChar: 2885
+      line: 71
+      lineChar: 15
+      spanCodeSection: 
+    - startInstruction: 1428
+      endInstruction: 1427
+      startSourceChar: 2885
+      endSourceChar: 2885
+      line: 71
+      lineChar: 15
+      spanCodeSection: 
+    - startInstruction: 1428
+      endInstruction: 1427
+      startSourceChar: 2885
+      endSourceChar: 2901
+      line: 71
+      lineChar: 15
+      spanCodeSection: Where_to_Modify[
+    - startInstruction: 1428
+      endInstruction: 1427
+      startSourceChar: 2901
+      endSourceChar: 2901
+      line: 71
+      lineChar: 31
+      spanCodeSection: 
+    - startInstruction: 1428
+      endInstruction: 1427
+      startSourceChar: 2901
+      endSourceChar: 2904
+      line: 71
+      lineChar: 31
+      spanCodeSection: i].
+    - startInstruction: 1428
+      endInstruction: 1459
+      startSourceChar: 2904
+      endSourceChar: 2920
+      line: 71
+      lineChar: 34
+      spanCodeSection: SendCustomEvent(
+    - startInstruction: 1460
+      endInstruction: 1603
+      startSourceChar: 2920
+      endSourceChar: 2965
+      line: 71
+      lineChar: 50
+      spanCodeSection: "Call_Event_Name); }\r\n        }\r\n    }\r\n\r\n    "
+    - startInstruction: 1604
+      endInstruction: 1611
+      startSourceChar: 2965
+      endSourceChar: 2996
+      line: 75
+      lineChar: 4
+      spanCodeSection: "private float get_input()\r\n    "
+    - startInstruction: 1612
+      endInstruction: 1611
+      startSourceChar: 2996
+      endSourceChar: 3007
+      line: 76
+      lineChar: 4
+      spanCodeSection: "{\r\n        "
+    - startInstruction: 1612
+      endInstruction: 1611
+      startSourceChar: 3007
+      endSourceChar: 3010
+      line: 77
+      lineChar: 8
+      spanCodeSection: if(
+    - startInstruction: 1612
+      endInstruction: 1611
+      startSourceChar: 3010
+      endSourceChar: 3010
+      line: 77
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 1612
+      endInstruction: 1611
+      startSourceChar: 3010
+      endSourceChar: 3029
+      line: 77
+      lineChar: 11
+      spanCodeSection: 'UI_Slider_Input != '
+    - startInstruction: 1612
+      endInstruction: 1659
+      startSourceChar: 3029
+      endSourceChar: 3045
+      line: 77
+      lineChar: 30
+      spanCodeSection: "null)\r\n         "
+    - startInstruction: 1660
+      endInstruction: 1659
+      startSourceChar: 3045
+      endSourceChar: 3047
+      line: 78
+      lineChar: 9
+      spanCodeSection: '{ '
+    - startInstruction: 1660
+      endInstruction: 1659
+      startSourceChar: 3047
+      endSourceChar: 3054
+      line: 78
+      lineChar: 11
+      spanCodeSection: 'return '
+    - startInstruction: 1660
+      endInstruction: 1659
+      startSourceChar: 3054
+      endSourceChar: 3054
+      line: 78
+      lineChar: 18
+      spanCodeSection: 
+    - startInstruction: 1660
+      endInstruction: 1659
+      startSourceChar: 3054
+      endSourceChar: 3070
+      line: 78
+      lineChar: 18
+      spanCodeSection: UI_Slider_Input.
+    - startInstruction: 1660
+      endInstruction: 1711
+      startSourceChar: 3070
+      endSourceChar: 3088
+      line: 78
+      lineChar: 34
+      spanCodeSection: "value; }\r\n        "
+    - startInstruction: 1712
+      endInstruction: 1711
+      startSourceChar: 3088
+      endSourceChar: 3103
+      line: 79
+      lineChar: 8
+      spanCodeSection: "else\r\n         "
+    - startInstruction: 1712
+      endInstruction: 1711
+      startSourceChar: 3103
+      endSourceChar: 3105
+      line: 80
+      lineChar: 9
+      spanCodeSection: '{ '
+    - startInstruction: 1712
+      endInstruction: 1711
+      startSourceChar: 3105
+      endSourceChar: 3112
+      line: 80
+      lineChar: 11
+      spanCodeSection: 'return '
+    - startInstruction: 1712
+      endInstruction: 1712
+      startSourceChar: 3112
+      endSourceChar: 3112
+      line: 80
+      lineChar: 18
+      spanCodeSection: 
+  hasInteractEvent: 1
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: fieldDefinitions
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[UdonSharp.FieldDefinition,
+        UdonSharp.Editor]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 14
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: world_init_mem
+    - Name: $v
+      Entry: 7
+      Data: 2|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 3|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 7
+      Data: 4|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: System.Boolean, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declarationType
+      Entry: 3
+      Data: 2
+    - Name: syncMode
+      Entry: 3
+      Data: 1
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemBoolean
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: world_init_mem
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: world_init_mem
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 5|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 6|UdonSharp.UdonSyncedAttribute, UdonSharp.Runtime
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: synch_mem
+    - Name: $v
+      Entry: 7
+      Data: 7|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 8|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 7
+      Data: 9|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: System.Single, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declarationType
+      Entry: 3
+      Data: 2
+    - Name: syncMode
+      Entry: 3
+      Data: 1
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemSingle
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: synch_mem
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: synch_mem
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 10|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 11|UdonSharp.UdonSyncedAttribute, UdonSharp.Runtime
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Where_to_Modify
+    - Name: $v
+      Entry: 7
+      Data: 12|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 13|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 7
+      Data: 14|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: UdonSharp.UdonSharpBehaviour[], UdonSharp.Runtime
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: UnityEngineComponentArray
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: Where_to_Modify
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: Where_to_Modify
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 15|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 16|UnityEngine.HeaderAttribute, UnityEngine.CoreModule
+    - Name: header
+      Entry: 1
+      Data: Modify Target (Udon Behaviour)
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 17|UnityEngine.TooltipAttribute, UnityEngine.CoreModule
+    - Name: tooltip
+      Entry: 1
+      Data: List of game objects containing a valid Udon Behaviour component
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: What_to_Modify
+    - Name: $v
+      Entry: 7
+      Data: 18|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 19|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 7
+      Data: 20|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: System.String, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemString
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: What_to_Modify
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: What_to_Modify
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 21|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 22|UnityEngine.TooltipAttribute, UnityEngine.CoreModule
+    - Name: tooltip
+      Entry: 1
+      Data: Name of variable to toggle
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Call_Event_Name
+    - Name: $v
+      Entry: 7
+      Data: 23|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 24|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 20
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemString
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: Call_Event_Name
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: Call_Event_Name
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 25|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 26|UnityEngine.TooltipAttribute, UnityEngine.CoreModule
+    - Name: tooltip
+      Entry: 1
+      Data: Name of update function to call (Optional)
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Manual_Input
+    - Name: $v
+      Entry: 7
+      Data: 27|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 28|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 9
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemSingle
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: Manual_Input
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: Manual_Input
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 29|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 30|UnityEngine.HeaderAttribute, UnityEngine.CoreModule
+    - Name: header
+      Entry: 1
+      Data: Value Input Setup
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 31|UnityEngine.TooltipAttribute, UnityEngine.CoreModule
+    - Name: tooltip
+      Entry: 1
+      Data: Default input if no UI selected
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: UI_Slider_Input
+    - Name: $v
+      Entry: 7
+      Data: 32|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 33|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 7
+      Data: 34|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: UnityEngine.UI.Slider, UnityEngine.UI
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: UnityEngineUISlider
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: UI_Slider_Input
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: UI_Slider_Input
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 35|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 36|UnityEngine.TooltipAttribute, UnityEngine.CoreModule
+    - Name: tooltip
+      Entry: 1
+      Data: "Use Ui slider\r\n(overrides 'Manual_Input')"
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Late_Join_Synched
+    - Name: $v
+      Entry: 7
+      Data: 37|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 38|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 4
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemBoolean
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: Late_Join_Synched
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: Late_Join_Synched
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 39|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 40|UnityEngine.HeaderAttribute, UnityEngine.CoreModule
+    - Name: header
+      Entry: 1
+      Data: Synching
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 41|UnityEngine.TooltipAttribute, UnityEngine.CoreModule
+    - Name: tooltip
+      Entry: 1
+      Data: Players who join will see what others see.
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Event_UI_Update
+    - Name: $v
+      Entry: 7
+      Data: 42|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 43|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 4
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemBoolean
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: Event_UI_Update
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: Event_UI_Update
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 44|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 45|UnityEngine.HeaderAttribute, UnityEngine.CoreModule
+    - Name: header
+      Entry: 1
+      Data: Events
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 46|UnityEngine.TooltipAttribute, UnityEngine.CoreModule
+    - Name: tooltip
+      Entry: 1
+      Data: Custom Event for UI to call/use
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: EventInteract
+    - Name: $v
+      Entry: 7
+      Data: 47|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 48|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 4
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemBoolean
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: EventInteract
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: EventInteract
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 49|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: EventOnCollisionEnter
+    - Name: $v
+      Entry: 7
+      Data: 50|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 51|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 4
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemBoolean
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: EventOnCollisionEnter
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: EventOnCollisionEnter
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 52|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: EventOnCollisionExit
+    - Name: $v
+      Entry: 7
+      Data: 53|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 54|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 4
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemBoolean
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: EventOnCollisionExit
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: EventOnCollisionExit
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 55|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: EventOnTriggerEnter
+    - Name: $v
+      Entry: 7
+      Data: 56|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 57|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 4
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemBoolean
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: EventOnTriggerEnter
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: EventOnTriggerEnter
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 58|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: EventOnTriggerExit
+    - Name: $v
+      Entry: 7
+      Data: 59|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 60|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 4
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemBoolean
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: EventOnTriggerExit
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: EventOnTriggerExit
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 61|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 

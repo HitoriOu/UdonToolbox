@@ -1,0 +1,4018 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
+  m_Name: Vanishing Chair (pickup)
+  m_EditorClassIdentifier: 
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 11dfe81b2c9801b45baa12150fd64d59,
+    type: 2}
+  udonAssembly: ".data_start\r\n\r\n    .export Pickup_Collider\r\n    .export Invert_Invisible\r\n
+    \   .export Turn_Invisible\r\n    .export Optional_Menu\r\n    .export Global_Synched\r\n
+    \   .export Late_Join_Synched\r\n    .export EventInteract\r\n    .export EventOnTriggerEnter\r\n
+    \   .export EventOnTriggerExit\r\n    .sync synch_mem, none\r\n\r\n    __refl_const_intnl_udonTypeID:
+    %SystemInt64, null\r\n    __refl_const_intnl_udonTypeName: %SystemString, null\r\n
+    \   EventInteract: %SystemBoolean, null\r\n    EventOnTriggerEnter: %SystemBoolean,
+    null\r\n    EventOnTriggerExit: %SystemBoolean, null\r\n    Global_Synched: %SystemBoolean,
+    null\r\n    Invert_Invisible: %SystemBoolean, null\r\n    Late_Join_Synched: %SystemBoolean,
+    null\r\n    Pickup_Collider: %UnityEngineCollider, null\r\n    Optional_Menu:
+    %UnityEngineGameObject, null\r\n    Turn_Invisible: %UnityEngineMeshRendererArray,
+    null\r\n    onTriggerEnterOther: %UnityEngineCollider, null\r\n    onTriggerExitOther:
+    %UnityEngineCollider, null\r\n    synch_mem: %SystemUInt32, null\r\n    __0_this_intnl_UnityEngineGameObject:
+    %UnityEngineGameObject, this\r\n    __0_this_intnl_VanishingChairpickup: %VRCUdonUdonBehaviour,
+    this\r\n    __0_other_Collider: %UnityEngineCollider, null\r\n    __1_other_Collider:
+    %UnityEngineCollider, null\r\n    __0_i_Int32: %SystemInt32, null\r\n    __1_i_Int32:
+    %SystemInt32, null\r\n    __0_temp_VRC_Pickup: %VRCSDK3ComponentsVRCPickup, null\r\n
+    \   __0_const_intnl_SystemBoolean: %SystemBoolean, null\r\n    __1_const_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __0_const_intnl_UnityEngineCollider: %UnityEngineCollider,
+    null\r\n    __0_const_intnl_UnityEngineGameObject: %UnityEngineGameObject, null\r\n
+    \   __0_const_intnl_SystemInt32: %SystemInt32, null\r\n    __1_const_intnl_SystemInt32:
+    %SystemInt32, null\r\n    __2_const_intnl_SystemInt32: %SystemInt32, null\r\n
+    \   __0_const_intnl_UnityEngineMeshRenderer: %UnityEngineMeshRenderer, null\r\n
+    \   __0_const_intnl_VRCUdonCommonInterfacesNetworkEventTarget: %VRCUdonCommonInterfacesNetworkEventTarget,
+    null\r\n    __0_const_intnl_SystemObject: %SystemObject, null\r\n    __0_const_intnl_SystemString:
+    %SystemString, null\r\n    __1_const_intnl_SystemString: %SystemString, null\r\n
+    \   __10_const_intnl_SystemString: %SystemString, null\r\n    __11_const_intnl_SystemString:
+    %SystemString, null\r\n    __12_const_intnl_SystemString: %SystemString, null\r\n
+    \   __13_const_intnl_SystemString: %SystemString, null\r\n    __2_const_intnl_SystemString:
+    %SystemString, null\r\n    __3_const_intnl_SystemString: %SystemString, null\r\n
+    \   __4_const_intnl_SystemString: %SystemString, null\r\n    __5_const_intnl_SystemString:
+    %SystemString, null\r\n    __6_const_intnl_SystemString: %SystemString, null\r\n
+    \   __7_const_intnl_SystemString: %SystemString, null\r\n    __8_const_intnl_SystemString:
+    %SystemString, null\r\n    __9_const_intnl_SystemString: %SystemString, null\r\n
+    \   __0_const_intnl_SystemType: %SystemType, null\r\n    __0_const_intnl_SystemUInt32:
+    %SystemUInt32, null\r\n    __0_const_intnl_VRCSDK3ComponentsVRCPickup: %VRCSDK3ComponentsVRCPickup,
+    null\r\n    __0_const_intnl_VRCSDKBaseVRCPlayerApi: %VRCSDKBaseVRCPlayerApi, null\r\n
+    \   __0_intnl_SystemBoolean: %SystemBoolean, null\r\n    __1_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __10_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __11_intnl_SystemBoolean: %SystemBoolean, null\r\n    __12_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __13_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __14_intnl_SystemBoolean: %SystemBoolean, null\r\n    __15_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __16_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __17_intnl_SystemBoolean: %SystemBoolean, null\r\n    __2_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __3_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __4_intnl_SystemBoolean: %SystemBoolean, null\r\n    __5_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __6_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __7_intnl_SystemBoolean: %SystemBoolean, null\r\n    __8_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __9_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __0_intnl_UnityEngineComponent: %UnityEngineComponent, null\r\n    __0_intnl_SystemInt32:
+    %SystemInt32, null\r\n    __1_intnl_SystemInt32: %SystemInt32, null\r\n    __2_intnl_SystemInt32:
+    %SystemInt32, null\r\n    __3_intnl_SystemInt32: %SystemInt32, null\r\n    __0_intnl_SystemInt64:
+    %SystemInt64, null\r\n    __1_intnl_SystemInt64: %SystemInt64, null\r\n    __2_intnl_SystemInt64:
+    %SystemInt64, null\r\n    __3_intnl_SystemInt64: %SystemInt64, null\r\n    __0_intnl_UnityEngineMeshRenderer:
+    %UnityEngineMeshRenderer, null\r\n    __1_intnl_UnityEngineMeshRenderer: %UnityEngineMeshRenderer,
+    null\r\n    __2_intnl_UnityEngineMeshRenderer: %UnityEngineMeshRenderer, null\r\n
+    \   __3_intnl_UnityEngineMeshRenderer: %UnityEngineMeshRenderer, null\r\n    __0_intnl_returnTarget_UInt32:
+    %SystemUInt32, null\r\n    __0_intnl_VRCSDKBaseVRCPlayerApi: %VRCSDKBaseVRCPlayerApi,
+    null\r\n    __1_intnl_VRCSDKBaseVRCPlayerApi: %VRCSDKBaseVRCPlayerApi, null\r\n
+    \   __2_intnl_VRCSDKBaseVRCPlayerApi: %VRCSDKBaseVRCPlayerApi, null\r\n    __3_intnl_VRCSDKBaseVRCPlayerApi:
+    %VRCSDKBaseVRCPlayerApi, null\r\n    __4_intnl_VRCSDKBaseVRCPlayerApi: %VRCSDKBaseVRCPlayerApi,
+    null\r\n\r\n.data_end\r\n\r\n        \r\n         # using UdonSharp;\r\n        \r\n
+    \        # using UnityEngine;\r\n        \r\n         # using VRC.SDKBase;\r\n
+    \       \r\n         # using VRC.Udon;\r\n        \r\n         # public class
+    VanishingChairpickup : UdonSharpBehaviour\r\n.code_start\r\n        \r\n         #
+    [UdonSynced(UdonSyncMode.None)]\r\n        \r\n         # uint synch_mem = 2;\r\n
+    \       \r\n         # [Tooltip(\"Prevents seated user from grabbing selected
+    collider\")]\r\n        \r\n         # public Collider Pickup_Collider;\r\n        \r\n
+    \        # [Space(3)]\r\n        \r\n         # [Tooltip(\"Events are swapped
+    when entering/exiting\")]\r\n        \r\n         # public bool Invert_Invisible
+    = false;\r\n        \r\n         # [Tooltip(\"Disables Mesh renderer when triggered\")]\r\n
+    \       \r\n         # public MeshRenderer[] Turn_Invisible = new MeshRenderer[1];\r\n
+    \       \r\n         # [Space(3)]\r\n        \r\n         # [Tooltip(\"This object
+    is enabled for seated player/user\")]\r\n        \r\n         # public GameObject
+    Optional_Menu;\r\n        \r\n         # [Header(\"Synching\")]\r\n        \r\n
+    \        # [Tooltip(\"All players in world are affected.\")]\r\n        \r\n         #
+    public bool Global_Synched = true;\r\n        \r\n         # [Tooltip(\"Players
+    who join will see what others see. \\r\\n(If set to Global_Synched)\")]\r\n        \r\n
+    \        # public bool Late_Join_Synched = true;\r\n        \r\n         # [Header(\"Events\")]\r\n
+    \       \r\n         # public bool EventInteract = true;\r\n        \r\n         #
+    public bool EventOnTriggerEnter = false;\r\n        \r\n         # public bool
+    EventOnTriggerExit = false;\r\n        \r\n         # void Interact() { if (EventInteract)
+    { SendCustomEvent(\"Use_Station\"); } }\r\n    .export _interact\r\n        \r\n
+    \   _interact:\r\n        \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n        PUSH,
+    EventInteract\r\n        JUMP_IF_FALSE, 0x00000030\r\n        PUSH, __0_this_intnl_VanishingChairpickup\r\n
+    \       PUSH, __8_const_intnl_SystemString\r\n        EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomEvent__SystemString__SystemVoid\"\r\n
+    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\r\n        COPY\r\n
+    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n        \r\n        \r\n
+    \        # void OnTriggerEnter(Collider other) { if (EventOnTriggerEnter) { SendCustomEvent(\"Use_Station\");
+    } }\r\n    .export _onTriggerEnter\r\n        \r\n    _onTriggerEnter:\r\n        \r\n
+    \       PUSH, __0_const_intnl_SystemUInt32\r\n        PUSH, onTriggerEnterOther\r\n
+    \       PUSH, __0_other_Collider\r\n        COPY\r\n        PUSH, EventOnTriggerEnter\r\n
+    \       JUMP_IF_FALSE, 0x00000088\r\n        PUSH, __0_this_intnl_VanishingChairpickup\r\n
+    \       PUSH, __8_const_intnl_SystemString\r\n        EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomEvent__SystemString__SystemVoid\"\r\n
+    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\r\n        COPY\r\n
+    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n        \r\n        \r\n
+    \        # void OnTriggerExit(Collider other) { if (EventOnTriggerExit) { SendCustomEvent(\"Use_Station\");
+    } }\r\n    .export _onTriggerExit\r\n        \r\n    _onTriggerExit:\r\n        \r\n
+    \       PUSH, __0_const_intnl_SystemUInt32\r\n        PUSH, onTriggerExitOther\r\n
+    \       PUSH, __1_other_Collider\r\n        COPY\r\n        PUSH, EventOnTriggerExit\r\n
+    \       JUMP_IF_FALSE, 0x000000E0\r\n        PUSH, __0_this_intnl_VanishingChairpickup\r\n
+    \       PUSH, __8_const_intnl_SystemString\r\n        EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomEvent__SystemString__SystemVoid\"\r\n
+    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\r\n        COPY\r\n
+    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n        \r\n        \r\n
+    \        # void OnPickup() { SendCustomEvent(\"Set_Owner\"); }\r\n    .export
+    _onPickup\r\n        \r\n    _onPickup:\r\n        \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n
+    \       PUSH, __0_this_intnl_VanishingChairpickup\r\n        PUSH, __9_const_intnl_SystemString\r\n
+    \       EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomEvent__SystemString__SystemVoid\"\r\n
+    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\r\n        COPY\r\n
+    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n        \r\n        \r\n
+    \        # void OnStationEntered() { SendCustomEvent(\"Hide\"); }\r\n    .export
+    _onStationEntered\r\n        \r\n    _onStationEntered:\r\n        \r\n        PUSH,
+    __0_const_intnl_SystemUInt32\r\n        PUSH, __0_this_intnl_VanishingChairpickup\r\n
+    \       PUSH, __10_const_intnl_SystemString\r\n        EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomEvent__SystemString__SystemVoid\"\r\n
+    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\r\n        COPY\r\n
+    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n        \r\n        \r\n
+    \        # void OnStationExited() { SendCustomEvent(\"Show\"); }\r\n    .export
+    _onStationExited\r\n        \r\n    _onStationExited:\r\n        \r\n        PUSH,
+    __0_const_intnl_SystemUInt32\r\n        PUSH, __0_this_intnl_VanishingChairpickup\r\n
+    \       PUSH, __11_const_intnl_SystemString\r\n        EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomEvent__SystemString__SystemVoid\"\r\n
+    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\r\n        COPY\r\n
+    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n        \r\n        \r\n
+    \        # public void Use_Station()\r\n    .export Use_Station\r\n        \r\n
+    \   Use_Station:\r\n        \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n
+    \       \r\n         # {\r\n        \r\n         # VRC_Pickup temp = (VRC_Pickup)this.gameObject.GetComponent(typeof(VRC_Pickup));\r\n
+    \       PUSH, __0_this_intnl_UnityEngineGameObject\r\n        PUSH, __0_const_intnl_SystemType\r\n
+    \       PUSH, __0_intnl_UnityEngineComponent\r\n        EXTERN, \"UnityEngineGameObject.__GetComponent__SystemType__UnityEngineComponent\"\r\n
+    \       PUSH, __0_intnl_UnityEngineComponent\r\n        PUSH, __0_temp_VRC_Pickup\r\n
+    \       COPY\r\n        \r\n         # if (temp != null && temp.IsHeld && temp.currentLocalPlayer
+    == Networking.LocalPlayer) /*Eliminates grab-seat infinite physics loop*/\r\n
+    \       PUSH, __0_temp_VRC_Pickup\r\n        PUSH, __0_const_intnl_VRCSDK3ComponentsVRCPickup\r\n
+    \       PUSH, __2_intnl_SystemBoolean\r\n        EXTERN, \"UnityEngineObject.__op_Inequality__UnityEngineObject_UnityEngineObject__SystemBoolean\"\r\n
+    \       PUSH, __2_intnl_SystemBoolean\r\n        PUSH, __1_intnl_SystemBoolean\r\n
+    \       COPY\r\n        PUSH, __1_intnl_SystemBoolean\r\n        JUMP_IF_FALSE,
+    0x0000025C\r\n        PUSH, __0_temp_VRC_Pickup\r\n        PUSH, __3_intnl_SystemBoolean\r\n
+    \       EXTERN, \"VRCSDK3ComponentsVRCPickup.__get_IsHeld__SystemBoolean\"\r\n
+    \       PUSH, __1_intnl_SystemBoolean\r\n        PUSH, __3_intnl_SystemBoolean\r\n
+    \       PUSH, __4_intnl_SystemBoolean\r\n        EXTERN, \"SystemBoolean.__op_ConditionalAnd__SystemBoolean_SystemBoolean__SystemBoolean\"\r\n
+    \       PUSH, __4_intnl_SystemBoolean\r\n        PUSH, __1_intnl_SystemBoolean\r\n
+    \       COPY\r\n        PUSH, __1_intnl_SystemBoolean\r\n        PUSH, __0_intnl_SystemBoolean\r\n
+    \       COPY\r\n        PUSH, __0_intnl_SystemBoolean\r\n        JUMP_IF_FALSE,
+    0x000002FC\r\n        PUSH, __0_temp_VRC_Pickup\r\n        PUSH, __0_intnl_VRCSDKBaseVRCPlayerApi\r\n
+    \       EXTERN, \"VRCSDK3ComponentsVRCPickup.__get_currentLocalPlayer__VRCSDKBaseVRCPlayerApi\"\r\n
+    \       PUSH, __1_intnl_VRCSDKBaseVRCPlayerApi\r\n        EXTERN, \"VRCSDKBaseNetworking.__get_LocalPlayer__VRCSDKBaseVRCPlayerApi\"\r\n
+    \       PUSH, __0_intnl_VRCSDKBaseVRCPlayerApi\r\n        PUSH, __1_intnl_VRCSDKBaseVRCPlayerApi\r\n
+    \       PUSH, __5_intnl_SystemBoolean\r\n        EXTERN, \"SystemObject.__op_Equality__SystemObject_SystemObject__SystemBoolean\"\r\n
+    \       PUSH, __0_intnl_SystemBoolean\r\n        PUSH, __5_intnl_SystemBoolean\r\n
+    \       PUSH, __6_intnl_SystemBoolean\r\n        EXTERN, \"SystemBoolean.__op_ConditionalAnd__SystemBoolean_SystemBoolean__SystemBoolean\"\r\n
+    \       PUSH, __6_intnl_SystemBoolean\r\n        PUSH, __0_intnl_SystemBoolean\r\n
+    \       COPY\r\n        PUSH, __0_intnl_SystemBoolean\r\n        JUMP_IF_FALSE,
+    0x0000031C\r\n        \r\n         # { temp.Drop(); }\r\n        PUSH, __0_temp_VRC_Pickup\r\n
+    \       EXTERN, \"VRCSDK3ComponentsVRCPickup.__Drop__SystemVoid\"\r\n        \r\n
+    \        # Networking.LocalPlayer.UseAttachedStation();\r\n        PUSH, __2_intnl_VRCSDKBaseVRCPlayerApi\r\n
+    \       EXTERN, \"VRCSDKBaseNetworking.__get_LocalPlayer__VRCSDKBaseVRCPlayerApi\"\r\n
+    \       PUSH, __2_intnl_VRCSDKBaseVRCPlayerApi\r\n        EXTERN, \"VRCSDKBaseVRCPlayerApi.__UseAttachedStation__SystemVoid\"\r\n
+    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\r\n        COPY\r\n
+    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n        \r\n        \r\n
+    \        # public void Set_Owner()\r\n    .export Set_Owner\r\n        \r\n    Set_Owner:\r\n
+    \       \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n         #
+    { Networking.SetOwner(Networking.LocalPlayer, this.gameObject); }\r\n        PUSH,
+    __3_intnl_VRCSDKBaseVRCPlayerApi\r\n        EXTERN, \"VRCSDKBaseNetworking.__get_LocalPlayer__VRCSDKBaseVRCPlayerApi\"\r\n
+    \       PUSH, __3_intnl_VRCSDKBaseVRCPlayerApi\r\n        PUSH, __0_this_intnl_UnityEngineGameObject\r\n
+    \       EXTERN, \"VRCSDKBaseNetworking.__SetOwner__VRCSDKBaseVRCPlayerApi_UnityEngineGameObject__SystemVoid\"\r\n
+    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\r\n        COPY\r\n
+    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n        \r\n        \r\n
+    \        # public void Start()\r\n    .export _start\r\n        \r\n    _start:\r\n
+    \       \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n         #
+    {\r\n        \r\n         # if (Networking.LocalPlayer == null)\r\n        PUSH,
+    __4_intnl_VRCSDKBaseVRCPlayerApi\r\n        EXTERN, \"VRCSDKBaseNetworking.__get_LocalPlayer__VRCSDKBaseVRCPlayerApi\"\r\n
+    \       PUSH, __4_intnl_VRCSDKBaseVRCPlayerApi\r\n        PUSH, __0_const_intnl_VRCSDKBaseVRCPlayerApi\r\n
+    \       PUSH, __7_intnl_SystemBoolean\r\n        EXTERN, \"SystemObject.__op_Equality__SystemObject_SystemObject__SystemBoolean\"\r\n
+    \       PUSH, __7_intnl_SystemBoolean\r\n        JUMP_IF_FALSE, 0x000003F0\r\n
+    \       \r\n         # { Global_Synched = false; }\r\n        PUSH, __0_const_intnl_SystemBoolean\r\n
+    \       PUSH, Global_Synched\r\n        COPY\r\n        \r\n         # if (synch_mem
+    == 0)\r\n        PUSH, synch_mem\r\n        PUSH, __0_intnl_SystemInt64\r\n        EXTERN,
+    \"SystemConvert.__ToInt64__SystemUInt32__SystemInt64\"\r\n        PUSH, __1_const_intnl_SystemInt32\r\n
+    \       PUSH, __1_intnl_SystemInt64\r\n        EXTERN, \"SystemConvert.__ToInt64__SystemInt32__SystemInt64\"\r\n
+    \       PUSH, __0_intnl_SystemInt64\r\n        PUSH, __1_intnl_SystemInt64\r\n
+    \       PUSH, __8_intnl_SystemBoolean\r\n        EXTERN, \"SystemInt64.__op_Equality__SystemInt64_SystemInt64__SystemBoolean\"\r\n
+    \       PUSH, __8_intnl_SystemBoolean\r\n        JUMP_IF_FALSE, 0x00000470\r\n
+    \       \r\n         # { SendCustomEvent(\"OFF\"); }\r\n        PUSH, __0_this_intnl_VanishingChairpickup\r\n
+    \       PUSH, __12_const_intnl_SystemString\r\n        EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomEvent__SystemString__SystemVoid\"\r\n
+    \       JUMP, 0x000004E8\r\n        \r\n         # else if (synch_mem == 1)\r\n
+    \       PUSH, synch_mem\r\n        PUSH, __2_intnl_SystemInt64\r\n        EXTERN,
+    \"SystemConvert.__ToInt64__SystemUInt32__SystemInt64\"\r\n        PUSH, __2_const_intnl_SystemInt32\r\n
+    \       PUSH, __3_intnl_SystemInt64\r\n        EXTERN, \"SystemConvert.__ToInt64__SystemInt32__SystemInt64\"\r\n
+    \       PUSH, __2_intnl_SystemInt64\r\n        PUSH, __3_intnl_SystemInt64\r\n
+    \       PUSH, __9_intnl_SystemBoolean\r\n        EXTERN, \"SystemInt64.__op_Equality__SystemInt64_SystemInt64__SystemBoolean\"\r\n
+    \       PUSH, __9_intnl_SystemBoolean\r\n        JUMP_IF_FALSE, 0x000004E8\r\n
+    \       \r\n         # { SendCustomEvent(\"ON\"); }\r\n        PUSH, __0_this_intnl_VanishingChairpickup\r\n
+    \       PUSH, __13_const_intnl_SystemString\r\n        EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomEvent__SystemString__SystemVoid\"\r\n
+    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\r\n        COPY\r\n
+    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n        \r\n        \r\n
+    \        # public void Hide()\r\n    .export Hide\r\n        \r\n    Hide:\r\n
+    \       \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n         #
+    {\r\n        \r\n         # if(Pickup_Collider!=null)\r\n        PUSH, Pickup_Collider\r\n
+    \       PUSH, __0_const_intnl_UnityEngineCollider\r\n        PUSH, __10_intnl_SystemBoolean\r\n
+    \       EXTERN, \"UnityEngineObject.__op_Inequality__UnityEngineObject_UnityEngineObject__SystemBoolean\"\r\n
+    \       PUSH, __10_intnl_SystemBoolean\r\n        JUMP_IF_FALSE, 0x0000054C\r\n
+    \       \r\n         # { Pickup_Collider.enabled = false; }\r\n        PUSH, Pickup_Collider\r\n
+    \       PUSH, __0_const_intnl_SystemBoolean\r\n        EXTERN, \"UnityEngineCollider.__set_enabled__SystemBoolean__SystemVoid\"\r\n
+    \       \r\n         # if(Optional_Menu!=null)\r\n        PUSH, Optional_Menu\r\n
+    \       PUSH, __0_const_intnl_UnityEngineGameObject\r\n        PUSH, __11_intnl_SystemBoolean\r\n
+    \       EXTERN, \"UnityEngineObject.__op_Inequality__UnityEngineObject_UnityEngineObject__SystemBoolean\"\r\n
+    \       PUSH, __11_intnl_SystemBoolean\r\n        JUMP_IF_FALSE, 0x00000594\r\n
+    \       \r\n         # { Optional_Menu.SetActive(true); }\r\n        PUSH, Optional_Menu\r\n
+    \       PUSH, __1_const_intnl_SystemBoolean\r\n        EXTERN, \"UnityEngineGameObject.__SetActive__SystemBoolean__SystemVoid\"\r\n
+    \       \r\n         # if (Global_Synched)\r\n        PUSH, Global_Synched\r\n
+    \       JUMP_IF_FALSE, 0x000005F4\r\n        \r\n         # {\r\n        \r\n
+    \        # if (Late_Join_Synched) { synch_mem = 0; }\r\n        PUSH, Late_Join_Synched\r\n
+    \       JUMP_IF_FALSE, 0x000005CC\r\n        PUSH, __1_const_intnl_SystemInt32\r\n
+    \       PUSH, synch_mem\r\n        EXTERN, \"SystemConvert.__ToUInt32__SystemInt32__SystemUInt32\"\r\n
+    \       \r\n         # SendCustomNetworkEvent(VRC.Udon.Common.Interfaces.NetworkEventTarget.All,
+    \"OFF\");\r\n        PUSH, __0_this_intnl_VanishingChairpickup\r\n        PUSH,
+    __0_const_intnl_VRCUdonCommonInterfacesNetworkEventTarget\r\n        PUSH, __12_const_intnl_SystemString\r\n
+    \       EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomNetworkEvent__VRCUdonCommonInterfacesNetworkEventTarget_SystemString__SystemVoid\"\r\n
+    \       JUMP, 0x0000060C\r\n        \r\n         # else\r\n        \r\n         #
+    { SendCustomEvent(\"OFF\"); }\r\n        PUSH, __0_this_intnl_VanishingChairpickup\r\n
+    \       PUSH, __12_const_intnl_SystemString\r\n        EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomEvent__SystemString__SystemVoid\"\r\n
+    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\r\n        COPY\r\n
+    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n        \r\n        \r\n
+    \        # public void Show()\r\n    .export Show\r\n        \r\n    Show:\r\n
+    \       \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n         #
+    {\r\n        \r\n         # if (Pickup_Collider != null)\r\n        PUSH, Pickup_Collider\r\n
+    \       PUSH, __0_const_intnl_UnityEngineCollider\r\n        PUSH, __12_intnl_SystemBoolean\r\n
+    \       EXTERN, \"UnityEngineObject.__op_Inequality__UnityEngineObject_UnityEngineObject__SystemBoolean\"\r\n
+    \       PUSH, __12_intnl_SystemBoolean\r\n        JUMP_IF_FALSE, 0x00000670\r\n
+    \       \r\n         # { Pickup_Collider.enabled = true; }\r\n        PUSH, Pickup_Collider\r\n
+    \       PUSH, __1_const_intnl_SystemBoolean\r\n        EXTERN, \"UnityEngineCollider.__set_enabled__SystemBoolean__SystemVoid\"\r\n
+    \       \r\n         # if (Optional_Menu != null)\r\n        PUSH, Optional_Menu\r\n
+    \       PUSH, __0_const_intnl_UnityEngineGameObject\r\n        PUSH, __13_intnl_SystemBoolean\r\n
+    \       EXTERN, \"UnityEngineObject.__op_Inequality__UnityEngineObject_UnityEngineObject__SystemBoolean\"\r\n
+    \       PUSH, __13_intnl_SystemBoolean\r\n        JUMP_IF_FALSE, 0x000006B8\r\n
+    \       \r\n         # { Optional_Menu.SetActive(false); }\r\n        PUSH, Optional_Menu\r\n
+    \       PUSH, __0_const_intnl_SystemBoolean\r\n        EXTERN, \"UnityEngineGameObject.__SetActive__SystemBoolean__SystemVoid\"\r\n
+    \       \r\n         # if (Global_Synched)\r\n        PUSH, Global_Synched\r\n
+    \       JUMP_IF_FALSE, 0x00000718\r\n        \r\n         # {\r\n        \r\n
+    \        # if (Late_Join_Synched) { synch_mem = 1; }\r\n        PUSH, Late_Join_Synched\r\n
+    \       JUMP_IF_FALSE, 0x000006F0\r\n        PUSH, __2_const_intnl_SystemInt32\r\n
+    \       PUSH, synch_mem\r\n        EXTERN, \"SystemConvert.__ToUInt32__SystemInt32__SystemUInt32\"\r\n
+    \       \r\n         # SendCustomNetworkEvent(VRC.Udon.Common.Interfaces.NetworkEventTarget.All,
+    \"ON\");\r\n        PUSH, __0_this_intnl_VanishingChairpickup\r\n        PUSH,
+    __0_const_intnl_VRCUdonCommonInterfacesNetworkEventTarget\r\n        PUSH, __13_const_intnl_SystemString\r\n
+    \       EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomNetworkEvent__VRCUdonCommonInterfacesNetworkEventTarget_SystemString__SystemVoid\"\r\n
+    \       JUMP, 0x00000730\r\n        \r\n         # else\r\n        \r\n         #
+    { SendCustomEvent(\"ON\"); }\r\n        PUSH, __0_this_intnl_VanishingChairpickup\r\n
+    \       PUSH, __13_const_intnl_SystemString\r\n        EXTERN, \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomEvent__SystemString__SystemVoid\"\r\n
+    \       PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\r\n        COPY\r\n
+    \       JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n        \r\n        \r\n
+    \        # public void ON()\r\n    .export ON\r\n        \r\n    ON:\r\n        \r\n
+    \       PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n         # {\r\n        \r\n
+    \        # for (int i = 0; i < Turn_Invisible.Length; i++)\r\n        PUSH, __1_const_intnl_SystemInt32\r\n
+    \       PUSH, __0_i_Int32\r\n        COPY\r\n        PUSH, Turn_Invisible\r\n
+    \       PUSH, __0_intnl_SystemInt32\r\n        EXTERN, \"UnityEngineMeshRendererArray.__get_Length__SystemInt32\"\r\n
+    \       PUSH, __0_i_Int32\r\n        PUSH, __0_intnl_SystemInt32\r\n        PUSH,
+    __14_intnl_SystemBoolean\r\n        EXTERN, \"SystemInt32.__op_LessThan__SystemInt32_SystemInt32__SystemBoolean\"\r\n
+    \       PUSH, __14_intnl_SystemBoolean\r\n        JUMP_IF_FALSE, 0x000008BC\r\n
+    \       \r\n         # {\r\n        \r\n         # if (Turn_Invisible[i] != null)\r\n
+    \       PUSH, Turn_Invisible\r\n        PUSH, __0_i_Int32\r\n        PUSH, __0_intnl_UnityEngineMeshRenderer\r\n
+    \       EXTERN, \"UnityEngineMeshRendererArray.__Get__SystemInt32__UnityEngineMeshRenderer\"\r\n
+    \       PUSH, __0_intnl_UnityEngineMeshRenderer\r\n        PUSH, __0_const_intnl_UnityEngineMeshRenderer\r\n
+    \       PUSH, __15_intnl_SystemBoolean\r\n        EXTERN, \"UnityEngineObject.__op_Inequality__UnityEngineObject_UnityEngineObject__SystemBoolean\"\r\n
+    \       PUSH, __15_intnl_SystemBoolean\r\n        JUMP_IF_FALSE, 0x00000880\r\n
+    \       \r\n         # {\r\n        \r\n         # if (Invert_Invisible) { Turn_Invisible[i].enabled
+    = false; }\r\n        PUSH, Invert_Invisible\r\n        JUMP_IF_FALSE, 0x00000848\r\n
+    \       PUSH, Turn_Invisible\r\n        PUSH, __0_i_Int32\r\n        PUSH, __1_intnl_UnityEngineMeshRenderer\r\n
+    \       EXTERN, \"UnityEngineMeshRendererArray.__Get__SystemInt32__UnityEngineMeshRenderer\"\r\n
+    \       PUSH, __1_intnl_UnityEngineMeshRenderer\r\n        PUSH, __0_const_intnl_SystemBoolean\r\n
+    \       EXTERN, \"UnityEngineMeshRenderer.__set_enabled__SystemBoolean__SystemVoid\"\r\n
+    \       JUMP, 0x00000880\r\n        \r\n         # else { Turn_Invisible[i].enabled
+    = true; }\r\n        PUSH, Turn_Invisible\r\n        PUSH, __0_i_Int32\r\n        PUSH,
+    __1_intnl_UnityEngineMeshRenderer\r\n        EXTERN, \"UnityEngineMeshRendererArray.__Get__SystemInt32__UnityEngineMeshRenderer\"\r\n
+    \       PUSH, __1_intnl_UnityEngineMeshRenderer\r\n        PUSH, __1_const_intnl_SystemBoolean\r\n
+    \       EXTERN, \"UnityEngineMeshRenderer.__set_enabled__SystemBoolean__SystemVoid\"\r\n
+    \       PUSH, __0_i_Int32\r\n        PUSH, __1_intnl_SystemInt32\r\n        COPY\r\n
+    \       PUSH, __0_i_Int32\r\n        PUSH, __2_const_intnl_SystemInt32\r\n        PUSH,
+    __0_i_Int32\r\n        EXTERN, \"SystemInt32.__op_Addition__SystemInt32_SystemInt32__SystemInt32\"\r\n
+    \       JUMP, 0x00000760\r\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
+    epilogue\r\n        COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n
+    \       \r\n        \r\n         # public void OFF()\r\n    .export OFF\r\n        \r\n
+    \   OFF:\r\n        \r\n        PUSH, __0_const_intnl_SystemUInt32\r\n        \r\n
+    \        # {\r\n        \r\n         # for (int i = 0; i < Turn_Invisible.Length;
+    i++)\r\n        PUSH, __1_const_intnl_SystemInt32\r\n        PUSH, __1_i_Int32\r\n
+    \       COPY\r\n        PUSH, Turn_Invisible\r\n        PUSH, __2_intnl_SystemInt32\r\n
+    \       EXTERN, \"UnityEngineMeshRendererArray.__get_Length__SystemInt32\"\r\n
+    \       PUSH, __1_i_Int32\r\n        PUSH, __2_intnl_SystemInt32\r\n        PUSH,
+    __16_intnl_SystemBoolean\r\n        EXTERN, \"SystemInt32.__op_LessThan__SystemInt32_SystemInt32__SystemBoolean\"\r\n
+    \       PUSH, __16_intnl_SystemBoolean\r\n        JUMP_IF_FALSE, 0x00000A48\r\n
+    \       \r\n         # {\r\n        \r\n         # if (Turn_Invisible[i] != null)\r\n
+    \       PUSH, Turn_Invisible\r\n        PUSH, __1_i_Int32\r\n        PUSH, __2_intnl_UnityEngineMeshRenderer\r\n
+    \       EXTERN, \"UnityEngineMeshRendererArray.__Get__SystemInt32__UnityEngineMeshRenderer\"\r\n
+    \       PUSH, __2_intnl_UnityEngineMeshRenderer\r\n        PUSH, __0_const_intnl_UnityEngineMeshRenderer\r\n
+    \       PUSH, __17_intnl_SystemBoolean\r\n        EXTERN, \"UnityEngineObject.__op_Inequality__UnityEngineObject_UnityEngineObject__SystemBoolean\"\r\n
+    \       PUSH, __17_intnl_SystemBoolean\r\n        JUMP_IF_FALSE, 0x00000A0C\r\n
+    \       \r\n         # {\r\n        \r\n         # if (Invert_Invisible) { Turn_Invisible[i].enabled
+    = true; }\r\n        PUSH, Invert_Invisible\r\n        JUMP_IF_FALSE, 0x000009D4\r\n
+    \       PUSH, Turn_Invisible\r\n        PUSH, __1_i_Int32\r\n        PUSH, __3_intnl_UnityEngineMeshRenderer\r\n
+    \       EXTERN, \"UnityEngineMeshRendererArray.__Get__SystemInt32__UnityEngineMeshRenderer\"\r\n
+    \       PUSH, __3_intnl_UnityEngineMeshRenderer\r\n        PUSH, __1_const_intnl_SystemBoolean\r\n
+    \       EXTERN, \"UnityEngineMeshRenderer.__set_enabled__SystemBoolean__SystemVoid\"\r\n
+    \       JUMP, 0x00000A0C\r\n        \r\n         # else { Turn_Invisible[i].enabled
+    = false; }\r\n        PUSH, Turn_Invisible\r\n        PUSH, __1_i_Int32\r\n        PUSH,
+    __3_intnl_UnityEngineMeshRenderer\r\n        EXTERN, \"UnityEngineMeshRendererArray.__Get__SystemInt32__UnityEngineMeshRenderer\"\r\n
+    \       PUSH, __3_intnl_UnityEngineMeshRenderer\r\n        PUSH, __0_const_intnl_SystemBoolean\r\n
+    \       EXTERN, \"UnityEngineMeshRenderer.__set_enabled__SystemBoolean__SystemVoid\"\r\n
+    \       PUSH, __1_i_Int32\r\n        PUSH, __3_intnl_SystemInt32\r\n        COPY\r\n
+    \       PUSH, __1_i_Int32\r\n        PUSH, __2_const_intnl_SystemInt32\r\n        PUSH,
+    __1_i_Int32\r\n        EXTERN, \"SystemInt32.__op_Addition__SystemInt32_SystemInt32__SystemInt32\"\r\n
+    \       JUMP, 0x000008EC\r\n        PUSH, __0_intnl_returnTarget_UInt32 #Function
+    epilogue\r\n        COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n
+    \       \r\n.code_end\r\n"
+  assemblyError: 
+  sourceCsScript: {fileID: 11500000, guid: 843720d50bd4a0446855634e7ad6360c, type: 3}
+  behaviourIDHeapVarName: __refl_const_intnl_udonTypeID
+  compileErrors: []
+  debugInfo:
+    serializedDebugSpans:
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 0
+      endSourceChar: 2
+      line: 0
+      lineChar: 0
+      spanCodeSection: "\r\n"
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 2
+      endSourceChar: 2
+      line: 1
+      lineChar: 0
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 2
+      endSourceChar: 8
+      line: 1
+      lineChar: 0
+      spanCodeSection: 'using '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 8
+      endSourceChar: 20
+      line: 1
+      lineChar: 6
+      spanCodeSection: "UdonSharp;\r\n"
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 20
+      endSourceChar: 26
+      line: 2
+      lineChar: 0
+      spanCodeSection: 'using '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 26
+      endSourceChar: 40
+      line: 2
+      lineChar: 6
+      spanCodeSection: "UnityEngine;\r\n"
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 40
+      endSourceChar: 46
+      line: 3
+      lineChar: 0
+      spanCodeSection: 'using '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 46
+      endSourceChar: 46
+      line: 3
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 46
+      endSourceChar: 50
+      line: 3
+      lineChar: 6
+      spanCodeSection: VRC.
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 50
+      endSourceChar: 60
+      line: 3
+      lineChar: 10
+      spanCodeSection: "SDKBase;\r\n"
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 60
+      endSourceChar: 66
+      line: 4
+      lineChar: 0
+      spanCodeSection: 'using '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 66
+      endSourceChar: 66
+      line: 4
+      lineChar: 6
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 66
+      endSourceChar: 70
+      line: 4
+      lineChar: 6
+      spanCodeSection: VRC.
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 70
+      endSourceChar: 79
+      line: 4
+      lineChar: 10
+      spanCodeSection: "Udon;\r\n\r\n"
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 79
+      endSourceChar: 113
+      line: 6
+      lineChar: 0
+      spanCodeSection: 'public class VanishingChairpickup '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 113
+      endSourceChar: 115
+      line: 6
+      lineChar: 34
+      spanCodeSection: ': '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 115
+      endSourceChar: 115
+      line: 6
+      lineChar: 36
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 115
+      endSourceChar: 284
+      line: 6
+      lineChar: 36
+      spanCodeSection: "UdonSharpBehaviour\r\n{\r\n    /*\r\n     Dev Notes:\r\n     Using
+        a Menu is not mandatory\r\n     Code removes the abillity to grab your own
+        seat (infinite loop)\r\n     */\r\n\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 284
+      endSourceChar: 285
+      line: 14
+      lineChar: 4
+      spanCodeSection: '['
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 285
+      endSourceChar: 296
+      line: 14
+      lineChar: 5
+      spanCodeSection: UdonSynced(
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 296
+      endSourceChar: 296
+      line: 14
+      lineChar: 16
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 296
+      endSourceChar: 309
+      line: 14
+      lineChar: 16
+      spanCodeSection: UdonSyncMode.
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 309
+      endSourceChar: 309
+      line: 14
+      lineChar: 29
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 309
+      endSourceChar: 321
+      line: 14
+      lineChar: 29
+      spanCodeSection: "None)]\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 321
+      endSourceChar: 321
+      line: 15
+      lineChar: 4
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 321
+      endSourceChar: 346
+      line: 15
+      lineChar: 4
+      spanCodeSection: "uint synch_mem = 2;\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 346
+      endSourceChar: 347
+      line: 16
+      lineChar: 4
+      spanCodeSection: '['
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 347
+      endSourceChar: 347
+      line: 16
+      lineChar: 5
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 347
+      endSourceChar: 355
+      line: 16
+      lineChar: 5
+      spanCodeSection: Tooltip(
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 355
+      endSourceChar: 355
+      line: 16
+      lineChar: 13
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 355
+      endSourceChar: 424
+      line: 16
+      lineChar: 13
+      spanCodeSection: "\"Prevents seated user from grabbing selected collider\")]\r\n
+        \   public "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 424
+      endSourceChar: 424
+      line: 17
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 424
+      endSourceChar: 457
+      line: 17
+      lineChar: 11
+      spanCodeSection: "Collider Pickup_Collider;\r\n\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 457
+      endSourceChar: 458
+      line: 19
+      lineChar: 4
+      spanCodeSection: '['
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 458
+      endSourceChar: 474
+      line: 19
+      lineChar: 5
+      spanCodeSection: "Space(3)]\r\n    ["
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 474
+      endSourceChar: 474
+      line: 20
+      lineChar: 5
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 474
+      endSourceChar: 482
+      line: 20
+      lineChar: 5
+      spanCodeSection: Tooltip(
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 482
+      endSourceChar: 482
+      line: 20
+      lineChar: 13
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 482
+      endSourceChar: 539
+      line: 20
+      lineChar: 13
+      spanCodeSection: "\"Events are swapped when entering/exiting\")]\r\n    public "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 539
+      endSourceChar: 539
+      line: 21
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 539
+      endSourceChar: 575
+      line: 21
+      lineChar: 11
+      spanCodeSection: "bool Invert_Invisible = false;\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 575
+      endSourceChar: 576
+      line: 22
+      lineChar: 4
+      spanCodeSection: '['
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 576
+      endSourceChar: 576
+      line: 22
+      lineChar: 5
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 576
+      endSourceChar: 584
+      line: 22
+      lineChar: 5
+      spanCodeSection: Tooltip(
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 584
+      endSourceChar: 584
+      line: 22
+      lineChar: 13
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 584
+      endSourceChar: 638
+      line: 22
+      lineChar: 13
+      spanCodeSection: "\"Disables Mesh renderer when triggered\")]\r\n    public "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 638
+      endSourceChar: 638
+      line: 23
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 638
+      endSourceChar: 638
+      line: 23
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 638
+      endSourceChar: 696
+      line: 23
+      lineChar: 11
+      spanCodeSection: "MeshRenderer[] Turn_Invisible = new MeshRenderer[1];\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 696
+      endSourceChar: 697
+      line: 24
+      lineChar: 4
+      spanCodeSection: '['
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 697
+      endSourceChar: 713
+      line: 24
+      lineChar: 5
+      spanCodeSection: "Space(3)]\r\n    ["
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 713
+      endSourceChar: 713
+      line: 25
+      lineChar: 5
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 713
+      endSourceChar: 721
+      line: 25
+      lineChar: 5
+      spanCodeSection: Tooltip(
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 721
+      endSourceChar: 721
+      line: 25
+      lineChar: 13
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 721
+      endSourceChar: 783
+      line: 25
+      lineChar: 13
+      spanCodeSection: "\"This object is enabled for seated player/user\")]\r\n    public "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 783
+      endSourceChar: 783
+      line: 26
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 783
+      endSourceChar: 816
+      line: 26
+      lineChar: 11
+      spanCodeSection: "GameObject Optional_Menu;\r\n\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 816
+      endSourceChar: 817
+      line: 28
+      lineChar: 4
+      spanCodeSection: '['
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 817
+      endSourceChar: 843
+      line: 28
+      lineChar: 5
+      spanCodeSection: "Header(\"Synching\")]\r\n    ["
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 843
+      endSourceChar: 843
+      line: 29
+      lineChar: 5
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 843
+      endSourceChar: 851
+      line: 29
+      lineChar: 5
+      spanCodeSection: Tooltip(
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 851
+      endSourceChar: 851
+      line: 29
+      lineChar: 13
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 851
+      endSourceChar: 902
+      line: 29
+      lineChar: 13
+      spanCodeSection: "\"All players in world are affected.\")]\r\n    public "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 902
+      endSourceChar: 902
+      line: 30
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 902
+      endSourceChar: 935
+      line: 30
+      lineChar: 11
+      spanCodeSection: "bool Global_Synched = true;\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 935
+      endSourceChar: 936
+      line: 31
+      lineChar: 4
+      spanCodeSection: '['
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 936
+      endSourceChar: 936
+      line: 31
+      lineChar: 5
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 936
+      endSourceChar: 944
+      line: 31
+      lineChar: 5
+      spanCodeSection: Tooltip(
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 944
+      endSourceChar: 944
+      line: 31
+      lineChar: 13
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 944
+      endSourceChar: 1034
+      line: 31
+      lineChar: 13
+      spanCodeSection: "\"Players who join will see what others see. \\r\\n(If set
+        to Global_Synched)\")]\r\n    public "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 1034
+      endSourceChar: 1034
+      line: 32
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 1034
+      endSourceChar: 1072
+      line: 32
+      lineChar: 11
+      spanCodeSection: "bool Late_Join_Synched = true;\r\n\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 1072
+      endSourceChar: 1073
+      line: 34
+      lineChar: 4
+      spanCodeSection: '['
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 1073
+      endSourceChar: 1073
+      line: 34
+      lineChar: 5
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 1073
+      endSourceChar: 1080
+      line: 34
+      lineChar: 5
+      spanCodeSection: Header(
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 1080
+      endSourceChar: 1080
+      line: 34
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 1080
+      endSourceChar: 1103
+      line: 34
+      lineChar: 12
+      spanCodeSection: "\"Events\")]\r\n    public "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 1103
+      endSourceChar: 1103
+      line: 35
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 1103
+      endSourceChar: 1135
+      line: 35
+      lineChar: 11
+      spanCodeSection: "bool EventInteract = true;\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 1135
+      endSourceChar: 1142
+      line: 36
+      lineChar: 4
+      spanCodeSection: 'public '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 1142
+      endSourceChar: 1142
+      line: 36
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 1142
+      endSourceChar: 1181
+      line: 36
+      lineChar: 11
+      spanCodeSection: "bool EventOnTriggerEnter = false;\r\n    "
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 1181
+      endSourceChar: 1188
+      line: 37
+      lineChar: 4
+      spanCodeSection: 'public '
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 1188
+      endSourceChar: 1188
+      line: 37
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 0
+      endInstruction: -1
+      startSourceChar: 1188
+      endSourceChar: 1228
+      line: 37
+      lineChar: 11
+      spanCodeSection: "bool EventOnTriggerExit = false;\r\n\r\n    "
+    - startInstruction: 0
+      endInstruction: 7
+      startSourceChar: 1228
+      endSourceChar: 1244
+      line: 39
+      lineChar: 4
+      spanCodeSection: 'void Interact() '
+    - startInstruction: 8
+      endInstruction: 7
+      startSourceChar: 1244
+      endSourceChar: 1246
+      line: 39
+      lineChar: 20
+      spanCodeSection: '{ '
+    - startInstruction: 8
+      endInstruction: 7
+      startSourceChar: 1246
+      endSourceChar: 1250
+      line: 39
+      lineChar: 22
+      spanCodeSection: if (
+    - startInstruction: 8
+      endInstruction: 23
+      startSourceChar: 1250
+      endSourceChar: 1265
+      line: 39
+      lineChar: 26
+      spanCodeSection: 'EventInteract) '
+    - startInstruction: 24
+      endInstruction: 23
+      startSourceChar: 1265
+      endSourceChar: 1267
+      line: 39
+      lineChar: 41
+      spanCodeSection: '{ '
+    - startInstruction: 24
+      endInstruction: 23
+      startSourceChar: 1267
+      endSourceChar: 1267
+      line: 39
+      lineChar: 43
+      spanCodeSection: 
+    - startInstruction: 24
+      endInstruction: 23
+      startSourceChar: 1267
+      endSourceChar: 1267
+      line: 39
+      lineChar: 43
+      spanCodeSection: 
+    - startInstruction: 24
+      endInstruction: 23
+      startSourceChar: 1267
+      endSourceChar: 1283
+      line: 39
+      lineChar: 43
+      spanCodeSection: SendCustomEvent(
+    - startInstruction: 24
+      endInstruction: 67
+      startSourceChar: 1283
+      endSourceChar: 1308
+      line: 39
+      lineChar: 59
+      spanCodeSection: "\"Use_Station\"); } }\r\n    "
+    - startInstruction: 68
+      endInstruction: 67
+      startSourceChar: 1308
+      endSourceChar: 1328
+      line: 40
+      lineChar: 4
+      spanCodeSection: void OnTriggerEnter(
+    - startInstruction: 68
+      endInstruction: 95
+      startSourceChar: 1328
+      endSourceChar: 1344
+      line: 40
+      lineChar: 24
+      spanCodeSection: 'Collider other) '
+    - startInstruction: 96
+      endInstruction: 95
+      startSourceChar: 1344
+      endSourceChar: 1346
+      line: 40
+      lineChar: 40
+      spanCodeSection: '{ '
+    - startInstruction: 96
+      endInstruction: 95
+      startSourceChar: 1346
+      endSourceChar: 1350
+      line: 40
+      lineChar: 42
+      spanCodeSection: if (
+    - startInstruction: 96
+      endInstruction: 111
+      startSourceChar: 1350
+      endSourceChar: 1371
+      line: 40
+      lineChar: 46
+      spanCodeSection: 'EventOnTriggerEnter) '
+    - startInstruction: 112
+      endInstruction: 111
+      startSourceChar: 1371
+      endSourceChar: 1373
+      line: 40
+      lineChar: 67
+      spanCodeSection: '{ '
+    - startInstruction: 112
+      endInstruction: 111
+      startSourceChar: 1373
+      endSourceChar: 1373
+      line: 40
+      lineChar: 69
+      spanCodeSection: 
+    - startInstruction: 112
+      endInstruction: 111
+      startSourceChar: 1373
+      endSourceChar: 1373
+      line: 40
+      lineChar: 69
+      spanCodeSection: 
+    - startInstruction: 112
+      endInstruction: 111
+      startSourceChar: 1373
+      endSourceChar: 1389
+      line: 40
+      lineChar: 69
+      spanCodeSection: SendCustomEvent(
+    - startInstruction: 112
+      endInstruction: 155
+      startSourceChar: 1389
+      endSourceChar: 1414
+      line: 40
+      lineChar: 85
+      spanCodeSection: "\"Use_Station\"); } }\r\n    "
+    - startInstruction: 156
+      endInstruction: 155
+      startSourceChar: 1414
+      endSourceChar: 1433
+      line: 41
+      lineChar: 4
+      spanCodeSection: void OnTriggerExit(
+    - startInstruction: 156
+      endInstruction: 183
+      startSourceChar: 1433
+      endSourceChar: 1449
+      line: 41
+      lineChar: 23
+      spanCodeSection: 'Collider other) '
+    - startInstruction: 184
+      endInstruction: 183
+      startSourceChar: 1449
+      endSourceChar: 1451
+      line: 41
+      lineChar: 39
+      spanCodeSection: '{ '
+    - startInstruction: 184
+      endInstruction: 183
+      startSourceChar: 1451
+      endSourceChar: 1455
+      line: 41
+      lineChar: 41
+      spanCodeSection: if (
+    - startInstruction: 184
+      endInstruction: 199
+      startSourceChar: 1455
+      endSourceChar: 1475
+      line: 41
+      lineChar: 45
+      spanCodeSection: 'EventOnTriggerExit) '
+    - startInstruction: 200
+      endInstruction: 199
+      startSourceChar: 1475
+      endSourceChar: 1477
+      line: 41
+      lineChar: 65
+      spanCodeSection: '{ '
+    - startInstruction: 200
+      endInstruction: 199
+      startSourceChar: 1477
+      endSourceChar: 1477
+      line: 41
+      lineChar: 67
+      spanCodeSection: 
+    - startInstruction: 200
+      endInstruction: 199
+      startSourceChar: 1477
+      endSourceChar: 1477
+      line: 41
+      lineChar: 67
+      spanCodeSection: 
+    - startInstruction: 200
+      endInstruction: 199
+      startSourceChar: 1477
+      endSourceChar: 1493
+      line: 41
+      lineChar: 67
+      spanCodeSection: SendCustomEvent(
+    - startInstruction: 200
+      endInstruction: 243
+      startSourceChar: 1493
+      endSourceChar: 1520
+      line: 41
+      lineChar: 83
+      spanCodeSection: "\"Use_Station\"); } }\r\n\r\n    "
+    - startInstruction: 244
+      endInstruction: 251
+      startSourceChar: 1520
+      endSourceChar: 1536
+      line: 43
+      lineChar: 4
+      spanCodeSection: 'void OnPickup() '
+    - startInstruction: 252
+      endInstruction: 251
+      startSourceChar: 1536
+      endSourceChar: 1538
+      line: 43
+      lineChar: 20
+      spanCodeSection: '{ '
+    - startInstruction: 252
+      endInstruction: 251
+      startSourceChar: 1538
+      endSourceChar: 1538
+      line: 43
+      lineChar: 22
+      spanCodeSection: 
+    - startInstruction: 252
+      endInstruction: 251
+      startSourceChar: 1538
+      endSourceChar: 1538
+      line: 43
+      lineChar: 22
+      spanCodeSection: 
+    - startInstruction: 252
+      endInstruction: 251
+      startSourceChar: 1538
+      endSourceChar: 1554
+      line: 43
+      lineChar: 22
+      spanCodeSection: SendCustomEvent(
+    - startInstruction: 252
+      endInstruction: 295
+      startSourceChar: 1554
+      endSourceChar: 1623
+      line: 43
+      lineChar: 38
+      spanCodeSection: "\"Set_Owner\"); }\r\n    //void OnDrop() { SendCustomEvent(\"\");
+        }\r\n\r\n    "
+    - startInstruction: 296
+      endInstruction: 303
+      startSourceChar: 1623
+      endSourceChar: 1647
+      line: 46
+      lineChar: 4
+      spanCodeSection: 'void OnStationEntered() '
+    - startInstruction: 304
+      endInstruction: 303
+      startSourceChar: 1647
+      endSourceChar: 1649
+      line: 46
+      lineChar: 28
+      spanCodeSection: '{ '
+    - startInstruction: 304
+      endInstruction: 303
+      startSourceChar: 1649
+      endSourceChar: 1649
+      line: 46
+      lineChar: 30
+      spanCodeSection: 
+    - startInstruction: 304
+      endInstruction: 303
+      startSourceChar: 1649
+      endSourceChar: 1649
+      line: 46
+      lineChar: 30
+      spanCodeSection: 
+    - startInstruction: 304
+      endInstruction: 303
+      startSourceChar: 1649
+      endSourceChar: 1665
+      line: 46
+      lineChar: 30
+      spanCodeSection: SendCustomEvent(
+    - startInstruction: 304
+      endInstruction: 347
+      startSourceChar: 1665
+      endSourceChar: 1681
+      line: 46
+      lineChar: 46
+      spanCodeSection: "\"Hide\"); }\r\n    "
+    - startInstruction: 348
+      endInstruction: 355
+      startSourceChar: 1681
+      endSourceChar: 1704
+      line: 47
+      lineChar: 4
+      spanCodeSection: 'void OnStationExited() '
+    - startInstruction: 356
+      endInstruction: 355
+      startSourceChar: 1704
+      endSourceChar: 1706
+      line: 47
+      lineChar: 27
+      spanCodeSection: '{ '
+    - startInstruction: 356
+      endInstruction: 355
+      startSourceChar: 1706
+      endSourceChar: 1706
+      line: 47
+      lineChar: 29
+      spanCodeSection: 
+    - startInstruction: 356
+      endInstruction: 355
+      startSourceChar: 1706
+      endSourceChar: 1706
+      line: 47
+      lineChar: 29
+      spanCodeSection: 
+    - startInstruction: 356
+      endInstruction: 355
+      startSourceChar: 1706
+      endSourceChar: 1722
+      line: 47
+      lineChar: 29
+      spanCodeSection: SendCustomEvent(
+    - startInstruction: 356
+      endInstruction: 399
+      startSourceChar: 1722
+      endSourceChar: 1740
+      line: 47
+      lineChar: 45
+      spanCodeSection: "\"Show\"); }\r\n\r\n    "
+    - startInstruction: 400
+      endInstruction: 407
+      startSourceChar: 1740
+      endSourceChar: 1771
+      line: 49
+      lineChar: 4
+      spanCodeSection: "public void Use_Station()\r\n    "
+    - startInstruction: 408
+      endInstruction: 407
+      startSourceChar: 1771
+      endSourceChar: 1782
+      line: 50
+      lineChar: 4
+      spanCodeSection: "{\r\n        "
+    - startInstruction: 408
+      endInstruction: 407
+      startSourceChar: 1782
+      endSourceChar: 1782
+      line: 51
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 408
+      endInstruction: 407
+      startSourceChar: 1782
+      endSourceChar: 1782
+      line: 51
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 408
+      endInstruction: 407
+      startSourceChar: 1782
+      endSourceChar: 1782
+      line: 51
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 408
+      endInstruction: 407
+      startSourceChar: 1782
+      endSourceChar: 1798
+      line: 51
+      lineChar: 8
+      spanCodeSection: 'VRC_Pickup temp '
+    - startInstruction: 408
+      endInstruction: 407
+      startSourceChar: 1798
+      endSourceChar: 1800
+      line: 51
+      lineChar: 24
+      spanCodeSection: '= '
+    - startInstruction: 408
+      endInstruction: 407
+      startSourceChar: 1800
+      endSourceChar: 1812
+      line: 51
+      lineChar: 26
+      spanCodeSection: (VRC_Pickup)
+    - startInstruction: 408
+      endInstruction: 407
+      startSourceChar: 1812
+      endSourceChar: 1812
+      line: 51
+      lineChar: 38
+      spanCodeSection: 
+    - startInstruction: 408
+      endInstruction: 407
+      startSourceChar: 1812
+      endSourceChar: 1812
+      line: 51
+      lineChar: 38
+      spanCodeSection: 
+    - startInstruction: 408
+      endInstruction: 407
+      startSourceChar: 1812
+      endSourceChar: 1812
+      line: 51
+      lineChar: 38
+      spanCodeSection: 
+    - startInstruction: 408
+      endInstruction: 407
+      startSourceChar: 1812
+      endSourceChar: 1817
+      line: 51
+      lineChar: 38
+      spanCodeSection: this.
+    - startInstruction: 408
+      endInstruction: 407
+      startSourceChar: 1817
+      endSourceChar: 1828
+      line: 51
+      lineChar: 43
+      spanCodeSection: gameObject.
+    - startInstruction: 408
+      endInstruction: 407
+      startSourceChar: 1828
+      endSourceChar: 1841
+      line: 51
+      lineChar: 54
+      spanCodeSection: GetComponent(
+    - startInstruction: 408
+      endInstruction: 407
+      startSourceChar: 1841
+      endSourceChar: 1848
+      line: 51
+      lineChar: 67
+      spanCodeSection: typeof(
+    - startInstruction: 408
+      endInstruction: 459
+      startSourceChar: 1848
+      endSourceChar: 1871
+      line: 51
+      lineChar: 74
+      spanCodeSection: "VRC_Pickup));\r\n        "
+    - startInstruction: 460
+      endInstruction: 459
+      startSourceChar: 1871
+      endSourceChar: 1875
+      line: 52
+      lineChar: 8
+      spanCodeSection: if (
+    - startInstruction: 460
+      endInstruction: 459
+      startSourceChar: 1875
+      endSourceChar: 1875
+      line: 52
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 460
+      endInstruction: 459
+      startSourceChar: 1875
+      endSourceChar: 1875
+      line: 52
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 460
+      endInstruction: 459
+      startSourceChar: 1875
+      endSourceChar: 1875
+      line: 52
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 460
+      endInstruction: 459
+      startSourceChar: 1875
+      endSourceChar: 1883
+      line: 52
+      lineChar: 12
+      spanCodeSection: 'temp != '
+    - startInstruction: 460
+      endInstruction: 527
+      startSourceChar: 1883
+      endSourceChar: 1891
+      line: 52
+      lineChar: 20
+      spanCodeSection: 'null && '
+    - startInstruction: 528
+      endInstruction: 527
+      startSourceChar: 1891
+      endSourceChar: 1891
+      line: 52
+      lineChar: 28
+      spanCodeSection: 
+    - startInstruction: 528
+      endInstruction: 527
+      startSourceChar: 1891
+      endSourceChar: 1896
+      line: 52
+      lineChar: 28
+      spanCodeSection: temp.
+    - startInstruction: 528
+      endInstruction: 639
+      startSourceChar: 1896
+      endSourceChar: 1906
+      line: 52
+      lineChar: 33
+      spanCodeSection: 'IsHeld && '
+    - startInstruction: 640
+      endInstruction: 639
+      startSourceChar: 1906
+      endSourceChar: 1906
+      line: 52
+      lineChar: 43
+      spanCodeSection: 
+    - startInstruction: 640
+      endInstruction: 639
+      startSourceChar: 1906
+      endSourceChar: 1906
+      line: 52
+      lineChar: 43
+      spanCodeSection: 
+    - startInstruction: 640
+      endInstruction: 639
+      startSourceChar: 1906
+      endSourceChar: 1911
+      line: 52
+      lineChar: 43
+      spanCodeSection: temp.
+    - startInstruction: 640
+      endInstruction: 663
+      startSourceChar: 1911
+      endSourceChar: 1933
+      line: 52
+      lineChar: 48
+      spanCodeSection: 'currentLocalPlayer == '
+    - startInstruction: 664
+      endInstruction: 663
+      startSourceChar: 1933
+      endSourceChar: 1933
+      line: 52
+      lineChar: 70
+      spanCodeSection: 
+    - startInstruction: 664
+      endInstruction: 663
+      startSourceChar: 1933
+      endSourceChar: 1944
+      line: 52
+      lineChar: 70
+      spanCodeSection: Networking.
+    - startInstruction: 664
+      endInstruction: 779
+      startSourceChar: 1944
+      endSourceChar: 2013
+      line: 52
+      lineChar: 81
+      spanCodeSection: "LocalPlayer) /*Eliminates grab-seat infinite physics loop*/\r\n
+        \       "
+    - startInstruction: 780
+      endInstruction: 779
+      startSourceChar: 2013
+      endSourceChar: 2015
+      line: 53
+      lineChar: 8
+      spanCodeSection: '{ '
+    - startInstruction: 780
+      endInstruction: 779
+      startSourceChar: 2015
+      endSourceChar: 2015
+      line: 53
+      lineChar: 10
+      spanCodeSection: 
+    - startInstruction: 780
+      endInstruction: 779
+      startSourceChar: 2015
+      endSourceChar: 2015
+      line: 53
+      lineChar: 10
+      spanCodeSection: 
+    - startInstruction: 780
+      endInstruction: 779
+      startSourceChar: 2015
+      endSourceChar: 2015
+      line: 53
+      lineChar: 10
+      spanCodeSection: 
+    - startInstruction: 780
+      endInstruction: 779
+      startSourceChar: 2015
+      endSourceChar: 2020
+      line: 53
+      lineChar: 10
+      spanCodeSection: temp.
+    - startInstruction: 780
+      endInstruction: 795
+      startSourceChar: 2020
+      endSourceChar: 2039
+      line: 53
+      lineChar: 15
+      spanCodeSection: "Drop(); }\r\n        "
+    - startInstruction: 796
+      endInstruction: 795
+      startSourceChar: 2039
+      endSourceChar: 2039
+      line: 54
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 796
+      endInstruction: 795
+      startSourceChar: 2039
+      endSourceChar: 2039
+      line: 54
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 796
+      endInstruction: 795
+      startSourceChar: 2039
+      endSourceChar: 2039
+      line: 54
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 796
+      endInstruction: 795
+      startSourceChar: 2039
+      endSourceChar: 2039
+      line: 54
+      lineChar: 8
+      spanCodeSection: 
+    - startInstruction: 796
+      endInstruction: 795
+      startSourceChar: 2039
+      endSourceChar: 2050
+      line: 54
+      lineChar: 8
+      spanCodeSection: Networking.
+    - startInstruction: 796
+      endInstruction: 795
+      startSourceChar: 2050
+      endSourceChar: 2062
+      line: 54
+      lineChar: 19
+      spanCodeSection: LocalPlayer.
+    - startInstruction: 796
+      endInstruction: 847
+      startSourceChar: 2062
+      endSourceChar: 2098
+      line: 54
+      lineChar: 31
+      spanCodeSection: "UseAttachedStation();\r\n    }\r\n\r\n    "
+    - startInstruction: 848
+      endInstruction: 855
+      startSourceChar: 2098
+      endSourceChar: 2128
+      line: 57
+      lineChar: 4
+      spanCodeSection: "public void Set_Owner()\r\n     "
+    - startInstruction: 856
+      endInstruction: 855
+      startSourceChar: 2128
+      endSourceChar: 2130
+      line: 58
+      lineChar: 5
+      spanCodeSection: '{ '
+    - startInstruction: 856
+      endInstruction: 855
+      startSourceChar: 2130
+      endSourceChar: 2130
+      line: 58
+      lineChar: 7
+      spanCodeSection: 
+    - startInstruction: 856
+      endInstruction: 855
+      startSourceChar: 2130
+      endSourceChar: 2130
+      line: 58
+      lineChar: 7
+      spanCodeSection: 
+    - startInstruction: 856
+      endInstruction: 855
+      startSourceChar: 2130
+      endSourceChar: 2130
+      line: 58
+      lineChar: 7
+      spanCodeSection: 
+    - startInstruction: 856
+      endInstruction: 855
+      startSourceChar: 2130
+      endSourceChar: 2141
+      line: 58
+      lineChar: 7
+      spanCodeSection: Networking.
+    - startInstruction: 856
+      endInstruction: 855
+      startSourceChar: 2141
+      endSourceChar: 2150
+      line: 58
+      lineChar: 18
+      spanCodeSection: SetOwner(
+    - startInstruction: 856
+      endInstruction: 855
+      startSourceChar: 2150
+      endSourceChar: 2150
+      line: 58
+      lineChar: 27
+      spanCodeSection: 
+    - startInstruction: 856
+      endInstruction: 855
+      startSourceChar: 2150
+      endSourceChar: 2161
+      line: 58
+      lineChar: 27
+      spanCodeSection: Networking.
+    - startInstruction: 856
+      endInstruction: 871
+      startSourceChar: 2161
+      endSourceChar: 2174
+      line: 58
+      lineChar: 38
+      spanCodeSection: 'LocalPlayer, '
+    - startInstruction: 872
+      endInstruction: 871
+      startSourceChar: 2174
+      endSourceChar: 2174
+      line: 58
+      lineChar: 51
+      spanCodeSection: 
+    - startInstruction: 872
+      endInstruction: 871
+      startSourceChar: 2174
+      endSourceChar: 2179
+      line: 58
+      lineChar: 51
+      spanCodeSection: this.
+    - startInstruction: 872
+      endInstruction: 915
+      startSourceChar: 2179
+      endSourceChar: 2201
+      line: 58
+      lineChar: 56
+      spanCodeSection: "gameObject); }\r\n\r\n    "
+    - startInstruction: 916
+      endInstruction: 923
+      startSourceChar: 2201
+      endSourceChar: 2226
+      line: 60
+      lineChar: 4
+      spanCodeSection: "public void Start()\r\n    "
+    - startInstruction: 924
+      endInstruction: 923
+      startSourceChar: 2226
+      endSourceChar: 2237
+      line: 61
+      lineChar: 4
+      spanCodeSection: "{\r\n        "
+    - startInstruction: 924
+      endInstruction: 923
+      startSourceChar: 2237
+      endSourceChar: 2241
+      line: 62
+      lineChar: 8
+      spanCodeSection: if (
+    - startInstruction: 924
+      endInstruction: 923
+      startSourceChar: 2241
+      endSourceChar: 2241
+      line: 62
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 924
+      endInstruction: 923
+      startSourceChar: 2241
+      endSourceChar: 2241
+      line: 62
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 924
+      endInstruction: 923
+      startSourceChar: 2241
+      endSourceChar: 2252
+      line: 62
+      lineChar: 12
+      spanCodeSection: Networking.
+    - startInstruction: 924
+      endInstruction: 939
+      startSourceChar: 2252
+      endSourceChar: 2267
+      line: 62
+      lineChar: 23
+      spanCodeSection: 'LocalPlayer == '
+    - startInstruction: 940
+      endInstruction: 987
+      startSourceChar: 2267
+      endSourceChar: 2282
+      line: 62
+      lineChar: 38
+      spanCodeSection: "null)\r\n        "
+    - startInstruction: 988
+      endInstruction: 987
+      startSourceChar: 2282
+      endSourceChar: 2284
+      line: 63
+      lineChar: 8
+      spanCodeSection: '{ '
+    - startInstruction: 988
+      endInstruction: 987
+      startSourceChar: 2284
+      endSourceChar: 2284
+      line: 63
+      lineChar: 10
+      spanCodeSection: 
+    - startInstruction: 988
+      endInstruction: 987
+      startSourceChar: 2284
+      endSourceChar: 2284
+      line: 63
+      lineChar: 10
+      spanCodeSection: 
+    - startInstruction: 988
+      endInstruction: 987
+      startSourceChar: 2284
+      endSourceChar: 2301
+      line: 63
+      lineChar: 10
+      spanCodeSection: 'Global_Synched = '
+    - startInstruction: 988
+      endInstruction: 1007
+      startSourceChar: 2301
+      endSourceChar: 2319
+      line: 63
+      lineChar: 27
+      spanCodeSection: "false; }\r\n        "
+    - startInstruction: 1008
+      endInstruction: 1007
+      startSourceChar: 2319
+      endSourceChar: 2323
+      line: 64
+      lineChar: 8
+      spanCodeSection: if (
+    - startInstruction: 1008
+      endInstruction: 1007
+      startSourceChar: 2323
+      endSourceChar: 2323
+      line: 64
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 1008
+      endInstruction: 1007
+      startSourceChar: 2323
+      endSourceChar: 2336
+      line: 64
+      lineChar: 12
+      spanCodeSection: 'synch_mem == '
+    - startInstruction: 1008
+      endInstruction: 1103
+      startSourceChar: 2336
+      endSourceChar: 2348
+      line: 64
+      lineChar: 25
+      spanCodeSection: "0)\r\n        "
+    - startInstruction: 1104
+      endInstruction: 1103
+      startSourceChar: 2348
+      endSourceChar: 2350
+      line: 65
+      lineChar: 8
+      spanCodeSection: '{ '
+    - startInstruction: 1104
+      endInstruction: 1103
+      startSourceChar: 2350
+      endSourceChar: 2350
+      line: 65
+      lineChar: 10
+      spanCodeSection: 
+    - startInstruction: 1104
+      endInstruction: 1103
+      startSourceChar: 2350
+      endSourceChar: 2350
+      line: 65
+      lineChar: 10
+      spanCodeSection: 
+    - startInstruction: 1104
+      endInstruction: 1103
+      startSourceChar: 2350
+      endSourceChar: 2366
+      line: 65
+      lineChar: 10
+      spanCodeSection: SendCustomEvent(
+    - startInstruction: 1104
+      endInstruction: 1135
+      startSourceChar: 2366
+      endSourceChar: 2385
+      line: 65
+      lineChar: 26
+      spanCodeSection: "\"OFF\"); }\r\n        "
+    - startInstruction: 1136
+      endInstruction: 1135
+      startSourceChar: 2385
+      endSourceChar: 2390
+      line: 66
+      lineChar: 8
+      spanCodeSection: 'else '
+    - startInstruction: 1136
+      endInstruction: 1135
+      startSourceChar: 2390
+      endSourceChar: 2394
+      line: 66
+      lineChar: 13
+      spanCodeSection: if (
+    - startInstruction: 1136
+      endInstruction: 1135
+      startSourceChar: 2394
+      endSourceChar: 2394
+      line: 66
+      lineChar: 17
+      spanCodeSection: 
+    - startInstruction: 1136
+      endInstruction: 1135
+      startSourceChar: 2394
+      endSourceChar: 2407
+      line: 66
+      lineChar: 17
+      spanCodeSection: 'synch_mem == '
+    - startInstruction: 1136
+      endInstruction: 1231
+      startSourceChar: 2407
+      endSourceChar: 2419
+      line: 66
+      lineChar: 30
+      spanCodeSection: "1)\r\n        "
+    - startInstruction: 1232
+      endInstruction: 1231
+      startSourceChar: 2419
+      endSourceChar: 2421
+      line: 67
+      lineChar: 8
+      spanCodeSection: '{ '
+    - startInstruction: 1232
+      endInstruction: 1231
+      startSourceChar: 2421
+      endSourceChar: 2421
+      line: 67
+      lineChar: 10
+      spanCodeSection: 
+    - startInstruction: 1232
+      endInstruction: 1231
+      startSourceChar: 2421
+      endSourceChar: 2421
+      line: 67
+      lineChar: 10
+      spanCodeSection: 
+    - startInstruction: 1232
+      endInstruction: 1231
+      startSourceChar: 2421
+      endSourceChar: 2437
+      line: 67
+      lineChar: 10
+      spanCodeSection: SendCustomEvent(
+    - startInstruction: 1232
+      endInstruction: 1275
+      startSourceChar: 2437
+      endSourceChar: 2460
+      line: 67
+      lineChar: 26
+      spanCodeSection: "\"ON\"); }\r\n    }\r\n\r\n    "
+    - startInstruction: 1276
+      endInstruction: 1283
+      startSourceChar: 2460
+      endSourceChar: 2484
+      line: 70
+      lineChar: 4
+      spanCodeSection: "public void Hide()\r\n    "
+    - startInstruction: 1284
+      endInstruction: 1283
+      startSourceChar: 2484
+      endSourceChar: 2495
+      line: 71
+      lineChar: 4
+      spanCodeSection: "{\r\n        "
+    - startInstruction: 1284
+      endInstruction: 1283
+      startSourceChar: 2495
+      endSourceChar: 2498
+      line: 72
+      lineChar: 8
+      spanCodeSection: if(
+    - startInstruction: 1284
+      endInstruction: 1283
+      startSourceChar: 2498
+      endSourceChar: 2498
+      line: 72
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 1284
+      endInstruction: 1283
+      startSourceChar: 2498
+      endSourceChar: 2515
+      line: 72
+      lineChar: 11
+      spanCodeSection: Pickup_Collider!=
+    - startInstruction: 1284
+      endInstruction: 1331
+      startSourceChar: 2515
+      endSourceChar: 2531
+      line: 72
+      lineChar: 28
+      spanCodeSection: "null)\r\n         "
+    - startInstruction: 1332
+      endInstruction: 1331
+      startSourceChar: 2531
+      endSourceChar: 2533
+      line: 73
+      lineChar: 9
+      spanCodeSection: '{ '
+    - startInstruction: 1332
+      endInstruction: 1331
+      startSourceChar: 2533
+      endSourceChar: 2533
+      line: 73
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 1332
+      endInstruction: 1331
+      startSourceChar: 2533
+      endSourceChar: 2533
+      line: 73
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 1332
+      endInstruction: 1331
+      startSourceChar: 2533
+      endSourceChar: 2533
+      line: 73
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 1332
+      endInstruction: 1331
+      startSourceChar: 2533
+      endSourceChar: 2549
+      line: 73
+      lineChar: 11
+      spanCodeSection: Pickup_Collider.
+    - startInstruction: 1332
+      endInstruction: 1331
+      startSourceChar: 2549
+      endSourceChar: 2559
+      line: 73
+      lineChar: 27
+      spanCodeSection: 'enabled = '
+    - startInstruction: 1332
+      endInstruction: 1355
+      startSourceChar: 2559
+      endSourceChar: 2577
+      line: 73
+      lineChar: 37
+      spanCodeSection: "false; }\r\n        "
+    - startInstruction: 1356
+      endInstruction: 1355
+      startSourceChar: 2577
+      endSourceChar: 2580
+      line: 74
+      lineChar: 8
+      spanCodeSection: if(
+    - startInstruction: 1356
+      endInstruction: 1355
+      startSourceChar: 2580
+      endSourceChar: 2580
+      line: 74
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 1356
+      endInstruction: 1355
+      startSourceChar: 2580
+      endSourceChar: 2595
+      line: 74
+      lineChar: 11
+      spanCodeSection: Optional_Menu!=
+    - startInstruction: 1356
+      endInstruction: 1403
+      startSourceChar: 2595
+      endSourceChar: 2611
+      line: 74
+      lineChar: 26
+      spanCodeSection: "null)\r\n         "
+    - startInstruction: 1404
+      endInstruction: 1403
+      startSourceChar: 2611
+      endSourceChar: 2613
+      line: 75
+      lineChar: 9
+      spanCodeSection: '{ '
+    - startInstruction: 1404
+      endInstruction: 1403
+      startSourceChar: 2613
+      endSourceChar: 2613
+      line: 75
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 1404
+      endInstruction: 1403
+      startSourceChar: 2613
+      endSourceChar: 2613
+      line: 75
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 1404
+      endInstruction: 1403
+      startSourceChar: 2613
+      endSourceChar: 2613
+      line: 75
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 1404
+      endInstruction: 1403
+      startSourceChar: 2613
+      endSourceChar: 2627
+      line: 75
+      lineChar: 11
+      spanCodeSection: Optional_Menu.
+    - startInstruction: 1404
+      endInstruction: 1403
+      startSourceChar: 2627
+      endSourceChar: 2637
+      line: 75
+      lineChar: 25
+      spanCodeSection: SetActive(
+    - startInstruction: 1404
+      endInstruction: 1427
+      startSourceChar: 2637
+      endSourceChar: 2655
+      line: 75
+      lineChar: 35
+      spanCodeSection: "true); }\r\n        "
+    - startInstruction: 1428
+      endInstruction: 1427
+      startSourceChar: 2655
+      endSourceChar: 2659
+      line: 76
+      lineChar: 8
+      spanCodeSection: if (
+    - startInstruction: 1428
+      endInstruction: 1443
+      startSourceChar: 2659
+      endSourceChar: 2684
+      line: 76
+      lineChar: 12
+      spanCodeSection: "Global_Synched)\r\n        "
+    - startInstruction: 1444
+      endInstruction: 1443
+      startSourceChar: 2684
+      endSourceChar: 2699
+      line: 77
+      lineChar: 8
+      spanCodeSection: "{\r\n            "
+    - startInstruction: 1444
+      endInstruction: 1443
+      startSourceChar: 2699
+      endSourceChar: 2703
+      line: 78
+      lineChar: 12
+      spanCodeSection: if (
+    - startInstruction: 1444
+      endInstruction: 1459
+      startSourceChar: 2703
+      endSourceChar: 2722
+      line: 78
+      lineChar: 16
+      spanCodeSection: 'Late_Join_Synched) '
+    - startInstruction: 1460
+      endInstruction: 1459
+      startSourceChar: 2722
+      endSourceChar: 2724
+      line: 78
+      lineChar: 35
+      spanCodeSection: '{ '
+    - startInstruction: 1460
+      endInstruction: 1459
+      startSourceChar: 2724
+      endSourceChar: 2724
+      line: 78
+      lineChar: 37
+      spanCodeSection: 
+    - startInstruction: 1460
+      endInstruction: 1459
+      startSourceChar: 2724
+      endSourceChar: 2724
+      line: 78
+      lineChar: 37
+      spanCodeSection: 
+    - startInstruction: 1460
+      endInstruction: 1459
+      startSourceChar: 2724
+      endSourceChar: 2736
+      line: 78
+      lineChar: 37
+      spanCodeSection: 'synch_mem = '
+    - startInstruction: 1460
+      endInstruction: 1483
+      startSourceChar: 2736
+      endSourceChar: 2754
+      line: 78
+      lineChar: 49
+      spanCodeSection: "0; }\r\n            "
+    - startInstruction: 1484
+      endInstruction: 1483
+      startSourceChar: 2754
+      endSourceChar: 2754
+      line: 79
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 1484
+      endInstruction: 1483
+      startSourceChar: 2754
+      endSourceChar: 2754
+      line: 79
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 1484
+      endInstruction: 1483
+      startSourceChar: 2754
+      endSourceChar: 2777
+      line: 79
+      lineChar: 12
+      spanCodeSection: SendCustomNetworkEvent(
+    - startInstruction: 1484
+      endInstruction: 1483
+      startSourceChar: 2777
+      endSourceChar: 2777
+      line: 79
+      lineChar: 35
+      spanCodeSection: 
+    - startInstruction: 1484
+      endInstruction: 1483
+      startSourceChar: 2777
+      endSourceChar: 2777
+      line: 79
+      lineChar: 35
+      spanCodeSection: 
+    - startInstruction: 1484
+      endInstruction: 1483
+      startSourceChar: 2777
+      endSourceChar: 2777
+      line: 79
+      lineChar: 35
+      spanCodeSection: 
+    - startInstruction: 1484
+      endInstruction: 1483
+      startSourceChar: 2777
+      endSourceChar: 2777
+      line: 79
+      lineChar: 35
+      spanCodeSection: 
+    - startInstruction: 1484
+      endInstruction: 1483
+      startSourceChar: 2777
+      endSourceChar: 2777
+      line: 79
+      lineChar: 35
+      spanCodeSection: 
+    - startInstruction: 1484
+      endInstruction: 1483
+      startSourceChar: 2777
+      endSourceChar: 2781
+      line: 79
+      lineChar: 35
+      spanCodeSection: VRC.
+    - startInstruction: 1484
+      endInstruction: 1483
+      startSourceChar: 2781
+      endSourceChar: 2786
+      line: 79
+      lineChar: 39
+      spanCodeSection: Udon.
+    - startInstruction: 1484
+      endInstruction: 1483
+      startSourceChar: 2786
+      endSourceChar: 2793
+      line: 79
+      lineChar: 44
+      spanCodeSection: Common.
+    - startInstruction: 1484
+      endInstruction: 1483
+      startSourceChar: 2793
+      endSourceChar: 2804
+      line: 79
+      lineChar: 51
+      spanCodeSection: Interfaces.
+    - startInstruction: 1484
+      endInstruction: 1483
+      startSourceChar: 2804
+      endSourceChar: 2823
+      line: 79
+      lineChar: 62
+      spanCodeSection: NetworkEventTarget.
+    - startInstruction: 1484
+      endInstruction: 1483
+      startSourceChar: 2823
+      endSourceChar: 2828
+      line: 79
+      lineChar: 81
+      spanCodeSection: 'All, '
+    - startInstruction: 1484
+      endInstruction: 1523
+      startSourceChar: 2828
+      endSourceChar: 2856
+      line: 79
+      lineChar: 86
+      spanCodeSection: "\"OFF\");\r\n        }\r\n        "
+    - startInstruction: 1524
+      endInstruction: 1523
+      startSourceChar: 2856
+      endSourceChar: 2870
+      line: 81
+      lineChar: 8
+      spanCodeSection: "else\r\n        "
+    - startInstruction: 1524
+      endInstruction: 1523
+      startSourceChar: 2870
+      endSourceChar: 2872
+      line: 82
+      lineChar: 8
+      spanCodeSection: '{ '
+    - startInstruction: 1524
+      endInstruction: 1523
+      startSourceChar: 2872
+      endSourceChar: 2872
+      line: 82
+      lineChar: 10
+      spanCodeSection: 
+    - startInstruction: 1524
+      endInstruction: 1523
+      startSourceChar: 2872
+      endSourceChar: 2872
+      line: 82
+      lineChar: 10
+      spanCodeSection: 
+    - startInstruction: 1524
+      endInstruction: 1523
+      startSourceChar: 2872
+      endSourceChar: 2888
+      line: 82
+      lineChar: 10
+      spanCodeSection: SendCustomEvent(
+    - startInstruction: 1524
+      endInstruction: 1567
+      startSourceChar: 2888
+      endSourceChar: 2912
+      line: 82
+      lineChar: 26
+      spanCodeSection: "\"OFF\"); }\r\n    }\r\n\r\n    "
+    - startInstruction: 1568
+      endInstruction: 1575
+      startSourceChar: 2912
+      endSourceChar: 2936
+      line: 85
+      lineChar: 4
+      spanCodeSection: "public void Show()\r\n    "
+    - startInstruction: 1576
+      endInstruction: 1575
+      startSourceChar: 2936
+      endSourceChar: 2947
+      line: 86
+      lineChar: 4
+      spanCodeSection: "{\r\n        "
+    - startInstruction: 1576
+      endInstruction: 1575
+      startSourceChar: 2947
+      endSourceChar: 2951
+      line: 87
+      lineChar: 8
+      spanCodeSection: if (
+    - startInstruction: 1576
+      endInstruction: 1575
+      startSourceChar: 2951
+      endSourceChar: 2951
+      line: 87
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 1576
+      endInstruction: 1575
+      startSourceChar: 2951
+      endSourceChar: 2970
+      line: 87
+      lineChar: 12
+      spanCodeSection: 'Pickup_Collider != '
+    - startInstruction: 1576
+      endInstruction: 1623
+      startSourceChar: 2970
+      endSourceChar: 2986
+      line: 87
+      lineChar: 31
+      spanCodeSection: "null)\r\n         "
+    - startInstruction: 1624
+      endInstruction: 1623
+      startSourceChar: 2986
+      endSourceChar: 2988
+      line: 88
+      lineChar: 9
+      spanCodeSection: '{ '
+    - startInstruction: 1624
+      endInstruction: 1623
+      startSourceChar: 2988
+      endSourceChar: 2988
+      line: 88
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 1624
+      endInstruction: 1623
+      startSourceChar: 2988
+      endSourceChar: 2988
+      line: 88
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 1624
+      endInstruction: 1623
+      startSourceChar: 2988
+      endSourceChar: 2988
+      line: 88
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 1624
+      endInstruction: 1623
+      startSourceChar: 2988
+      endSourceChar: 3004
+      line: 88
+      lineChar: 11
+      spanCodeSection: Pickup_Collider.
+    - startInstruction: 1624
+      endInstruction: 1623
+      startSourceChar: 3004
+      endSourceChar: 3014
+      line: 88
+      lineChar: 27
+      spanCodeSection: 'enabled = '
+    - startInstruction: 1624
+      endInstruction: 1647
+      startSourceChar: 3014
+      endSourceChar: 3031
+      line: 88
+      lineChar: 37
+      spanCodeSection: "true; }\r\n        "
+    - startInstruction: 1648
+      endInstruction: 1647
+      startSourceChar: 3031
+      endSourceChar: 3035
+      line: 89
+      lineChar: 8
+      spanCodeSection: if (
+    - startInstruction: 1648
+      endInstruction: 1647
+      startSourceChar: 3035
+      endSourceChar: 3035
+      line: 89
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 1648
+      endInstruction: 1647
+      startSourceChar: 3035
+      endSourceChar: 3052
+      line: 89
+      lineChar: 12
+      spanCodeSection: 'Optional_Menu != '
+    - startInstruction: 1648
+      endInstruction: 1695
+      startSourceChar: 3052
+      endSourceChar: 3068
+      line: 89
+      lineChar: 29
+      spanCodeSection: "null)\r\n         "
+    - startInstruction: 1696
+      endInstruction: 1695
+      startSourceChar: 3068
+      endSourceChar: 3070
+      line: 90
+      lineChar: 9
+      spanCodeSection: '{ '
+    - startInstruction: 1696
+      endInstruction: 1695
+      startSourceChar: 3070
+      endSourceChar: 3070
+      line: 90
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 1696
+      endInstruction: 1695
+      startSourceChar: 3070
+      endSourceChar: 3070
+      line: 90
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 1696
+      endInstruction: 1695
+      startSourceChar: 3070
+      endSourceChar: 3070
+      line: 90
+      lineChar: 11
+      spanCodeSection: 
+    - startInstruction: 1696
+      endInstruction: 1695
+      startSourceChar: 3070
+      endSourceChar: 3084
+      line: 90
+      lineChar: 11
+      spanCodeSection: Optional_Menu.
+    - startInstruction: 1696
+      endInstruction: 1695
+      startSourceChar: 3084
+      endSourceChar: 3094
+      line: 90
+      lineChar: 25
+      spanCodeSection: SetActive(
+    - startInstruction: 1696
+      endInstruction: 1719
+      startSourceChar: 3094
+      endSourceChar: 3113
+      line: 90
+      lineChar: 35
+      spanCodeSection: "false); }\r\n        "
+    - startInstruction: 1720
+      endInstruction: 1719
+      startSourceChar: 3113
+      endSourceChar: 3117
+      line: 91
+      lineChar: 8
+      spanCodeSection: if (
+    - startInstruction: 1720
+      endInstruction: 1735
+      startSourceChar: 3117
+      endSourceChar: 3142
+      line: 91
+      lineChar: 12
+      spanCodeSection: "Global_Synched)\r\n        "
+    - startInstruction: 1736
+      endInstruction: 1735
+      startSourceChar: 3142
+      endSourceChar: 3157
+      line: 92
+      lineChar: 8
+      spanCodeSection: "{\r\n            "
+    - startInstruction: 1736
+      endInstruction: 1735
+      startSourceChar: 3157
+      endSourceChar: 3161
+      line: 93
+      lineChar: 12
+      spanCodeSection: if (
+    - startInstruction: 1736
+      endInstruction: 1751
+      startSourceChar: 3161
+      endSourceChar: 3180
+      line: 93
+      lineChar: 16
+      spanCodeSection: 'Late_Join_Synched) '
+    - startInstruction: 1752
+      endInstruction: 1751
+      startSourceChar: 3180
+      endSourceChar: 3182
+      line: 93
+      lineChar: 35
+      spanCodeSection: '{ '
+    - startInstruction: 1752
+      endInstruction: 1751
+      startSourceChar: 3182
+      endSourceChar: 3182
+      line: 93
+      lineChar: 37
+      spanCodeSection: 
+    - startInstruction: 1752
+      endInstruction: 1751
+      startSourceChar: 3182
+      endSourceChar: 3182
+      line: 93
+      lineChar: 37
+      spanCodeSection: 
+    - startInstruction: 1752
+      endInstruction: 1751
+      startSourceChar: 3182
+      endSourceChar: 3194
+      line: 93
+      lineChar: 37
+      spanCodeSection: 'synch_mem = '
+    - startInstruction: 1752
+      endInstruction: 1775
+      startSourceChar: 3194
+      endSourceChar: 3212
+      line: 93
+      lineChar: 49
+      spanCodeSection: "1; }\r\n            "
+    - startInstruction: 1776
+      endInstruction: 1775
+      startSourceChar: 3212
+      endSourceChar: 3212
+      line: 94
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 1776
+      endInstruction: 1775
+      startSourceChar: 3212
+      endSourceChar: 3212
+      line: 94
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 1776
+      endInstruction: 1775
+      startSourceChar: 3212
+      endSourceChar: 3235
+      line: 94
+      lineChar: 12
+      spanCodeSection: SendCustomNetworkEvent(
+    - startInstruction: 1776
+      endInstruction: 1775
+      startSourceChar: 3235
+      endSourceChar: 3235
+      line: 94
+      lineChar: 35
+      spanCodeSection: 
+    - startInstruction: 1776
+      endInstruction: 1775
+      startSourceChar: 3235
+      endSourceChar: 3235
+      line: 94
+      lineChar: 35
+      spanCodeSection: 
+    - startInstruction: 1776
+      endInstruction: 1775
+      startSourceChar: 3235
+      endSourceChar: 3235
+      line: 94
+      lineChar: 35
+      spanCodeSection: 
+    - startInstruction: 1776
+      endInstruction: 1775
+      startSourceChar: 3235
+      endSourceChar: 3235
+      line: 94
+      lineChar: 35
+      spanCodeSection: 
+    - startInstruction: 1776
+      endInstruction: 1775
+      startSourceChar: 3235
+      endSourceChar: 3235
+      line: 94
+      lineChar: 35
+      spanCodeSection: 
+    - startInstruction: 1776
+      endInstruction: 1775
+      startSourceChar: 3235
+      endSourceChar: 3239
+      line: 94
+      lineChar: 35
+      spanCodeSection: VRC.
+    - startInstruction: 1776
+      endInstruction: 1775
+      startSourceChar: 3239
+      endSourceChar: 3244
+      line: 94
+      lineChar: 39
+      spanCodeSection: Udon.
+    - startInstruction: 1776
+      endInstruction: 1775
+      startSourceChar: 3244
+      endSourceChar: 3251
+      line: 94
+      lineChar: 44
+      spanCodeSection: Common.
+    - startInstruction: 1776
+      endInstruction: 1775
+      startSourceChar: 3251
+      endSourceChar: 3262
+      line: 94
+      lineChar: 51
+      spanCodeSection: Interfaces.
+    - startInstruction: 1776
+      endInstruction: 1775
+      startSourceChar: 3262
+      endSourceChar: 3281
+      line: 94
+      lineChar: 62
+      spanCodeSection: NetworkEventTarget.
+    - startInstruction: 1776
+      endInstruction: 1775
+      startSourceChar: 3281
+      endSourceChar: 3286
+      line: 94
+      lineChar: 81
+      spanCodeSection: 'All, '
+    - startInstruction: 1776
+      endInstruction: 1815
+      startSourceChar: 3286
+      endSourceChar: 3313
+      line: 94
+      lineChar: 86
+      spanCodeSection: "\"ON\");\r\n        }\r\n        "
+    - startInstruction: 1816
+      endInstruction: 1815
+      startSourceChar: 3313
+      endSourceChar: 3327
+      line: 96
+      lineChar: 8
+      spanCodeSection: "else\r\n        "
+    - startInstruction: 1816
+      endInstruction: 1815
+      startSourceChar: 3327
+      endSourceChar: 3329
+      line: 97
+      lineChar: 8
+      spanCodeSection: '{ '
+    - startInstruction: 1816
+      endInstruction: 1815
+      startSourceChar: 3329
+      endSourceChar: 3329
+      line: 97
+      lineChar: 10
+      spanCodeSection: 
+    - startInstruction: 1816
+      endInstruction: 1815
+      startSourceChar: 3329
+      endSourceChar: 3329
+      line: 97
+      lineChar: 10
+      spanCodeSection: 
+    - startInstruction: 1816
+      endInstruction: 1815
+      startSourceChar: 3329
+      endSourceChar: 3345
+      line: 97
+      lineChar: 10
+      spanCodeSection: SendCustomEvent(
+    - startInstruction: 1816
+      endInstruction: 1859
+      startSourceChar: 3345
+      endSourceChar: 3368
+      line: 97
+      lineChar: 26
+      spanCodeSection: "\"ON\"); }\r\n    }\r\n\r\n    "
+    - startInstruction: 1860
+      endInstruction: 1867
+      startSourceChar: 3368
+      endSourceChar: 3390
+      line: 100
+      lineChar: 4
+      spanCodeSection: "public void ON()\r\n    "
+    - startInstruction: 1868
+      endInstruction: 1867
+      startSourceChar: 3390
+      endSourceChar: 3401
+      line: 101
+      lineChar: 4
+      spanCodeSection: "{\r\n        "
+    - startInstruction: 1868
+      endInstruction: 1867
+      startSourceChar: 3401
+      endSourceChar: 3406
+      line: 102
+      lineChar: 8
+      spanCodeSection: for (
+    - startInstruction: 1868
+      endInstruction: 1867
+      startSourceChar: 3406
+      endSourceChar: 3406
+      line: 102
+      lineChar: 13
+      spanCodeSection: 
+    - startInstruction: 1868
+      endInstruction: 1867
+      startSourceChar: 3406
+      endSourceChar: 3406
+      line: 102
+      lineChar: 13
+      spanCodeSection: 
+    - startInstruction: 1868
+      endInstruction: 1867
+      startSourceChar: 3406
+      endSourceChar: 3412
+      line: 102
+      lineChar: 13
+      spanCodeSection: 'int i '
+    - startInstruction: 1868
+      endInstruction: 1867
+      startSourceChar: 3412
+      endSourceChar: 3414
+      line: 102
+      lineChar: 19
+      spanCodeSection: '= '
+    - startInstruction: 1868
+      endInstruction: 1887
+      startSourceChar: 3414
+      endSourceChar: 3417
+      line: 102
+      lineChar: 21
+      spanCodeSection: '0; '
+    - startInstruction: 1888
+      endInstruction: 1887
+      startSourceChar: 3417
+      endSourceChar: 3417
+      line: 102
+      lineChar: 24
+      spanCodeSection: 
+    - startInstruction: 1888
+      endInstruction: 1887
+      startSourceChar: 3417
+      endSourceChar: 3421
+      line: 102
+      lineChar: 24
+      spanCodeSection: 'i < '
+    - startInstruction: 1888
+      endInstruction: 1887
+      startSourceChar: 3421
+      endSourceChar: 3421
+      line: 102
+      lineChar: 28
+      spanCodeSection: 
+    - startInstruction: 1888
+      endInstruction: 1887
+      startSourceChar: 3421
+      endSourceChar: 3436
+      line: 102
+      lineChar: 28
+      spanCodeSection: Turn_Invisible.
+    - startInstruction: 1888
+      endInstruction: 1959
+      startSourceChar: 3436
+      endSourceChar: 3458
+      line: 102
+      lineChar: 43
+      spanCodeSection: "Length; i++)\r\n        "
+    - startInstruction: 1960
+      endInstruction: 1959
+      startSourceChar: 3458
+      endSourceChar: 3473
+      line: 103
+      lineChar: 8
+      spanCodeSection: "{\r\n            "
+    - startInstruction: 1960
+      endInstruction: 1959
+      startSourceChar: 3473
+      endSourceChar: 3477
+      line: 104
+      lineChar: 12
+      spanCodeSection: if (
+    - startInstruction: 1960
+      endInstruction: 1959
+      startSourceChar: 3477
+      endSourceChar: 3477
+      line: 104
+      lineChar: 16
+      spanCodeSection: 
+    - startInstruction: 1960
+      endInstruction: 1959
+      startSourceChar: 3477
+      endSourceChar: 3477
+      line: 104
+      lineChar: 16
+      spanCodeSection: 
+    - startInstruction: 1960
+      endInstruction: 1959
+      startSourceChar: 3477
+      endSourceChar: 3492
+      line: 104
+      lineChar: 16
+      spanCodeSection: Turn_Invisible[
+    - startInstruction: 1960
+      endInstruction: 1959
+      startSourceChar: 3492
+      endSourceChar: 3492
+      line: 104
+      lineChar: 31
+      spanCodeSection: 
+    - startInstruction: 1960
+      endInstruction: 1991
+      startSourceChar: 3492
+      endSourceChar: 3498
+      line: 104
+      lineChar: 31
+      spanCodeSection: 'i] != '
+    - startInstruction: 1992
+      endInstruction: 2039
+      startSourceChar: 3498
+      endSourceChar: 3517
+      line: 104
+      lineChar: 37
+      spanCodeSection: "null)\r\n            "
+    - startInstruction: 2040
+      endInstruction: 2039
+      startSourceChar: 3517
+      endSourceChar: 3536
+      line: 105
+      lineChar: 12
+      spanCodeSection: "{\r\n                "
+    - startInstruction: 2040
+      endInstruction: 2039
+      startSourceChar: 3536
+      endSourceChar: 3540
+      line: 106
+      lineChar: 16
+      spanCodeSection: if (
+    - startInstruction: 2040
+      endInstruction: 2055
+      startSourceChar: 3540
+      endSourceChar: 3558
+      line: 106
+      lineChar: 20
+      spanCodeSection: 'Invert_Invisible) '
+    - startInstruction: 2056
+      endInstruction: 2055
+      startSourceChar: 3558
+      endSourceChar: 3560
+      line: 106
+      lineChar: 38
+      spanCodeSection: '{ '
+    - startInstruction: 2056
+      endInstruction: 2055
+      startSourceChar: 3560
+      endSourceChar: 3560
+      line: 106
+      lineChar: 40
+      spanCodeSection: 
+    - startInstruction: 2056
+      endInstruction: 2055
+      startSourceChar: 3560
+      endSourceChar: 3560
+      line: 106
+      lineChar: 40
+      spanCodeSection: 
+    - startInstruction: 2056
+      endInstruction: 2055
+      startSourceChar: 3560
+      endSourceChar: 3560
+      line: 106
+      lineChar: 40
+      spanCodeSection: 
+    - startInstruction: 2056
+      endInstruction: 2055
+      startSourceChar: 3560
+      endSourceChar: 3560
+      line: 106
+      lineChar: 40
+      spanCodeSection: 
+    - startInstruction: 2056
+      endInstruction: 2055
+      startSourceChar: 3560
+      endSourceChar: 3575
+      line: 106
+      lineChar: 40
+      spanCodeSection: Turn_Invisible[
+    - startInstruction: 2056
+      endInstruction: 2055
+      startSourceChar: 3575
+      endSourceChar: 3575
+      line: 106
+      lineChar: 55
+      spanCodeSection: 
+    - startInstruction: 2056
+      endInstruction: 2055
+      startSourceChar: 3575
+      endSourceChar: 3578
+      line: 106
+      lineChar: 55
+      spanCodeSection: i].
+    - startInstruction: 2056
+      endInstruction: 2087
+      startSourceChar: 3578
+      endSourceChar: 3588
+      line: 106
+      lineChar: 58
+      spanCodeSection: 'enabled = '
+    - startInstruction: 2088
+      endInstruction: 2119
+      startSourceChar: 3588
+      endSourceChar: 3614
+      line: 106
+      lineChar: 68
+      spanCodeSection: "false; }\r\n                "
+    - startInstruction: 2120
+      endInstruction: 2119
+      startSourceChar: 3614
+      endSourceChar: 3619
+      line: 107
+      lineChar: 16
+      spanCodeSection: 'else '
+    - startInstruction: 2120
+      endInstruction: 2119
+      startSourceChar: 3619
+      endSourceChar: 3621
+      line: 107
+      lineChar: 21
+      spanCodeSection: '{ '
+    - startInstruction: 2120
+      endInstruction: 2119
+      startSourceChar: 3621
+      endSourceChar: 3621
+      line: 107
+      lineChar: 23
+      spanCodeSection: 
+    - startInstruction: 2120
+      endInstruction: 2119
+      startSourceChar: 3621
+      endSourceChar: 3621
+      line: 107
+      lineChar: 23
+      spanCodeSection: 
+    - startInstruction: 2120
+      endInstruction: 2119
+      startSourceChar: 3621
+      endSourceChar: 3621
+      line: 107
+      lineChar: 23
+      spanCodeSection: 
+    - startInstruction: 2120
+      endInstruction: 2119
+      startSourceChar: 3621
+      endSourceChar: 3621
+      line: 107
+      lineChar: 23
+      spanCodeSection: 
+    - startInstruction: 2120
+      endInstruction: 2119
+      startSourceChar: 3621
+      endSourceChar: 3636
+      line: 107
+      lineChar: 23
+      spanCodeSection: Turn_Invisible[
+    - startInstruction: 2120
+      endInstruction: 2119
+      startSourceChar: 3636
+      endSourceChar: 3636
+      line: 107
+      lineChar: 38
+      spanCodeSection: 
+    - startInstruction: 2120
+      endInstruction: 2119
+      startSourceChar: 3636
+      endSourceChar: 3639
+      line: 107
+      lineChar: 38
+      spanCodeSection: i].
+    - startInstruction: 2120
+      endInstruction: 2151
+      startSourceChar: 3639
+      endSourceChar: 3649
+      line: 107
+      lineChar: 41
+      spanCodeSection: 'enabled = '
+    - startInstruction: 2152
+      endInstruction: 2255
+      startSourceChar: 3649
+      endSourceChar: 3697
+      line: 107
+      lineChar: 51
+      spanCodeSection: "true; }\r\n            }\r\n        }\r\n    }\r\n\r\n    "
+    - startInstruction: 2256
+      endInstruction: 2263
+      startSourceChar: 3697
+      endSourceChar: 3720
+      line: 112
+      lineChar: 4
+      spanCodeSection: "public void OFF()\r\n    "
+    - startInstruction: 2264
+      endInstruction: 2263
+      startSourceChar: 3720
+      endSourceChar: 3731
+      line: 113
+      lineChar: 4
+      spanCodeSection: "{\r\n        "
+    - startInstruction: 2264
+      endInstruction: 2263
+      startSourceChar: 3731
+      endSourceChar: 3736
+      line: 114
+      lineChar: 8
+      spanCodeSection: for (
+    - startInstruction: 2264
+      endInstruction: 2263
+      startSourceChar: 3736
+      endSourceChar: 3736
+      line: 114
+      lineChar: 13
+      spanCodeSection: 
+    - startInstruction: 2264
+      endInstruction: 2263
+      startSourceChar: 3736
+      endSourceChar: 3736
+      line: 114
+      lineChar: 13
+      spanCodeSection: 
+    - startInstruction: 2264
+      endInstruction: 2263
+      startSourceChar: 3736
+      endSourceChar: 3742
+      line: 114
+      lineChar: 13
+      spanCodeSection: 'int i '
+    - startInstruction: 2264
+      endInstruction: 2263
+      startSourceChar: 3742
+      endSourceChar: 3744
+      line: 114
+      lineChar: 19
+      spanCodeSection: '= '
+    - startInstruction: 2264
+      endInstruction: 2283
+      startSourceChar: 3744
+      endSourceChar: 3747
+      line: 114
+      lineChar: 21
+      spanCodeSection: '0; '
+    - startInstruction: 2284
+      endInstruction: 2283
+      startSourceChar: 3747
+      endSourceChar: 3747
+      line: 114
+      lineChar: 24
+      spanCodeSection: 
+    - startInstruction: 2284
+      endInstruction: 2283
+      startSourceChar: 3747
+      endSourceChar: 3751
+      line: 114
+      lineChar: 24
+      spanCodeSection: 'i < '
+    - startInstruction: 2284
+      endInstruction: 2283
+      startSourceChar: 3751
+      endSourceChar: 3751
+      line: 114
+      lineChar: 28
+      spanCodeSection: 
+    - startInstruction: 2284
+      endInstruction: 2283
+      startSourceChar: 3751
+      endSourceChar: 3766
+      line: 114
+      lineChar: 28
+      spanCodeSection: Turn_Invisible.
+    - startInstruction: 2284
+      endInstruction: 2355
+      startSourceChar: 3766
+      endSourceChar: 3788
+      line: 114
+      lineChar: 43
+      spanCodeSection: "Length; i++)\r\n        "
+    - startInstruction: 2356
+      endInstruction: 2355
+      startSourceChar: 3788
+      endSourceChar: 3803
+      line: 115
+      lineChar: 8
+      spanCodeSection: "{\r\n            "
+    - startInstruction: 2356
+      endInstruction: 2355
+      startSourceChar: 3803
+      endSourceChar: 3807
+      line: 116
+      lineChar: 12
+      spanCodeSection: if (
+    - startInstruction: 2356
+      endInstruction: 2355
+      startSourceChar: 3807
+      endSourceChar: 3807
+      line: 116
+      lineChar: 16
+      spanCodeSection: 
+    - startInstruction: 2356
+      endInstruction: 2355
+      startSourceChar: 3807
+      endSourceChar: 3807
+      line: 116
+      lineChar: 16
+      spanCodeSection: 
+    - startInstruction: 2356
+      endInstruction: 2355
+      startSourceChar: 3807
+      endSourceChar: 3822
+      line: 116
+      lineChar: 16
+      spanCodeSection: Turn_Invisible[
+    - startInstruction: 2356
+      endInstruction: 2355
+      startSourceChar: 3822
+      endSourceChar: 3822
+      line: 116
+      lineChar: 31
+      spanCodeSection: 
+    - startInstruction: 2356
+      endInstruction: 2387
+      startSourceChar: 3822
+      endSourceChar: 3828
+      line: 116
+      lineChar: 31
+      spanCodeSection: 'i] != '
+    - startInstruction: 2388
+      endInstruction: 2435
+      startSourceChar: 3828
+      endSourceChar: 3847
+      line: 116
+      lineChar: 37
+      spanCodeSection: "null)\r\n            "
+    - startInstruction: 2436
+      endInstruction: 2435
+      startSourceChar: 3847
+      endSourceChar: 3866
+      line: 117
+      lineChar: 12
+      spanCodeSection: "{\r\n                "
+    - startInstruction: 2436
+      endInstruction: 2435
+      startSourceChar: 3866
+      endSourceChar: 3870
+      line: 118
+      lineChar: 16
+      spanCodeSection: if (
+    - startInstruction: 2436
+      endInstruction: 2451
+      startSourceChar: 3870
+      endSourceChar: 3888
+      line: 118
+      lineChar: 20
+      spanCodeSection: 'Invert_Invisible) '
+    - startInstruction: 2452
+      endInstruction: 2451
+      startSourceChar: 3888
+      endSourceChar: 3890
+      line: 118
+      lineChar: 38
+      spanCodeSection: '{ '
+    - startInstruction: 2452
+      endInstruction: 2451
+      startSourceChar: 3890
+      endSourceChar: 3890
+      line: 118
+      lineChar: 40
+      spanCodeSection: 
+    - startInstruction: 2452
+      endInstruction: 2451
+      startSourceChar: 3890
+      endSourceChar: 3890
+      line: 118
+      lineChar: 40
+      spanCodeSection: 
+    - startInstruction: 2452
+      endInstruction: 2451
+      startSourceChar: 3890
+      endSourceChar: 3890
+      line: 118
+      lineChar: 40
+      spanCodeSection: 
+    - startInstruction: 2452
+      endInstruction: 2451
+      startSourceChar: 3890
+      endSourceChar: 3890
+      line: 118
+      lineChar: 40
+      spanCodeSection: 
+    - startInstruction: 2452
+      endInstruction: 2451
+      startSourceChar: 3890
+      endSourceChar: 3905
+      line: 118
+      lineChar: 40
+      spanCodeSection: Turn_Invisible[
+    - startInstruction: 2452
+      endInstruction: 2451
+      startSourceChar: 3905
+      endSourceChar: 3905
+      line: 118
+      lineChar: 55
+      spanCodeSection: 
+    - startInstruction: 2452
+      endInstruction: 2451
+      startSourceChar: 3905
+      endSourceChar: 3908
+      line: 118
+      lineChar: 55
+      spanCodeSection: i].
+    - startInstruction: 2452
+      endInstruction: 2483
+      startSourceChar: 3908
+      endSourceChar: 3918
+      line: 118
+      lineChar: 58
+      spanCodeSection: 'enabled = '
+    - startInstruction: 2484
+      endInstruction: 2515
+      startSourceChar: 3918
+      endSourceChar: 3943
+      line: 118
+      lineChar: 68
+      spanCodeSection: "true; }\r\n                "
+    - startInstruction: 2516
+      endInstruction: 2515
+      startSourceChar: 3943
+      endSourceChar: 3948
+      line: 119
+      lineChar: 16
+      spanCodeSection: 'else '
+    - startInstruction: 2516
+      endInstruction: 2515
+      startSourceChar: 3948
+      endSourceChar: 3950
+      line: 119
+      lineChar: 21
+      spanCodeSection: '{ '
+    - startInstruction: 2516
+      endInstruction: 2515
+      startSourceChar: 3950
+      endSourceChar: 3950
+      line: 119
+      lineChar: 23
+      spanCodeSection: 
+    - startInstruction: 2516
+      endInstruction: 2515
+      startSourceChar: 3950
+      endSourceChar: 3950
+      line: 119
+      lineChar: 23
+      spanCodeSection: 
+    - startInstruction: 2516
+      endInstruction: 2515
+      startSourceChar: 3950
+      endSourceChar: 3950
+      line: 119
+      lineChar: 23
+      spanCodeSection: 
+    - startInstruction: 2516
+      endInstruction: 2515
+      startSourceChar: 3950
+      endSourceChar: 3950
+      line: 119
+      lineChar: 23
+      spanCodeSection: 
+    - startInstruction: 2516
+      endInstruction: 2515
+      startSourceChar: 3950
+      endSourceChar: 3965
+      line: 119
+      lineChar: 23
+      spanCodeSection: Turn_Invisible[
+    - startInstruction: 2516
+      endInstruction: 2515
+      startSourceChar: 3965
+      endSourceChar: 3965
+      line: 119
+      lineChar: 38
+      spanCodeSection: 
+    - startInstruction: 2516
+      endInstruction: 2515
+      startSourceChar: 3965
+      endSourceChar: 3968
+      line: 119
+      lineChar: 38
+      spanCodeSection: i].
+    - startInstruction: 2516
+      endInstruction: 2547
+      startSourceChar: 3968
+      endSourceChar: 3978
+      line: 119
+      lineChar: 41
+      spanCodeSection: 'enabled = '
+    - startInstruction: 2548
+      endInstruction: 2548
+      startSourceChar: 3978
+      endSourceChar: 3978
+      line: 119
+      lineChar: 51
+      spanCodeSection: 
+  hasInteractEvent: 1
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: fieldDefinitions
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[UdonSharp.FieldDefinition,
+        UdonSharp.Editor]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 10
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: synch_mem
+    - Name: $v
+      Entry: 7
+      Data: 2|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 3|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 7
+      Data: 4|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: System.UInt32, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declarationType
+      Entry: 3
+      Data: 2
+    - Name: syncMode
+      Entry: 3
+      Data: 1
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemUInt32
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: synch_mem
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: synch_mem
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 5|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 6|UdonSharp.UdonSyncedAttribute, UdonSharp.Runtime
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Pickup_Collider
+    - Name: $v
+      Entry: 7
+      Data: 7|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 8|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 7
+      Data: 9|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: UnityEngine.Collider, UnityEngine.PhysicsModule
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: UnityEngineCollider
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: Pickup_Collider
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: Pickup_Collider
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 10|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 11|UnityEngine.TooltipAttribute, UnityEngine.CoreModule
+    - Name: tooltip
+      Entry: 1
+      Data: Prevents seated user from grabbing selected collider
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Invert_Invisible
+    - Name: $v
+      Entry: 7
+      Data: 12|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 13|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 7
+      Data: 14|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: System.Boolean, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemBoolean
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: Invert_Invisible
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: Invert_Invisible
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 15|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 16|UnityEngine.SpaceAttribute, UnityEngine.CoreModule
+    - Name: height
+      Entry: 4
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 17|UnityEngine.TooltipAttribute, UnityEngine.CoreModule
+    - Name: tooltip
+      Entry: 1
+      Data: Events are swapped when entering/exiting
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Turn_Invisible
+    - Name: $v
+      Entry: 7
+      Data: 18|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 19|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 7
+      Data: 20|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: UnityEngine.MeshRenderer[], UnityEngine.CoreModule
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: UnityEngineMeshRendererArray
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: Turn_Invisible
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: Turn_Invisible
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 21|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 22|UnityEngine.TooltipAttribute, UnityEngine.CoreModule
+    - Name: tooltip
+      Entry: 1
+      Data: Disables Mesh renderer when triggered
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Optional_Menu
+    - Name: $v
+      Entry: 7
+      Data: 23|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 24|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 7
+      Data: 25|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: UnityEngine.GameObject, UnityEngine.CoreModule
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: UnityEngineGameObject
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: Optional_Menu
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: Optional_Menu
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 26|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 27|UnityEngine.SpaceAttribute, UnityEngine.CoreModule
+    - Name: height
+      Entry: 4
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 28|UnityEngine.TooltipAttribute, UnityEngine.CoreModule
+    - Name: tooltip
+      Entry: 1
+      Data: This object is enabled for seated player/user
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Global_Synched
+    - Name: $v
+      Entry: 7
+      Data: 29|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 30|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 14
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemBoolean
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: Global_Synched
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: Global_Synched
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 31|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 32|UnityEngine.HeaderAttribute, UnityEngine.CoreModule
+    - Name: header
+      Entry: 1
+      Data: Synching
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 33|UnityEngine.TooltipAttribute, UnityEngine.CoreModule
+    - Name: tooltip
+      Entry: 1
+      Data: All players in world are affected.
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: Late_Join_Synched
+    - Name: $v
+      Entry: 7
+      Data: 34|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 35|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 14
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemBoolean
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: Late_Join_Synched
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: Late_Join_Synched
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 36|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 37|UnityEngine.TooltipAttribute, UnityEngine.CoreModule
+    - Name: tooltip
+      Entry: 1
+      Data: "Players who join will see what others see. \r\n(If set to Global_Synched)"
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: EventInteract
+    - Name: $v
+      Entry: 7
+      Data: 38|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 39|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 14
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemBoolean
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: EventInteract
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: EventInteract
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 40|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 41|UnityEngine.HeaderAttribute, UnityEngine.CoreModule
+    - Name: header
+      Entry: 1
+      Data: Events
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: EventOnTriggerEnter
+    - Name: $v
+      Entry: 7
+      Data: 42|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 43|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 14
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemBoolean
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: EventOnTriggerEnter
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: EventOnTriggerEnter
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 44|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: EventOnTriggerExit
+    - Name: $v
+      Entry: 7
+      Data: 45|UdonSharp.FieldDefinition, UdonSharp.Editor
+    - Name: fieldSymbol
+      Entry: 7
+      Data: 46|UdonSharp.SymbolDefinition, UdonSharp.Editor
+    - Name: internalType
+      Entry: 9
+      Data: 14
+    - Name: declarationType
+      Entry: 3
+      Data: 1
+    - Name: syncMode
+      Entry: 3
+      Data: 0
+    - Name: symbolResolvedTypeName
+      Entry: 1
+      Data: SystemBoolean
+    - Name: symbolOriginalName
+      Entry: 1
+      Data: EventOnTriggerExit
+    - Name: symbolUniqueName
+      Entry: 1
+      Data: EventOnTriggerExit
+    - Name: symbolDefaultValue
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: fieldAttributes
+      Entry: 7
+      Data: 47|System.Collections.Generic.List`1[[System.Attribute, mscorlib]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: userBehaviourSource
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
