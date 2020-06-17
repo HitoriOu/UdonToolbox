@@ -69,13 +69,13 @@ public class Stopwatch : UdonSharpBehaviour
     [Space(6)]
     [Tooltip("Stopwatch is enabled while held/picked-up\r\n(uncheck to set always on)")]
     public bool Event_EnableOnPickup = false;
-    void OnPickup() { if (Event_EnableOnPickup) { SendCustomEvent("run_update_start"); } }
-    void OnDrop() { if (Event_EnableOnPickup) { SendCustomEvent("run_update_stop"); } }
+    public void OnPickup() { if (Event_EnableOnPickup) { SendCustomEvent("run_update_start"); } }
+    public void OnDrop() { if (Event_EnableOnPickup) { SendCustomEvent("run_update_stop"); } }
 
     public bool Event_OnPickupUseDown = false;
     public bool Event_OnPickupUseUp = false;
-    void OnPickupUseDown() { if (Event_OnPickupUseDown) { SendCustomEvent("Stopwatch_Click"); } }
-    void OnPickupUseUp() { if (Event_OnPickupUseUp) { SendCustomEvent("Stopwatch_Click"); } }
+    public void OnPickupUseDown() { if (Event_OnPickupUseDown) { SendCustomEvent("Stopwatch_Click"); } }
+    public void OnPickupUseUp() { if (Event_OnPickupUseUp) { SendCustomEvent("Stopwatch_Click"); } }
 
 
     public void Stopwatch_Click()
