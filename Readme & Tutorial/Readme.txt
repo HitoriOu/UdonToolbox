@@ -1,19 +1,29 @@
 Udon Toolbox (by "Hitori Ou").
+Downloaded from www.github.com/HitoriOu/UdonToolbox
 
-A collection of Udon and U# scripts that are easy to understand and use.
+A collection of U# scripts (for Udon scripts in worlds on "VR Chat") that are easy to understand and use. 
+For free use/modification with "VR Chat" using UDON on Unity.
+
 You will need U# for the code/scripts to work, download latest version from here.
 https://github.com/Merlin-san/UdonSharp
 https://github.com/Merlin-san/UdonSharp/releases
 
-Most of these are designed to function as the old trigger system, 
-meaning the Game Object for buttons has to be the same one the script is on and that it need collider/trigger (or other required).
+Many of these are designed to function as the old trigger system, 
+meaning the Game Object for buttons/triggers/colliders has to be the same one the script is on and that it need collider/trigger components (or other required).
 
------------- Rules: ------------
+------------ Please Note the following: ------------
+Do not edit the code it self (updated versions will overwrite it).
+If you want to modify the code then make a copy of it with a unique "class name" to edit instead.
+If you do edit the code/copy of it, please make sure to make a note of this in the code (a simple edited/modified by "name" in the dev notes will suffice).
+Updated versions might have new variable names (will be noted in the readme file if so), if this is the case you will have to redo the setup of said variable (sorry for the inconveniance).
+All codes are provided as "work in progress" i try clear all bugs and test but some issues will slip by me.
+If you want to credit the use of the toolbox feel free to do so (with link/adress to github provided)
+
+------------ Usefull Rules to be aware of: ------------
 1: Udon Behaviour Scripts do not work if the "Program Source" is empty, at minimum it needs a Udon file (.asset), if for Object Synch use the provided "NULL" or the official "Empty" provided by the SDK.
 2: Network synched events/scripts (global) will not work in "play mode", have to actually be inside VRchat to test those (made automated code to take care of this, so never mind this rule).
 3: When a component/object parameter for a Udon script is left empty it default to the object the script is on (can cause errors if empty, depending on script design).
 4: Udon Scripts are handeled locally according to object, network synch is also per object basis. Only exception is if a global variable targets a Udon script on a different Game object. So any duplicate using the same script are regarded as a seperate instance/script despite sharing a common Udon "Program Source".
-
 
 ------------ Variable naming convention: ------------
 ON_is_default	= Sets the codes state on start (is the mirror on or off for example)
@@ -26,6 +36,10 @@ Event_OnCollisionExit	= You want the code run when exiting a collider
 Event_OnTrigger	= Individual code run on Enter and Exit
 Event_OnTrigger_Enter	= You want the code run when hitting a Trigger
 Event_OnTrigger_Exit	= You want the code run when exiting a Trigger
+Event_OnPickup		= Run code on object Pickup
+Event_OnDrop	= Run code on object Drop
+Event_OnPickupUseDown	= Run code on PickupUseDown (controller trigger/button)
+Event_OnPickupUseUp	= Run code on PickupUseUp (controller trigger/button)
 Event_OnEnable	= Triggers when object is set active.
 Cooldown	= Time in seconds that must elapse before you can use/trigger again (local)
 Timer		= Amount of time before code is activated
@@ -35,14 +49,11 @@ Detect_Object	= Run code if a object activates it
 ------------ Changelogs (newest first) ------------
 
 
-
-
-
-
 ------------ Changelog (V2.0) ------------
 Notes:
 Started adding in more complex scripts (Programs)
 changed readme to list versions by newest first
+added sound files for demo world
 
 ------ Added attributes: ------
 Player movement (on start)
@@ -67,15 +78,7 @@ Toggle Udon Bool [added code for calling update functions]
 ------ Udon files added: ------
 Modify Udon Number (float) [can be used to locally set a value or update a script/program based on UI-slider (volume for example)]
 Sound Player [music player with a multitude of functions]
-
-
-
-
-
-
-
-
-
+Stopwatch [time checker, usefull for competitions and testing]
 
 ------------ Changelog (V1.9) ------------
 Notes:
