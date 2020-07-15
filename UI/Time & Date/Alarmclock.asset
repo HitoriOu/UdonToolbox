@@ -104,8 +104,8 @@ MonoBehaviour:
     %SystemSingle, null\r\n    __3_intnl_SystemSingle: %SystemSingle, null\r\n    __4_intnl_SystemSingle:
     %SystemSingle, null\r\n    __5_intnl_SystemSingle: %SystemSingle, null\r\n    __6_intnl_SystemSingle:
     %SystemSingle, null\r\n    __7_intnl_SystemSingle: %SystemSingle, null\r\n    __8_intnl_SystemSingle:
-    %SystemSingle, null\r\n    __0_intnl_returnValSymbol_String: %SystemString, null\r\n
-    \   __0_intnl_SystemString: %SystemString, null\r\n    __1_intnl_SystemString:
+    %SystemSingle, null\r\n    __9_intnl_SystemSingle: %SystemSingle, null\r\n    __0_intnl_returnValSymbol_String:
+    %SystemString, null\r\n    __0_intnl_SystemString: %SystemString, null\r\n    __1_intnl_SystemString:
     %SystemString, null\r\n    __10_intnl_SystemString: %SystemString, null\r\n    __11_intnl_SystemString:
     %SystemString, null\r\n    __12_intnl_SystemString: %SystemString, null\r\n    __13_intnl_SystemString:
     %SystemString, null\r\n    __14_intnl_SystemString: %SystemString, null\r\n    __15_intnl_SystemString:
@@ -585,7 +585,7 @@ MonoBehaviour:
     \       PUSH, __0_time_to_show_Single\r\n        EXTERN, \"SystemConvert.__ToSingle__SystemInt32__SystemSingle\"\r\n
     \       \r\n         # time_to_show = (int)Mathf.Floor(time_to_show);\r\n        PUSH,
     __0_time_to_show_Single\r\n        PUSH, __0_time_to_show_Single\r\n        PUSH,
-    __7_intnl_SystemSingle\r\n        COPY # Copy-on-write symbol value dirtied\r\n
+    __9_intnl_SystemSingle\r\n        COPY # Copy-on-write symbol value dirtied\r\n
     \       PUSH, __0_time_to_show_Single\r\n        EXTERN, \"UnityEngineMathf.__Floor__SystemSingle__SystemSingle\"\r\n
     \       \r\n         # if (Show_In_Seconds)\r\n        PUSH, Show_In_Seconds\r\n
     \       JUMP_IF_FALSE, 0x000015D0\r\n        \r\n         # { text = time_to_show.ToString();
