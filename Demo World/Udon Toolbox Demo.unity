@@ -1683,9 +1683,9 @@ MonoBehaviour:
   m_Text: "This is a demo world for.\nUdon Toolbox Version 2.0 (by Hitori Ou)\nA collection
     of easy to use U# code.\nFor world makers of any kind (even beginners).\n\nFor
     free use with \"VR Chat\" using UDON on Unity.\nCode designed using \"UdonSharp\"
-    from \nwww.github.com/Merlin-san/UdonSharp\nThe toolbox it self is downloadable
-    from\nwww.github.com/HitoriOu/UdonToolbox/releases\n\nKnown issues:\n1: Spawned
-    objects are broken (for now, nothing i can do)\n2: Pickupable Chairs/stations
+    from \nhttps://github.com/Merlin-san/UdonSharp/releases\nThe toolbox it self is
+    downloadable from\nwww.github.com/HitoriOu/UdonToolbox/releases\n\nKnown issues:\n1:
+    Spawned objects are broken (for now, nothing i can do)\n2: Pickupable Chairs/stations
     infinite loop still glitch for \ndesktop users, this is due to the pickup and
     station \nusing same collider/trigger (can be fixed by using 2 \nseperate collider/triggers)"
 --- !u!222 &128642104
@@ -14099,7 +14099,6 @@ GameObject:
   - component: {fileID: 1497959633}
   - component: {fileID: 1497959632}
   - component: {fileID: 1497959631}
-  - component: {fileID: 1497959635}
   m_Layer: 0
   m_Name: VRC World
   m_TagString: Untagged
@@ -14252,19 +14251,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1497959635
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1497959630}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 229740497, guid: 4ecd63eff847044b68db9453ce219299, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  contentType: 1
 --- !u!1 &1508122617
 GameObject:
   m_ObjectHideFlags: 0
