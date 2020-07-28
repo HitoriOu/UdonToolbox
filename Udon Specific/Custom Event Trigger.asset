@@ -84,20 +84,22 @@ MonoBehaviour:
     %SystemBoolean, null\r\n    __24_intnl_SystemBoolean: %SystemBoolean, null\r\n
     \   __25_intnl_SystemBoolean: %SystemBoolean, null\r\n    __26_intnl_SystemBoolean:
     %SystemBoolean, null\r\n    __27_intnl_SystemBoolean: %SystemBoolean, null\r\n
-    \   __28_intnl_SystemBoolean: %SystemBoolean, null\r\n    __3_intnl_SystemBoolean:
-    %SystemBoolean, null\r\n    __4_intnl_SystemBoolean: %SystemBoolean, null\r\n
-    \   __5_intnl_SystemBoolean: %SystemBoolean, null\r\n    __6_intnl_SystemBoolean:
-    %SystemBoolean, null\r\n    __7_intnl_SystemBoolean: %SystemBoolean, null\r\n
-    \   __8_intnl_SystemBoolean: %SystemBoolean, null\r\n    __9_intnl_SystemBoolean:
-    %SystemBoolean, null\r\n    __0_intnl_UnityEngineComponent: %UnityEngineComponent,
-    null\r\n    __1_intnl_UnityEngineComponent: %UnityEngineComponent, null\r\n    __0_intnl_UnityEngineGameObject:
-    %UnityEngineGameObject, null\r\n    __1_intnl_UnityEngineGameObject: %UnityEngineGameObject,
-    null\r\n    __2_intnl_UnityEngineGameObject: %UnityEngineGameObject, null\r\n
-    \   __3_intnl_UnityEngineGameObject: %UnityEngineGameObject, null\r\n    __0_intnl_SystemInt32:
-    %SystemInt32, null\r\n    __1_intnl_SystemInt32: %SystemInt32, null\r\n    __10_intnl_SystemInt32:
-    %SystemInt32, null\r\n    __11_intnl_SystemInt32: %SystemInt32, null\r\n    __12_intnl_SystemInt32:
-    %SystemInt32, null\r\n    __13_intnl_SystemInt32: %SystemInt32, null\r\n    __14_intnl_SystemInt32:
-    %SystemInt32, null\r\n    __15_intnl_SystemInt32: %SystemInt32, null\r\n    __2_intnl_SystemInt32:
+    \   __28_intnl_SystemBoolean: %SystemBoolean, null\r\n    __29_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __3_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __4_intnl_SystemBoolean: %SystemBoolean, null\r\n    __5_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __6_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __7_intnl_SystemBoolean: %SystemBoolean, null\r\n    __8_intnl_SystemBoolean:
+    %SystemBoolean, null\r\n    __9_intnl_SystemBoolean: %SystemBoolean, null\r\n
+    \   __0_intnl_UnityEngineComponent: %UnityEngineComponent, null\r\n    __1_intnl_UnityEngineComponent:
+    %UnityEngineComponent, null\r\n    __0_intnl_UnityEngineGameObject: %UnityEngineGameObject,
+    null\r\n    __1_intnl_UnityEngineGameObject: %UnityEngineGameObject, null\r\n
+    \   __2_intnl_UnityEngineGameObject: %UnityEngineGameObject, null\r\n    __3_intnl_UnityEngineGameObject:
+    %UnityEngineGameObject, null\r\n    __4_intnl_UnityEngineGameObject: %UnityEngineGameObject,
+    null\r\n    __0_intnl_SystemInt32: %SystemInt32, null\r\n    __1_intnl_SystemInt32:
+    %SystemInt32, null\r\n    __10_intnl_SystemInt32: %SystemInt32, null\r\n    __11_intnl_SystemInt32:
+    %SystemInt32, null\r\n    __12_intnl_SystemInt32: %SystemInt32, null\r\n    __13_intnl_SystemInt32:
+    %SystemInt32, null\r\n    __14_intnl_SystemInt32: %SystemInt32, null\r\n    __15_intnl_SystemInt32:
+    %SystemInt32, null\r\n    __16_intnl_SystemInt32: %SystemInt32, null\r\n    __2_intnl_SystemInt32:
     %SystemInt32, null\r\n    __3_intnl_SystemInt32: %SystemInt32, null\r\n    __4_intnl_SystemInt32:
     %SystemInt32, null\r\n    __5_intnl_SystemInt32: %SystemInt32, null\r\n    __6_intnl_SystemInt32:
     %SystemInt32, null\r\n    __7_intnl_SystemInt32: %SystemInt32, null\r\n    __8_intnl_SystemInt32:
@@ -705,23 +707,31 @@ MonoBehaviour:
     \       PUSH, __5_intnl_SystemInt64\r\n        EXTERN, \"SystemConvert.__ToInt64__SystemInt32__SystemInt64\"\r\n
     \       PUSH, __4_intnl_SystemInt64\r\n        PUSH, __5_intnl_SystemInt64\r\n
     \       PUSH, __25_intnl_SystemBoolean\r\n        EXTERN, \"SystemInt64.__op_LessThan__SystemInt64_SystemInt64__SystemBoolean\"\r\n
-    \       PUSH, __25_intnl_SystemBoolean\r\n        JUMP_IF_FALSE, 0x00001A60\r\n
-    \       \r\n         # {\r\n        \r\n         # UdonBehaviour temp = (UdonBehaviour)Udon_scripts_1[i].GetComponent(typeof(UdonBehaviour));\r\n
+    \       PUSH, __25_intnl_SystemBoolean\r\n        JUMP_IF_FALSE, 0x00001AC8\r\n
+    \       \r\n         # {\r\n        \r\n         # if(Udon_scripts_1[i] != null)\r\n
     \       PUSH, __1_i_UInt32\r\n        PUSH, __11_intnl_SystemInt32\r\n        EXTERN,
     \"SystemConvert.__ToInt32__SystemUInt32__SystemInt32\"\r\n        PUSH, Udon_scripts_1\r\n
     \       PUSH, __11_intnl_SystemInt32\r\n        PUSH, __2_intnl_UnityEngineGameObject\r\n
     \       EXTERN, \"UnityEngineGameObjectArray.__Get__SystemInt32__UnityEngineGameObject\"\r\n
-    \       PUSH, __2_intnl_UnityEngineGameObject\r\n        PUSH, __0_const_intnl_SystemType\r\n
+    \       PUSH, __2_intnl_UnityEngineGameObject\r\n        PUSH, __0_const_intnl_UnityEngineGameObject\r\n
+    \       PUSH, __26_intnl_SystemBoolean\r\n        EXTERN, \"UnityEngineObject.__op_Inequality__UnityEngineObject_UnityEngineObject__SystemBoolean\"\r\n
+    \       PUSH, __26_intnl_SystemBoolean\r\n        JUMP_IF_FALSE, 0x00001A8C\r\n
+    \       \r\n         # {\r\n        \r\n         # UdonBehaviour temp = (UdonBehaviour)Udon_scripts_1[i].GetComponent(typeof(UdonBehaviour));\r\n
+    \       PUSH, __1_i_UInt32\r\n        PUSH, __12_intnl_SystemInt32\r\n        EXTERN,
+    \"SystemConvert.__ToInt32__SystemUInt32__SystemInt32\"\r\n        PUSH, Udon_scripts_1\r\n
+    \       PUSH, __12_intnl_SystemInt32\r\n        PUSH, __3_intnl_UnityEngineGameObject\r\n
+    \       EXTERN, \"UnityEngineGameObjectArray.__Get__SystemInt32__UnityEngineGameObject\"\r\n
+    \       PUSH, __3_intnl_UnityEngineGameObject\r\n        PUSH, __0_const_intnl_SystemType\r\n
     \       PUSH, __0_intnl_UnityEngineComponent\r\n        EXTERN, \"UnityEngineGameObject.__GetComponent__SystemType__UnityEngineComponent\"\r\n
     \       PUSH, __0_intnl_UnityEngineComponent\r\n        PUSH, __0_temp_UdonBehaviour\r\n
-    \       COPY\r\n        \r\n         # if(temp != null)\r\n        PUSH, __0_temp_UdonBehaviour\r\n
+    \       COPY\r\n        \r\n         # if (temp != null)\r\n        PUSH, __0_temp_UdonBehaviour\r\n
     \       PUSH, __0_const_intnl_VRCUdonCommonInterfacesIUdonEventReceiver\r\n        PUSH,
-    __26_intnl_SystemBoolean\r\n        EXTERN, \"UnityEngineObject.__op_Inequality__UnityEngineObject_UnityEngineObject__SystemBoolean\"\r\n
-    \       PUSH, __26_intnl_SystemBoolean\r\n        JUMP_IF_FALSE, 0x00001A24\r\n
+    __27_intnl_SystemBoolean\r\n        EXTERN, \"UnityEngineObject.__op_Inequality__UnityEngineObject_UnityEngineObject__SystemBoolean\"\r\n
+    \       PUSH, __27_intnl_SystemBoolean\r\n        JUMP_IF_FALSE, 0x00001A8C\r\n
     \       \r\n         # {\r\n        \r\n         # temp.SendCustomEvent(Event_Name_1[i]);\r\n
-    \       PUSH, __1_i_UInt32\r\n        PUSH, __12_intnl_SystemInt32\r\n        EXTERN,
+    \       PUSH, __1_i_UInt32\r\n        PUSH, __13_intnl_SystemInt32\r\n        EXTERN,
     \"SystemConvert.__ToInt32__SystemUInt32__SystemInt32\"\r\n        PUSH, Event_Name_1\r\n
-    \       PUSH, __12_intnl_SystemInt32\r\n        PUSH, __7_intnl_SystemString\r\n
+    \       PUSH, __13_intnl_SystemInt32\r\n        PUSH, __7_intnl_SystemString\r\n
     \       EXTERN, \"SystemStringArray.__Get__SystemInt32__SystemString\"\r\n        PUSH,
     __0_temp_UdonBehaviour\r\n        PUSH, __7_intnl_SystemString\r\n        EXTERN,
     \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomEvent__SystemString__SystemVoid\"\r\n
@@ -737,36 +747,36 @@ MonoBehaviour:
     \       \r\n         # {\r\n        \r\n         # for (uint i = 0; i < Udon_scripts_0.Length;
     i++)\r\n        PUSH, __1_const_intnl_SystemInt32\r\n        PUSH, __2_i_UInt32\r\n
     \       EXTERN, \"SystemConvert.__ToUInt32__SystemInt32__SystemUInt32\"\r\n        PUSH,
-    Udon_scripts_0\r\n        PUSH, __13_intnl_SystemInt32\r\n        EXTERN, \"UnityEngineGameObjectArray.__get_Length__SystemInt32\"\r\n
+    Udon_scripts_0\r\n        PUSH, __14_intnl_SystemInt32\r\n        EXTERN, \"UnityEngineGameObjectArray.__get_Length__SystemInt32\"\r\n
     \       PUSH, __2_i_UInt32\r\n        PUSH, __6_intnl_SystemInt64\r\n        EXTERN,
-    \"SystemConvert.__ToInt64__SystemUInt32__SystemInt64\"\r\n        PUSH, __13_intnl_SystemInt32\r\n
+    \"SystemConvert.__ToInt64__SystemUInt32__SystemInt64\"\r\n        PUSH, __14_intnl_SystemInt32\r\n
     \       PUSH, __7_intnl_SystemInt64\r\n        EXTERN, \"SystemConvert.__ToInt64__SystemInt32__SystemInt64\"\r\n
     \       PUSH, __6_intnl_SystemInt64\r\n        PUSH, __7_intnl_SystemInt64\r\n
-    \       PUSH, __27_intnl_SystemBoolean\r\n        EXTERN, \"SystemInt64.__op_LessThan__SystemInt64_SystemInt64__SystemBoolean\"\r\n
-    \       PUSH, __27_intnl_SystemBoolean\r\n        JUMP_IF_FALSE, 0x00001C48\r\n
+    \       PUSH, __28_intnl_SystemBoolean\r\n        EXTERN, \"SystemInt64.__op_LessThan__SystemInt64_SystemInt64__SystemBoolean\"\r\n
+    \       PUSH, __28_intnl_SystemBoolean\r\n        JUMP_IF_FALSE, 0x00001CB0\r\n
     \       \r\n         # {\r\n        \r\n         # UdonBehaviour temp = (UdonBehaviour)Udon_scripts_0[i].GetComponent(typeof(UdonBehaviour));\r\n
-    \       PUSH, __2_i_UInt32\r\n        PUSH, __14_intnl_SystemInt32\r\n        EXTERN,
+    \       PUSH, __2_i_UInt32\r\n        PUSH, __15_intnl_SystemInt32\r\n        EXTERN,
     \"SystemConvert.__ToInt32__SystemUInt32__SystemInt32\"\r\n        PUSH, Udon_scripts_0\r\n
-    \       PUSH, __14_intnl_SystemInt32\r\n        PUSH, __3_intnl_UnityEngineGameObject\r\n
+    \       PUSH, __15_intnl_SystemInt32\r\n        PUSH, __4_intnl_UnityEngineGameObject\r\n
     \       EXTERN, \"UnityEngineGameObjectArray.__Get__SystemInt32__UnityEngineGameObject\"\r\n
-    \       PUSH, __3_intnl_UnityEngineGameObject\r\n        PUSH, __0_const_intnl_SystemType\r\n
+    \       PUSH, __4_intnl_UnityEngineGameObject\r\n        PUSH, __0_const_intnl_SystemType\r\n
     \       PUSH, __1_intnl_UnityEngineComponent\r\n        EXTERN, \"UnityEngineGameObject.__GetComponent__SystemType__UnityEngineComponent\"\r\n
     \       PUSH, __1_intnl_UnityEngineComponent\r\n        PUSH, __1_temp_UdonBehaviour\r\n
     \       COPY\r\n        \r\n         # if (temp != null)\r\n        PUSH, __1_temp_UdonBehaviour\r\n
     \       PUSH, __0_const_intnl_VRCUdonCommonInterfacesIUdonEventReceiver\r\n        PUSH,
-    __28_intnl_SystemBoolean\r\n        EXTERN, \"UnityEngineObject.__op_Inequality__UnityEngineObject_UnityEngineObject__SystemBoolean\"\r\n
-    \       PUSH, __28_intnl_SystemBoolean\r\n        JUMP_IF_FALSE, 0x00001C0C\r\n
+    __29_intnl_SystemBoolean\r\n        EXTERN, \"UnityEngineObject.__op_Inequality__UnityEngineObject_UnityEngineObject__SystemBoolean\"\r\n
+    \       PUSH, __29_intnl_SystemBoolean\r\n        JUMP_IF_FALSE, 0x00001C74\r\n
     \       \r\n         # {\r\n        \r\n         # temp.SendCustomEvent(Event_Name_0[i]);\r\n
-    \       PUSH, __2_i_UInt32\r\n        PUSH, __15_intnl_SystemInt32\r\n        EXTERN,
+    \       PUSH, __2_i_UInt32\r\n        PUSH, __16_intnl_SystemInt32\r\n        EXTERN,
     \"SystemConvert.__ToInt32__SystemUInt32__SystemInt32\"\r\n        PUSH, Event_Name_0\r\n
-    \       PUSH, __15_intnl_SystemInt32\r\n        PUSH, __8_intnl_SystemString\r\n
+    \       PUSH, __16_intnl_SystemInt32\r\n        PUSH, __8_intnl_SystemString\r\n
     \       EXTERN, \"SystemStringArray.__Get__SystemInt32__SystemString\"\r\n        PUSH,
     __1_temp_UdonBehaviour\r\n        PUSH, __8_intnl_SystemString\r\n        EXTERN,
     \"VRCUdonCommonInterfacesIUdonEventReceiver.__SendCustomEvent__SystemString__SystemVoid\"\r\n
     \       PUSH, __2_i_UInt32\r\n        PUSH, __2_intnl_SystemUInt32\r\n        COPY\r\n
     \       PUSH, __2_i_UInt32\r\n        PUSH, __1_const_intnl_SystemUInt32\r\n        PUSH,
     __2_i_UInt32\r\n        EXTERN, \"SystemUInt32.__op_Addition__SystemUInt32_SystemUInt32__SystemUInt32\"\r\n
-    \       JUMP, 0x00001AA8\r\n        \r\n         # current_state = false;\r\n
+    \       JUMP, 0x00001B10\r\n        \r\n         # current_state = false;\r\n
     \       PUSH, __0_const_intnl_SystemBoolean\r\n        PUSH, current_state\r\n
     \       COPY\r\n        PUSH, __0_intnl_returnTarget_UInt32 #Function epilogue\r\n
     \       COPY\r\n        JUMP_INDIRECT, __0_intnl_returnTarget_UInt32\r\n        \r\n.code_end\r\n"
@@ -8426,561 +8436,618 @@ MonoBehaviour:
     - startInstruction: 6456
       endInstruction: 6455
       startSourceChar: 12906
-      endSourceChar: 12906
+      endSourceChar: 12909
       line: 317
       lineChar: 12
+      spanCodeSection: if(
+    - startInstruction: 6456
+      endInstruction: 6455
+      startSourceChar: 12909
+      endSourceChar: 12909
+      line: 317
+      lineChar: 15
       spanCodeSection: 
     - startInstruction: 6456
       endInstruction: 6455
-      startSourceChar: 12906
-      endSourceChar: 12906
+      startSourceChar: 12909
+      endSourceChar: 12909
       line: 317
-      lineChar: 12
+      lineChar: 15
       spanCodeSection: 
     - startInstruction: 6456
       endInstruction: 6455
-      startSourceChar: 12906
-      endSourceChar: 12906
+      startSourceChar: 12909
+      endSourceChar: 12924
       line: 317
-      lineChar: 12
-      spanCodeSection: 
-    - startInstruction: 6456
-      endInstruction: 6455
-      startSourceChar: 12906
-      endSourceChar: 12925
-      line: 317
-      lineChar: 12
-      spanCodeSection: 'UdonBehaviour temp '
-    - startInstruction: 6456
-      endInstruction: 6455
-      startSourceChar: 12925
-      endSourceChar: 12927
-      line: 317
-      lineChar: 31
-      spanCodeSection: '= '
-    - startInstruction: 6456
-      endInstruction: 6455
-      startSourceChar: 12927
-      endSourceChar: 12942
-      line: 317
-      lineChar: 33
-      spanCodeSection: (UdonBehaviour)
-    - startInstruction: 6456
-      endInstruction: 6455
-      startSourceChar: 12942
-      endSourceChar: 12942
-      line: 317
-      lineChar: 48
-      spanCodeSection: 
-    - startInstruction: 6456
-      endInstruction: 6455
-      startSourceChar: 12942
-      endSourceChar: 12942
-      line: 317
-      lineChar: 48
-      spanCodeSection: 
-    - startInstruction: 6456
-      endInstruction: 6455
-      startSourceChar: 12942
-      endSourceChar: 12942
-      line: 317
-      lineChar: 48
-      spanCodeSection: 
-    - startInstruction: 6456
-      endInstruction: 6455
-      startSourceChar: 12942
-      endSourceChar: 12957
-      line: 317
-      lineChar: 48
+      lineChar: 15
       spanCodeSection: Udon_scripts_1[
     - startInstruction: 6456
       endInstruction: 6455
-      startSourceChar: 12957
-      endSourceChar: 12957
+      startSourceChar: 12924
+      endSourceChar: 12924
       line: 317
-      lineChar: 63
+      lineChar: 30
       spanCodeSection: 
     - startInstruction: 6456
-      endInstruction: 6479
-      startSourceChar: 12957
-      endSourceChar: 12960
-      line: 317
-      lineChar: 63
-      spanCodeSection: i].
-    - startInstruction: 6480
       endInstruction: 6511
-      startSourceChar: 12960
-      endSourceChar: 12973
+      startSourceChar: 12924
+      endSourceChar: 12930
       line: 317
-      lineChar: 66
-      spanCodeSection: GetComponent(
+      lineChar: 30
+      spanCodeSection: 'i] != '
     - startInstruction: 6512
-      endInstruction: 6511
-      startSourceChar: 12973
-      endSourceChar: 12980
+      endInstruction: 6559
+      startSourceChar: 12930
+      endSourceChar: 12949
       line: 317
-      lineChar: 79
-      spanCodeSection: typeof(
-    - startInstruction: 6512
-      endInstruction: 6563
-      startSourceChar: 12980
-      endSourceChar: 13010
-      line: 317
-      lineChar: 86
-      spanCodeSection: "UdonBehaviour));\r\n            "
-    - startInstruction: 6564
-      endInstruction: 6563
-      startSourceChar: 13010
-      endSourceChar: 13013
-      line: 318
-      lineChar: 12
-      spanCodeSection: if(
-    - startInstruction: 6564
-      endInstruction: 6563
-      startSourceChar: 13013
-      endSourceChar: 13013
-      line: 318
-      lineChar: 15
-      spanCodeSection: 
-    - startInstruction: 6564
-      endInstruction: 6563
-      startSourceChar: 13013
-      endSourceChar: 13021
-      line: 318
-      lineChar: 15
-      spanCodeSection: 'temp != '
-    - startInstruction: 6564
-      endInstruction: 6611
-      startSourceChar: 13021
-      endSourceChar: 13040
-      line: 318
-      lineChar: 23
+      lineChar: 36
       spanCodeSection: "null)\r\n            "
-    - startInstruction: 6612
-      endInstruction: 6611
-      startSourceChar: 13040
-      endSourceChar: 13059
-      line: 319
+    - startInstruction: 6560
+      endInstruction: 6559
+      startSourceChar: 12949
+      endSourceChar: 12968
+      line: 318
       lineChar: 12
       spanCodeSection: "{\r\n                "
-    - startInstruction: 6612
-      endInstruction: 6611
-      startSourceChar: 13059
-      endSourceChar: 13059
-      line: 320
+    - startInstruction: 6560
+      endInstruction: 6559
+      startSourceChar: 12968
+      endSourceChar: 12968
+      line: 319
       lineChar: 16
       spanCodeSection: 
-    - startInstruction: 6612
-      endInstruction: 6611
-      startSourceChar: 13059
-      endSourceChar: 13059
-      line: 320
+    - startInstruction: 6560
+      endInstruction: 6559
+      startSourceChar: 12968
+      endSourceChar: 12968
+      line: 319
       lineChar: 16
       spanCodeSection: 
-    - startInstruction: 6612
-      endInstruction: 6611
-      startSourceChar: 13059
-      endSourceChar: 13059
-      line: 320
+    - startInstruction: 6560
+      endInstruction: 6559
+      startSourceChar: 12968
+      endSourceChar: 12968
+      line: 319
       lineChar: 16
       spanCodeSection: 
-    - startInstruction: 6612
-      endInstruction: 6611
-      startSourceChar: 13059
-      endSourceChar: 13064
+    - startInstruction: 6560
+      endInstruction: 6559
+      startSourceChar: 12968
+      endSourceChar: 12987
+      line: 319
+      lineChar: 16
+      spanCodeSection: 'UdonBehaviour temp '
+    - startInstruction: 6560
+      endInstruction: 6559
+      startSourceChar: 12987
+      endSourceChar: 12989
+      line: 319
+      lineChar: 35
+      spanCodeSection: '= '
+    - startInstruction: 6560
+      endInstruction: 6559
+      startSourceChar: 12989
+      endSourceChar: 13004
+      line: 319
+      lineChar: 37
+      spanCodeSection: (UdonBehaviour)
+    - startInstruction: 6560
+      endInstruction: 6559
+      startSourceChar: 13004
+      endSourceChar: 13004
+      line: 319
+      lineChar: 52
+      spanCodeSection: 
+    - startInstruction: 6560
+      endInstruction: 6559
+      startSourceChar: 13004
+      endSourceChar: 13004
+      line: 319
+      lineChar: 52
+      spanCodeSection: 
+    - startInstruction: 6560
+      endInstruction: 6559
+      startSourceChar: 13004
+      endSourceChar: 13004
+      line: 319
+      lineChar: 52
+      spanCodeSection: 
+    - startInstruction: 6560
+      endInstruction: 6559
+      startSourceChar: 13004
+      endSourceChar: 13019
+      line: 319
+      lineChar: 52
+      spanCodeSection: Udon_scripts_1[
+    - startInstruction: 6560
+      endInstruction: 6559
+      startSourceChar: 13019
+      endSourceChar: 13019
+      line: 319
+      lineChar: 67
+      spanCodeSection: 
+    - startInstruction: 6560
+      endInstruction: 6583
+      startSourceChar: 13019
+      endSourceChar: 13022
+      line: 319
+      lineChar: 67
+      spanCodeSection: i].
+    - startInstruction: 6584
+      endInstruction: 6615
+      startSourceChar: 13022
+      endSourceChar: 13035
+      line: 319
+      lineChar: 70
+      spanCodeSection: GetComponent(
+    - startInstruction: 6616
+      endInstruction: 6615
+      startSourceChar: 13035
+      endSourceChar: 13042
+      line: 319
+      lineChar: 83
+      spanCodeSection: typeof(
+    - startInstruction: 6616
+      endInstruction: 6667
+      startSourceChar: 13042
+      endSourceChar: 13076
+      line: 319
+      lineChar: 90
+      spanCodeSection: "UdonBehaviour));\r\n                "
+    - startInstruction: 6668
+      endInstruction: 6667
+      startSourceChar: 13076
+      endSourceChar: 13080
       line: 320
       lineChar: 16
+      spanCodeSection: if (
+    - startInstruction: 6668
+      endInstruction: 6667
+      startSourceChar: 13080
+      endSourceChar: 13080
+      line: 320
+      lineChar: 20
+      spanCodeSection: 
+    - startInstruction: 6668
+      endInstruction: 6667
+      startSourceChar: 13080
+      endSourceChar: 13088
+      line: 320
+      lineChar: 20
+      spanCodeSection: 'temp != '
+    - startInstruction: 6668
+      endInstruction: 6715
+      startSourceChar: 13088
+      endSourceChar: 13111
+      line: 320
+      lineChar: 28
+      spanCodeSection: "null)\r\n                "
+    - startInstruction: 6716
+      endInstruction: 6715
+      startSourceChar: 13111
+      endSourceChar: 13134
+      line: 321
+      lineChar: 16
+      spanCodeSection: "{\r\n                    "
+    - startInstruction: 6716
+      endInstruction: 6715
+      startSourceChar: 13134
+      endSourceChar: 13134
+      line: 322
+      lineChar: 20
+      spanCodeSection: 
+    - startInstruction: 6716
+      endInstruction: 6715
+      startSourceChar: 13134
+      endSourceChar: 13134
+      line: 322
+      lineChar: 20
+      spanCodeSection: 
+    - startInstruction: 6716
+      endInstruction: 6715
+      startSourceChar: 13134
+      endSourceChar: 13134
+      line: 322
+      lineChar: 20
+      spanCodeSection: 
+    - startInstruction: 6716
+      endInstruction: 6715
+      startSourceChar: 13134
+      endSourceChar: 13139
+      line: 322
+      lineChar: 20
       spanCodeSection: temp.
-    - startInstruction: 6612
-      endInstruction: 6611
-      startSourceChar: 13064
-      endSourceChar: 13080
-      line: 320
-      lineChar: 21
+    - startInstruction: 6716
+      endInstruction: 6715
+      startSourceChar: 13139
+      endSourceChar: 13155
+      line: 322
+      lineChar: 25
       spanCodeSection: SendCustomEvent(
-    - startInstruction: 6612
-      endInstruction: 6611
-      startSourceChar: 13080
-      endSourceChar: 13080
-      line: 320
-      lineChar: 37
+    - startInstruction: 6716
+      endInstruction: 6715
+      startSourceChar: 13155
+      endSourceChar: 13155
+      line: 322
+      lineChar: 41
       spanCodeSection: 
-    - startInstruction: 6612
-      endInstruction: 6611
-      startSourceChar: 13080
-      endSourceChar: 13093
-      line: 320
-      lineChar: 37
+    - startInstruction: 6716
+      endInstruction: 6715
+      startSourceChar: 13155
+      endSourceChar: 13168
+      line: 322
+      lineChar: 41
       spanCodeSection: Event_Name_1[
-    - startInstruction: 6612
-      endInstruction: 6611
-      startSourceChar: 13093
-      endSourceChar: 13093
-      line: 320
-      lineChar: 50
+    - startInstruction: 6716
+      endInstruction: 6715
+      startSourceChar: 13168
+      endSourceChar: 13168
+      line: 322
+      lineChar: 54
       spanCodeSection: 
-    - startInstruction: 6612
-      endInstruction: 6751
-      startSourceChar: 13093
-      endSourceChar: 13133
-      line: 320
-      lineChar: 50
-      spanCodeSection: "i]);\r\n            }\r\n        }\r\n        "
-    - startInstruction: 6752
-      endInstruction: 6751
-      startSourceChar: 13133
-      endSourceChar: 13133
-      line: 323
+    - startInstruction: 6716
+      endInstruction: 6855
+      startSourceChar: 13168
+      endSourceChar: 13227
+      line: 322
+      lineChar: 54
+      spanCodeSection: "i]);\r\n                }\r\n            }\r\n        }\r\n
+        \       "
+    - startInstruction: 6856
+      endInstruction: 6855
+      startSourceChar: 13227
+      endSourceChar: 13227
+      line: 326
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 6752
-      endInstruction: 6751
-      startSourceChar: 13133
-      endSourceChar: 13133
-      line: 323
+    - startInstruction: 6856
+      endInstruction: 6855
+      startSourceChar: 13227
+      endSourceChar: 13227
+      line: 326
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 6752
-      endInstruction: 6751
-      startSourceChar: 13133
-      endSourceChar: 13149
-      line: 323
+    - startInstruction: 6856
+      endInstruction: 6855
+      startSourceChar: 13227
+      endSourceChar: 13243
+      line: 326
       lineChar: 8
       spanCodeSection: 'current_state = '
-    - startInstruction: 6752
-      endInstruction: 6791
-      startSourceChar: 13149
-      endSourceChar: 13169
-      line: 323
+    - startInstruction: 6856
+      endInstruction: 6895
+      startSourceChar: 13243
+      endSourceChar: 13263
+      line: 326
       lineChar: 24
       spanCodeSection: "true;\r\n    }\r\n\r\n    "
-    - startInstruction: 6792
-      endInstruction: 6799
-      startSourceChar: 13169
-      endSourceChar: 13204
-      line: 326
+    - startInstruction: 6896
+      endInstruction: 6903
+      startSourceChar: 13263
+      endSourceChar: 13298
+      line: 329
       lineChar: 4
       spanCodeSection: "public void Run_event_0_NET()\r\n    "
-    - startInstruction: 6800
-      endInstruction: 6799
-      startSourceChar: 13204
-      endSourceChar: 13215
-      line: 327
-      lineChar: 4
-      spanCodeSection: "{\r\n        "
-    - startInstruction: 6800
-      endInstruction: 6799
-      startSourceChar: 13215
-      endSourceChar: 13220
-      line: 328
-      lineChar: 8
-      spanCodeSection: for (
-    - startInstruction: 6800
-      endInstruction: 6799
-      startSourceChar: 13220
-      endSourceChar: 13220
-      line: 328
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 6800
-      endInstruction: 6799
-      startSourceChar: 13220
-      endSourceChar: 13220
-      line: 328
-      lineChar: 13
-      spanCodeSection: 
-    - startInstruction: 6800
-      endInstruction: 6799
-      startSourceChar: 13220
-      endSourceChar: 13227
-      line: 328
-      lineChar: 13
-      spanCodeSection: 'uint i '
-    - startInstruction: 6800
-      endInstruction: 6799
-      startSourceChar: 13227
-      endSourceChar: 13229
-      line: 328
-      lineChar: 20
-      spanCodeSection: '= '
-    - startInstruction: 6800
-      endInstruction: 6823
-      startSourceChar: 13229
-      endSourceChar: 13232
-      line: 328
-      lineChar: 22
-      spanCodeSection: '0; '
-    - startInstruction: 6824
-      endInstruction: 6823
-      startSourceChar: 13232
-      endSourceChar: 13232
-      line: 328
-      lineChar: 25
-      spanCodeSection: 
-    - startInstruction: 6824
-      endInstruction: 6823
-      startSourceChar: 13232
-      endSourceChar: 13236
-      line: 328
-      lineChar: 25
-      spanCodeSection: 'i < '
-    - startInstruction: 6824
-      endInstruction: 6823
-      startSourceChar: 13236
-      endSourceChar: 13236
-      line: 328
-      lineChar: 29
-      spanCodeSection: 
-    - startInstruction: 6824
-      endInstruction: 6823
-      startSourceChar: 13236
-      endSourceChar: 13251
-      line: 328
-      lineChar: 29
-      spanCodeSection: Udon_scripts_0.
-    - startInstruction: 6824
-      endInstruction: 6943
-      startSourceChar: 13251
-      endSourceChar: 13273
-      line: 328
-      lineChar: 44
-      spanCodeSection: "Length; i++)\r\n        "
-    - startInstruction: 6944
-      endInstruction: 6943
-      startSourceChar: 13273
-      endSourceChar: 13288
-      line: 329
-      lineChar: 8
-      spanCodeSection: "{\r\n            "
-    - startInstruction: 6944
-      endInstruction: 6943
-      startSourceChar: 13288
-      endSourceChar: 13288
-      line: 330
-      lineChar: 12
-      spanCodeSection: 
-    - startInstruction: 6944
-      endInstruction: 6943
-      startSourceChar: 13288
-      endSourceChar: 13288
-      line: 330
-      lineChar: 12
-      spanCodeSection: 
-    - startInstruction: 6944
-      endInstruction: 6943
-      startSourceChar: 13288
-      endSourceChar: 13288
-      line: 330
-      lineChar: 12
-      spanCodeSection: 
-    - startInstruction: 6944
-      endInstruction: 6943
-      startSourceChar: 13288
-      endSourceChar: 13307
-      line: 330
-      lineChar: 12
-      spanCodeSection: 'UdonBehaviour temp '
-    - startInstruction: 6944
-      endInstruction: 6943
-      startSourceChar: 13307
+    - startInstruction: 6904
+      endInstruction: 6903
+      startSourceChar: 13298
       endSourceChar: 13309
       line: 330
+      lineChar: 4
+      spanCodeSection: "{\r\n        "
+    - startInstruction: 6904
+      endInstruction: 6903
+      startSourceChar: 13309
+      endSourceChar: 13314
+      line: 331
+      lineChar: 8
+      spanCodeSection: for (
+    - startInstruction: 6904
+      endInstruction: 6903
+      startSourceChar: 13314
+      endSourceChar: 13314
+      line: 331
+      lineChar: 13
+      spanCodeSection: 
+    - startInstruction: 6904
+      endInstruction: 6903
+      startSourceChar: 13314
+      endSourceChar: 13314
+      line: 331
+      lineChar: 13
+      spanCodeSection: 
+    - startInstruction: 6904
+      endInstruction: 6903
+      startSourceChar: 13314
+      endSourceChar: 13321
+      line: 331
+      lineChar: 13
+      spanCodeSection: 'uint i '
+    - startInstruction: 6904
+      endInstruction: 6903
+      startSourceChar: 13321
+      endSourceChar: 13323
+      line: 331
+      lineChar: 20
+      spanCodeSection: '= '
+    - startInstruction: 6904
+      endInstruction: 6927
+      startSourceChar: 13323
+      endSourceChar: 13326
+      line: 331
+      lineChar: 22
+      spanCodeSection: '0; '
+    - startInstruction: 6928
+      endInstruction: 6927
+      startSourceChar: 13326
+      endSourceChar: 13326
+      line: 331
+      lineChar: 25
+      spanCodeSection: 
+    - startInstruction: 6928
+      endInstruction: 6927
+      startSourceChar: 13326
+      endSourceChar: 13330
+      line: 331
+      lineChar: 25
+      spanCodeSection: 'i < '
+    - startInstruction: 6928
+      endInstruction: 6927
+      startSourceChar: 13330
+      endSourceChar: 13330
+      line: 331
+      lineChar: 29
+      spanCodeSection: 
+    - startInstruction: 6928
+      endInstruction: 6927
+      startSourceChar: 13330
+      endSourceChar: 13345
+      line: 331
+      lineChar: 29
+      spanCodeSection: Udon_scripts_0.
+    - startInstruction: 6928
+      endInstruction: 7047
+      startSourceChar: 13345
+      endSourceChar: 13367
+      line: 331
+      lineChar: 44
+      spanCodeSection: "Length; i++)\r\n        "
+    - startInstruction: 7048
+      endInstruction: 7047
+      startSourceChar: 13367
+      endSourceChar: 13382
+      line: 332
+      lineChar: 8
+      spanCodeSection: "{\r\n            "
+    - startInstruction: 7048
+      endInstruction: 7047
+      startSourceChar: 13382
+      endSourceChar: 13382
+      line: 333
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 7048
+      endInstruction: 7047
+      startSourceChar: 13382
+      endSourceChar: 13382
+      line: 333
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 7048
+      endInstruction: 7047
+      startSourceChar: 13382
+      endSourceChar: 13382
+      line: 333
+      lineChar: 12
+      spanCodeSection: 
+    - startInstruction: 7048
+      endInstruction: 7047
+      startSourceChar: 13382
+      endSourceChar: 13401
+      line: 333
+      lineChar: 12
+      spanCodeSection: 'UdonBehaviour temp '
+    - startInstruction: 7048
+      endInstruction: 7047
+      startSourceChar: 13401
+      endSourceChar: 13403
+      line: 333
       lineChar: 31
       spanCodeSection: '= '
-    - startInstruction: 6944
-      endInstruction: 6943
-      startSourceChar: 13309
-      endSourceChar: 13324
-      line: 330
+    - startInstruction: 7048
+      endInstruction: 7047
+      startSourceChar: 13403
+      endSourceChar: 13418
+      line: 333
       lineChar: 33
       spanCodeSection: (UdonBehaviour)
-    - startInstruction: 6944
-      endInstruction: 6943
-      startSourceChar: 13324
-      endSourceChar: 13324
-      line: 330
+    - startInstruction: 7048
+      endInstruction: 7047
+      startSourceChar: 13418
+      endSourceChar: 13418
+      line: 333
       lineChar: 48
       spanCodeSection: 
-    - startInstruction: 6944
-      endInstruction: 6943
-      startSourceChar: 13324
-      endSourceChar: 13324
-      line: 330
+    - startInstruction: 7048
+      endInstruction: 7047
+      startSourceChar: 13418
+      endSourceChar: 13418
+      line: 333
       lineChar: 48
       spanCodeSection: 
-    - startInstruction: 6944
-      endInstruction: 6943
-      startSourceChar: 13324
-      endSourceChar: 13324
-      line: 330
+    - startInstruction: 7048
+      endInstruction: 7047
+      startSourceChar: 13418
+      endSourceChar: 13418
+      line: 333
       lineChar: 48
       spanCodeSection: 
-    - startInstruction: 6944
-      endInstruction: 6943
-      startSourceChar: 13324
-      endSourceChar: 13339
-      line: 330
+    - startInstruction: 7048
+      endInstruction: 7047
+      startSourceChar: 13418
+      endSourceChar: 13433
+      line: 333
       lineChar: 48
       spanCodeSection: Udon_scripts_0[
-    - startInstruction: 6944
-      endInstruction: 6943
-      startSourceChar: 13339
-      endSourceChar: 13339
-      line: 330
+    - startInstruction: 7048
+      endInstruction: 7047
+      startSourceChar: 13433
+      endSourceChar: 13433
+      line: 333
       lineChar: 63
       spanCodeSection: 
-    - startInstruction: 6944
-      endInstruction: 6967
-      startSourceChar: 13339
-      endSourceChar: 13342
-      line: 330
+    - startInstruction: 7048
+      endInstruction: 7071
+      startSourceChar: 13433
+      endSourceChar: 13436
+      line: 333
       lineChar: 63
       spanCodeSection: i].
-    - startInstruction: 6968
-      endInstruction: 6999
-      startSourceChar: 13342
-      endSourceChar: 13355
-      line: 330
+    - startInstruction: 7072
+      endInstruction: 7103
+      startSourceChar: 13436
+      endSourceChar: 13449
+      line: 333
       lineChar: 66
       spanCodeSection: GetComponent(
-    - startInstruction: 7000
-      endInstruction: 6999
-      startSourceChar: 13355
-      endSourceChar: 13362
-      line: 330
+    - startInstruction: 7104
+      endInstruction: 7103
+      startSourceChar: 13449
+      endSourceChar: 13456
+      line: 333
       lineChar: 79
       spanCodeSection: typeof(
-    - startInstruction: 7000
-      endInstruction: 7051
-      startSourceChar: 13362
-      endSourceChar: 13392
-      line: 330
+    - startInstruction: 7104
+      endInstruction: 7155
+      startSourceChar: 13456
+      endSourceChar: 13486
+      line: 333
       lineChar: 86
       spanCodeSection: "UdonBehaviour));\r\n            "
-    - startInstruction: 7052
-      endInstruction: 7051
-      startSourceChar: 13392
-      endSourceChar: 13396
-      line: 331
+    - startInstruction: 7156
+      endInstruction: 7155
+      startSourceChar: 13486
+      endSourceChar: 13490
+      line: 334
       lineChar: 12
       spanCodeSection: if (
-    - startInstruction: 7052
-      endInstruction: 7051
-      startSourceChar: 13396
-      endSourceChar: 13396
-      line: 331
+    - startInstruction: 7156
+      endInstruction: 7155
+      startSourceChar: 13490
+      endSourceChar: 13490
+      line: 334
       lineChar: 16
       spanCodeSection: 
-    - startInstruction: 7052
-      endInstruction: 7051
-      startSourceChar: 13396
-      endSourceChar: 13404
-      line: 331
+    - startInstruction: 7156
+      endInstruction: 7155
+      startSourceChar: 13490
+      endSourceChar: 13498
+      line: 334
       lineChar: 16
       spanCodeSection: 'temp != '
-    - startInstruction: 7052
-      endInstruction: 7099
-      startSourceChar: 13404
-      endSourceChar: 13423
-      line: 331
+    - startInstruction: 7156
+      endInstruction: 7203
+      startSourceChar: 13498
+      endSourceChar: 13517
+      line: 334
       lineChar: 24
       spanCodeSection: "null)\r\n            "
-    - startInstruction: 7100
-      endInstruction: 7099
-      startSourceChar: 13423
-      endSourceChar: 13442
-      line: 332
+    - startInstruction: 7204
+      endInstruction: 7203
+      startSourceChar: 13517
+      endSourceChar: 13536
+      line: 335
       lineChar: 12
       spanCodeSection: "{\r\n                "
-    - startInstruction: 7100
-      endInstruction: 7099
-      startSourceChar: 13442
-      endSourceChar: 13442
-      line: 333
+    - startInstruction: 7204
+      endInstruction: 7203
+      startSourceChar: 13536
+      endSourceChar: 13536
+      line: 336
       lineChar: 16
       spanCodeSection: 
-    - startInstruction: 7100
-      endInstruction: 7099
-      startSourceChar: 13442
-      endSourceChar: 13442
-      line: 333
+    - startInstruction: 7204
+      endInstruction: 7203
+      startSourceChar: 13536
+      endSourceChar: 13536
+      line: 336
       lineChar: 16
       spanCodeSection: 
-    - startInstruction: 7100
-      endInstruction: 7099
-      startSourceChar: 13442
-      endSourceChar: 13442
-      line: 333
+    - startInstruction: 7204
+      endInstruction: 7203
+      startSourceChar: 13536
+      endSourceChar: 13536
+      line: 336
       lineChar: 16
       spanCodeSection: 
-    - startInstruction: 7100
-      endInstruction: 7099
-      startSourceChar: 13442
-      endSourceChar: 13447
-      line: 333
+    - startInstruction: 7204
+      endInstruction: 7203
+      startSourceChar: 13536
+      endSourceChar: 13541
+      line: 336
       lineChar: 16
       spanCodeSection: temp.
-    - startInstruction: 7100
-      endInstruction: 7099
-      startSourceChar: 13447
-      endSourceChar: 13463
-      line: 333
+    - startInstruction: 7204
+      endInstruction: 7203
+      startSourceChar: 13541
+      endSourceChar: 13557
+      line: 336
       lineChar: 21
       spanCodeSection: SendCustomEvent(
-    - startInstruction: 7100
-      endInstruction: 7099
-      startSourceChar: 13463
-      endSourceChar: 13463
-      line: 333
+    - startInstruction: 7204
+      endInstruction: 7203
+      startSourceChar: 13557
+      endSourceChar: 13557
+      line: 336
       lineChar: 37
       spanCodeSection: 
-    - startInstruction: 7100
-      endInstruction: 7099
-      startSourceChar: 13463
-      endSourceChar: 13476
-      line: 333
+    - startInstruction: 7204
+      endInstruction: 7203
+      startSourceChar: 13557
+      endSourceChar: 13570
+      line: 336
       lineChar: 37
       spanCodeSection: Event_Name_0[
-    - startInstruction: 7100
-      endInstruction: 7099
-      startSourceChar: 13476
-      endSourceChar: 13476
-      line: 333
+    - startInstruction: 7204
+      endInstruction: 7203
+      startSourceChar: 13570
+      endSourceChar: 13570
+      line: 336
       lineChar: 50
       spanCodeSection: 
-    - startInstruction: 7100
-      endInstruction: 7239
-      startSourceChar: 13476
-      endSourceChar: 13516
-      line: 333
+    - startInstruction: 7204
+      endInstruction: 7343
+      startSourceChar: 13570
+      endSourceChar: 13610
+      line: 336
       lineChar: 50
       spanCodeSection: "i]);\r\n            }\r\n        }\r\n        "
-    - startInstruction: 7240
-      endInstruction: 7239
-      startSourceChar: 13516
-      endSourceChar: 13516
-      line: 336
+    - startInstruction: 7344
+      endInstruction: 7343
+      startSourceChar: 13610
+      endSourceChar: 13610
+      line: 339
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 7240
-      endInstruction: 7239
-      startSourceChar: 13516
-      endSourceChar: 13516
-      line: 336
+    - startInstruction: 7344
+      endInstruction: 7343
+      startSourceChar: 13610
+      endSourceChar: 13610
+      line: 339
       lineChar: 8
       spanCodeSection: 
-    - startInstruction: 7240
-      endInstruction: 7239
-      startSourceChar: 13516
-      endSourceChar: 13532
-      line: 336
+    - startInstruction: 7344
+      endInstruction: 7343
+      startSourceChar: 13610
+      endSourceChar: 13626
+      line: 339
       lineChar: 8
       spanCodeSection: 'current_state = '
-    - startInstruction: 7240
-      endInstruction: 7240
-      startSourceChar: 13532
-      endSourceChar: 13532
-      line: 336
+    - startInstruction: 7344
+      endInstruction: 7344
+      startSourceChar: 13626
+      endSourceChar: 13626
+      line: 339
       lineChar: 24
       spanCodeSection: 
   hasInteractEvent: 1

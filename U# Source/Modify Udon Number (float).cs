@@ -22,12 +22,16 @@ public class ModifyUdonNumberFloat : UdonSharpBehaviour
     public float Manual_Input =0;
     [Tooltip("Use Ui slider\r\n(overrides 'Manual_Input')")]
     public UnityEngine.UI.Slider UI_Slider_Input=null;
+    [Tooltip("Use Ui Input Field\r\n(overrides 'Manual_Input' & 'UI_Slider_Input')\r\n Input errors will default input to 'Manual_Input'")]
+    public UnityEngine.UI.InputField UI_Inputfield = null;
 
+    /* // removed code
     [Header("Synching")]
     //[Tooltip("All players in world are affected.")]
     //public bool Global_Synched = true;
     [Tooltip("Players who join will see what others see.")]
     public bool Late_Join_Synched = true;
+    */
 
     [Header("Events")]
     [Tooltip("Custom Event for UI to call/use")]
@@ -48,18 +52,21 @@ public class ModifyUdonNumberFloat : UdonSharpBehaviour
     void Start()
     {
        // if (Networking.LocalPlayer == null)  { Global_Synched = false; }
-
-        if (world_init_mem && Late_Join_Synched && UI_Slider_Input != null)
+       /* // removed code
+        if (world_init_mem && Late_Join_Synched && UI_Slider_Input != null && UI_Inputfield == null)
         { Set_Value(synch_mem); UI_Slider_Input.value= synch_mem; }
-        else
+        else if(UI_Inputfield == null)
          { Set_Value(get_input()); }
         world_init_mem = true;
+        */
     }
 
     public void Run()
     {
+         /* // removed code
          if (Late_Join_Synched)
           { synch_mem = get_input(); }
+          */
          Set_Value(get_input()); 
     }
 
@@ -75,8 +82,21 @@ public class ModifyUdonNumberFloat : UdonSharpBehaviour
 
     private float get_input()
     {
-        if(UI_Slider_Input != null)
-         { return UI_Slider_Input.value; }
+        if (UI_Inputfield != null)
+        {
+            float temp = -1;
+            if (float.TryParse(UI_Inputfield.text, out temp) && UI_Inputfield.text.Length > 0)
+            {
+                return float.Parse(UI_Inputfield.text);
+            }
+            else
+            {
+                UI_Inputfield.text = "Error invalid input: using default " + Manual_Input.ToString() + " instead!";
+                return Manual_Input;
+            }
+        }
+        else if (UI_Slider_Input != null)
+        { return UI_Slider_Input.value; }
         else
          { return Manual_Input; }
     }

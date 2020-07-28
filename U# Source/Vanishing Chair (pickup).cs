@@ -44,8 +44,13 @@ public class VanishingChairpickup : UdonSharpBehaviour
     void OnPickup() { SendCustomEvent("Set_Owner"); }
     //void OnDrop() { SendCustomEvent(""); }
 
+    /*
+     //old code (depricated bugged)
     void OnStationEntered() { SendCustomEvent("Hide"); }
     void OnStationExited() { SendCustomEvent("Show"); }
+     */
+    public override void OnStationEntered(VRCPlayerApi player) { SendCustomEvent("Hide"); }
+    public override void OnStationExited(VRCPlayerApi player) { SendCustomEvent("Show"); }
 
     public void Use_Station()
     {

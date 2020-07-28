@@ -48,12 +48,17 @@ Detect_Player	= Run code if player activates it
 Detect_Object	= Run code if a object activates it
 
 ------------ Changelogs (newest first) ------------
+------------ Changelog (V2.2) ------------
+------ Udon files changed: ------
+Despawn Timer [added option for pool system (disables instead of permanently removing it)]
+Custom Event Trigger [bugfix for when script array element = null]
+Modify Udon Number (float) [added support for UI input Fields & removed support for late join synch (did not make sense to have)]
+Vanishing Chair (pickup) [bugfix for "onstation" events (dev updates)]
 
 ------------ Changelog (V2.1) ------------
 ------ Udon files added: ------
 Player Param Tester [debug tool for trying different movement settings safely]
 Custom Event Trigger [multi event trigger with toggle event options]
-
 
 ------------ Changelog (V2.0) ------------
 Notes:

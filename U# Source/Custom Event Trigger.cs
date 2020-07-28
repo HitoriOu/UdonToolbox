@@ -315,10 +315,13 @@ public class EventTrigger : UdonSharpBehaviour
     {
         for (uint i=0;i<Udon_scripts_1.Length;i++)
         {
-            UdonBehaviour temp = (UdonBehaviour)Udon_scripts_1[i].GetComponent(typeof(UdonBehaviour));
-            if(temp != null)
+            if(Udon_scripts_1[i] != null)
             {
-                temp.SendCustomEvent(Event_Name_1[i]);
+                UdonBehaviour temp = (UdonBehaviour)Udon_scripts_1[i].GetComponent(typeof(UdonBehaviour));
+                if (temp != null)
+                {
+                    temp.SendCustomEvent(Event_Name_1[i]);
+                }
             }
         }
         current_state = true;

@@ -10,6 +10,9 @@ public class DespawnTimer : UdonSharpBehaviour
     bool started = false;
     bool paused = false;
 
+
+    [Tooltip("Disables object instead of de-spawning")]
+    public bool Pool_System = false;
     [Tooltip("Time untill despawned")]
     public float Countdown = 60;
     [Tooltip("Countdown is never resetted (only paused)")]
@@ -53,7 +56,15 @@ public class DespawnTimer : UdonSharpBehaviour
             
             if (!paused && Time.time>Time_mem)
             {
-                Destroy(this.gameObject);
+                if(Pool_System)
+                {
+                    this.gameObject.SetActive(false);
+                    started = false;
+                }
+                else
+                {
+                    Destroy(this.gameObject);
+                }
             }
         }
         else
