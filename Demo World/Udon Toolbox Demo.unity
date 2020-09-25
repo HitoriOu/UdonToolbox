@@ -16080,6 +16080,7 @@ GameObject:
   - component: {fileID: 1497959633}
   - component: {fileID: 1497959632}
   - component: {fileID: 1497959631}
+  - component: {fileID: 1497959635}
   m_Layer: 0
   m_Name: VRC World
   m_TagString: Untagged
@@ -16179,6 +16180,7 @@ MonoBehaviour:
   useAssignedLayers: 0
   DynamicPrefabs: []
   DynamicMaterials:
+  - {fileID: 2100000, guid: 9414e644b0d9d4c4cb1d863093f0284c, type: 2}
   - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   - {fileID: 2100000, guid: afb3ae39f1bbda44b89332b43a77e78b, type: 2}
   - {fileID: 2100000, guid: b076d34b3b48fa7488eb91acb9419394, type: 2}
@@ -16186,7 +16188,6 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 8f2f485ea2ee33841a2e9a5bce52062c, type: 2}
   - {fileID: 2100000, guid: 02f552f6607d55947bd543d67bf66cec, type: 2}
   - {fileID: 2100000, guid: 21af7c638f138454ab76d8ea8011d196, type: 2}
-  - {fileID: 2100000, guid: 9414e644b0d9d4c4cb1d863093f0284c, type: 2}
   - {fileID: 2100000, guid: c815f7613a04b724089c206857e57c6a, type: 2}
   - {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   LightMapsNear: []
@@ -16232,6 +16233,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1497959635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1497959630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 229740497, guid: 4ecd63eff847044b68db9453ce219299, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  contentType: 1
 --- !u!1 &1508122617
 GameObject:
   m_ObjectHideFlags: 0
