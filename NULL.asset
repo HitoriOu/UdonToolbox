@@ -20,4 +20,9 @@ MonoBehaviour:
     name: 
     description: 
     nodes: []
+  graphElementData: []
+  viewTransform:
+    position: {x: 0, y: 0}
+    scale: 1
+  version: 1.0.0
   showAssembly: 0

@@ -14,8 +14,9 @@ public class VanishingChairpickup : UdonSharpBehaviour
 
     [UdonSynced(UdonSyncMode.None)]
     uint synch_mem = 2;
+    private bool debug_flag=false;
     [Tooltip("Prevents seated user from grabbing selected collider")]
-    public Collider Pickup_Collider;
+    public Collider Pickup_Collider=null;
 
     [Space(3)]
     [Tooltip("Events are swapped when entering/exiting")]
@@ -23,8 +24,8 @@ public class VanishingChairpickup : UdonSharpBehaviour
     [Tooltip("Disables Mesh renderer when triggered")]
     public MeshRenderer[] Turn_Invisible = new MeshRenderer[1];
     [Space(3)]
-    [Tooltip("This object is enabled for seated player/user")]
-    public GameObject Optional_Menu;
+    [Tooltip("This object is enabled for seated player/user.")]
+    public GameObject Optional_Menu=null;
 
     [Header("Synching")]
     [Tooltip("All players in world are affected.")]
@@ -34,12 +35,15 @@ public class VanishingChairpickup : UdonSharpBehaviour
 
     [Header("Events")]
     public bool EventInteract = true;
-    public bool EventOnTriggerEnter = false;
-    public bool EventOnTriggerExit = false;
+    public bool Event_OnTriggerEnter = false;
+    public bool Event_OnTriggerExit = false;
 
     void Interact() { if (EventInteract) { SendCustomEvent("Use_Station"); } }
-    void OnTriggerEnter(Collider other) { if (EventOnTriggerEnter) { SendCustomEvent("Use_Station"); } }
-    void OnTriggerExit(Collider other) { if (EventOnTriggerExit) { SendCustomEvent("Use_Station"); } }
+    void OnTriggerEnter(Collider other) { if (Event_OnTriggerEnter) { SendCustomEvent("Use_Station"); } }
+    void OnTriggerExit(Collider other) { if (Event_OnTriggerExit) { SendCustomEvent("Use_Station"); } }
+
+    public void OnPlayerTriggerEnter(VRCPlayerApi player) { if (Event_OnTriggerEnter) { SendCustomEvent("Use_Station"); } }
+    public void OnPlayerTriggerExit(VRCPlayerApi player) { if (Event_OnTriggerExit) { SendCustomEvent("Use_Station"); } }
 
     void OnPickup() { SendCustomEvent("Set_Owner"); }
     //void OnDrop() { SendCustomEvent(""); }
@@ -55,9 +59,27 @@ public class VanishingChairpickup : UdonSharpBehaviour
     public void Use_Station()
     {
         VRC_Pickup temp = (VRC_Pickup)this.gameObject.GetComponent(typeof(VRC_Pickup));
-        if (temp != null && temp.IsHeld && temp.currentLocalPlayer == Networking.LocalPlayer) /*Eliminates grab-seat infinite physics loop*/
-        { temp.Drop(); }
-        Networking.LocalPlayer.UseAttachedStation();
+        if(Networking.LocalPlayer != null)
+        {
+            if (temp != null && temp.IsHeld && temp.currentPlayer == Networking.LocalPlayer) /*Eliminates grab-seat infinite physics loop*/
+            { temp.Drop(); }
+            Networking.LocalPlayer.UseAttachedStation();
+        }
+        else
+        {
+            if(!debug_flag)
+            {
+                Debug.Log("Player got in seat/station.");
+                debug_flag = true;
+                SendCustomEvent("Hide");
+            }
+            else
+            {
+                Debug.Log("Player Exited seat/station.");
+                debug_flag = false;
+                SendCustomEvent("Show");
+            }
+        }
     }
 
     public void Set_Owner()
@@ -67,6 +89,14 @@ public class VanishingChairpickup : UdonSharpBehaviour
     {
         if (Networking.LocalPlayer == null)
         { Global_Synched = false; }
+
+        if (Optional_Menu != null && this.gameObject == Optional_Menu.gameObject)
+        {
+            Optional_Menu = null;
+            /// double checks to make sure unpredictable bugs do not occur (when you exit chair the entire game-object will be toggeled off instead).
+            // Debug.LogWarning("[Udon Toolbox] Note: Optional menu cannot be same as script holder, must be either none/NULL or different gameobject!", this);
+        }
+
         if (synch_mem == 0)
         { SendCustomEvent("OFF"); }
         else if (synch_mem == 1)
@@ -77,7 +107,7 @@ public class VanishingChairpickup : UdonSharpBehaviour
     {
         if(Pickup_Collider!=null)
          { Pickup_Collider.enabled = false; }
-        if(Optional_Menu!=null)
+        if(Optional_Menu!=null && Optional_Menu != this.gameObject)
          { Optional_Menu.SetActive(true); }
         if (Global_Synched)
         {
@@ -92,7 +122,7 @@ public class VanishingChairpickup : UdonSharpBehaviour
     {
         if (Pickup_Collider != null)
          { Pickup_Collider.enabled = true; }
-        if (Optional_Menu != null)
+        if (Optional_Menu != null && Optional_Menu != this.gameObject)
          { Optional_Menu.SetActive(false); }
         if (Global_Synched)
         {

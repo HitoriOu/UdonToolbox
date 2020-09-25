@@ -37,10 +37,14 @@ public class DespawnTimer : UdonSharpBehaviour
     public bool Pause_on_CollisionEnter = false;
     void OnCollisionEnter(Collision other) { if (Pause_on_CollisionEnter) { SendCustomEvent("Pause"); } }
     void OnCollisionExit(Collision other) { if (Pause_on_CollisionEnter) { SendCustomEvent("Reset"); } }
+    public void OnPlayerCollisionEnter(VRCPlayerApi player) { if (Pause_on_CollisionEnter) { SendCustomEvent("Pause"); } }
+    public void OnPlayerCollisionExit(VRCPlayerApi player) { if (Pause_on_CollisionEnter) { SendCustomEvent("Reset"); } }
 
     public bool Pause_on_TriggerEnter = false;
     void OnTriggerEnter(Collider other) { if (Pause_on_TriggerEnter) { SendCustomEvent("Pause"); } }
     void OnTriggerExit(Collider other) { if (Pause_on_TriggerEnter) { SendCustomEvent("Reset"); } }
+    public void OnPlayerTriggerEnter(VRCPlayerApi player) { if (Pause_on_TriggerEnter) { SendCustomEvent("Pause"); } }
+    public void OnPlayerTriggerExit(VRCPlayerApi player) { if (Pause_on_TriggerEnter) { SendCustomEvent("Reset"); } }
 
     public void Start()
     {

@@ -21,16 +21,16 @@ public class TeleportObject : UdonSharpBehaviour
     public bool Owner_Only = true;
 
     [Header("Events")]
-    public bool EventOnCollisionEnter = true;
-    public bool EventOnCollisionExit = false;
-    public bool EventOnTriggerEnter = true;
-    public bool EventOnTriggerExit = false;
+    public bool Event_OnCollisionEnter = true;
+    public bool Event_OnCollisionExit = false;
+    public bool Event_OnTriggerEnter = true;
+    public bool Event_OnTriggerExit = false;
 
-    void OnCollisionEnter(Collision other) { if (EventOnCollisionEnter) { Teleport_Collision(other); } }
-    void OnCollisionExit(Collision other) { if (EventOnCollisionExit) { Teleport_Collision(other); } }
-    void OnTriggerEnter(Collider other) { if (EventOnTriggerEnter) { Teleport_Collider(other); } }
-    void OnTriggerExit(Collider other) { if (EventOnTriggerExit) { Teleport_Collider(other); } }
-
+    void OnCollisionEnter(Collision other) { if (Event_OnCollisionEnter) { Teleport_Collision(other); } }
+    void OnCollisionExit(Collision other) { if (Event_OnCollisionExit) { Teleport_Collision(other); } }
+    void OnTriggerEnter(Collider other) { if (Event_OnTriggerEnter) { Teleport_Collider(other); } }
+    void OnTriggerExit(Collider other) { if (Event_OnTriggerExit) { Teleport_Collider(other); } }
+    
     private void Teleport_Collider(Collider other)
     {
         if (Networking.LocalPlayer == null || !Owner_Only || Owner_Only && Networking.LocalPlayer.IsOwner(other.gameObject))

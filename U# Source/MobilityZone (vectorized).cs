@@ -55,6 +55,11 @@ public class MobilityZonevectorized : UdonSharpBehaviour
     void OnTriggerEnter(Collider other) { if (Event_OnTriggerEnter) { SendCustomEvent("Run_Enter"); } }
     void OnTriggerExit(Collider other) { if (Event_OnTriggerExit) { SendCustomEvent("Run_Vector_Check"); } }
 
+    public void OnPlayerCollisionEnter(VRCPlayerApi player) { if (Event_OnCollisionEnter) { SendCustomEvent("Run_Enter"); } }
+    public void OnPlayerCollisionExit(VRCPlayerApi player) { if (Event_OnCollisionExit) { SendCustomEvent("Run_Vector_Check"); } }
+    public void OnPlayerTriggerEnter(VRCPlayerApi player) { if (Event_OnTriggerEnter) { SendCustomEvent("Run_Enter"); } }
+    public void OnPlayerTriggerExit(VRCPlayerApi player) { if (Event_OnTriggerExit) { SendCustomEvent("Run_Vector_Check"); } }
+
     private void Set_OnVector()
      { Set_mobility(Exit_Walk_OnVector, Exit_Run_OnVector, Exit_Jump_OnVector, Exit_Grav_OnVector); }
 

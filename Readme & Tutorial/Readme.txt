@@ -48,12 +48,36 @@ Detect_Player	= Run code if player activates it
 Detect_Object	= Run code if a object activates it
 
 ------------ Changelogs (newest first) ------------
+------------ Changelog (V2.2.1) ------------
+
+------ Udon files changed: ------
+Note: Almost all files had to be changed due to SDK update altering how player colliders/triggers work (files changed not listed).
+
+Cycle Toggle [fixed wrong variable naming for collider & trigger event setting]
+Material Cycler (cloner) [fixed wrong variable naming for collider & trigger event setting]
+Material Swapper [fixed wrong variable naming for collider & trigger event setting]
+MobilityZone [fixed wrong variable naming for collider & trigger event setting]
+Modify Udon Number (float) [fixed wrong variable naming for collider & trigger event setting]
+Reset Position Multiple [fixed wrong variable naming for collider & trigger event setting]
+Set Active Multiple [fixed wrong variable naming for collider & trigger event setting]
+Spawn Object (clone) [fixed wrong variable naming for collider & trigger event setting]
+Teleport Object [fixed wrong variable naming for collider & trigger event setting]
+Teleport Player [fixed wrong variable naming for collider & trigger event setting]
+Toggle Udon Bool [fixed wrong variable naming for collider & trigger event setting]
+Vanishing Chair (pickup) [fixed wrong variable naming for collider & trigger event setting]
+
 ------------ Changelog (V2.2) ------------
 ------ Udon files changed: ------
 Despawn Timer [added option for pool system (disables instead of permanently removing it)]
 Custom Event Trigger [bugfix for when script array element = null]
 Modify Udon Number (float) [added support for UI input Fields & removed support for late join synch (did not make sense to have)]
-Vanishing Chair (pickup) [bugfix for "onstation" events (dev updates)]
+Vanishing Chair (pickup) [bugfix for "onstation" events (new syntax dev update), bugfix for null var being autofilled with this]
+Spawn Object (clone) [changed code to set same parent for it's clones and added option for using object pool systems]
+Cycle Toggle [fixed bug by upgrading it so it handles null Targets]
+
+
+------ Udon files added: ------
+Trashbin [removes/disables objects based on who is it's parent when triggered]
 
 ------------ Changelog (V2.1) ------------
 ------ Udon files added: ------

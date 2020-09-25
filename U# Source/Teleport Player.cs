@@ -18,17 +18,22 @@ public class Teleportplayer : UdonSharpBehaviour
 
     [Header("Events")]
     public bool EventInteract = true;
-    //public bool EventOnCollisionEnter = false;
-    //public bool EventOnCollisionExit = false;
-    public bool EventOnTriggerEnter = false;
-    public bool EventOnTriggerExit = false;
+    //public bool Event_OnCollisionEnter = false;
+    //public bool Event_OnCollisionExit = false;
+    public bool Event_OnTriggerEnter = false;
+    public bool Event_OnTriggerExit = false;
 
     void Interact() { if (EventInteract) { SendCustomEvent("Teleport"); } }
-    //void OnCollisionEnter(Collision other) { if (EventOnCollisionEnter) { SendCustomEvent("Teleport"); } }
-    //void OnCollisionExit(Collision other) { if (EventOnCollisionExit) { SendCustomEvent("Teleport"); } }
-    void OnTriggerEnter(Collider other) { if (EventOnTriggerEnter) { SendCustomEvent("Teleport"); } }
-    void OnTriggerExit(Collider other) { if (EventOnTriggerExit) { SendCustomEvent("Teleport"); } }
+    //void OnCollisionEnter(Collision other) { if (Event_OnCollisionEnter) { SendCustomEvent("Teleport"); } }
+    //void OnCollisionExit(Collision other) { if (Event_OnCollisionExit) { SendCustomEvent("Teleport"); } }
+    void OnTriggerEnter(Collider other) { if (Event_OnTriggerEnter) { SendCustomEvent("Teleport"); } }
+    void OnTriggerExit(Collider other) { if (Event_OnTriggerExit) { SendCustomEvent("Teleport"); } }
 
+    //public void OnPlayerCollisionEnter(VRCPlayerApi player) { if (Event_OnCollisionEnter) { SendCustomEvent("Teleport"); } }
+    //public void OnPlayerCollisionExit(VRCPlayerApi player) { if (Event_OnCollisionExit) { SendCustomEvent("Teleport"); } }
+    public void OnPlayerTriggerEnter(VRCPlayerApi player) { if (Event_OnTriggerEnter) { SendCustomEvent("Teleport"); } }
+    public void OnPlayerTriggerExit(VRCPlayerApi player) { if (Event_OnTriggerExit) { SendCustomEvent("Teleport"); } }
+    
     public void Teleport()
     {
         if (Teleport_to.Length != 0 && Teleport_to[0]!=null &&time_mem<Time.time)

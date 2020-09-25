@@ -25,17 +25,22 @@ public class ToggleUdonBool : UdonSharpBehaviour
     [Tooltip("Custom Event for UI to call/use")]
     public bool Event_UI_Update = true; /*custom event for UI to use on UI updates*/
     public bool EventInteract = true;
-    public bool EventOnCollisionEnter = false;
-    public bool EventOnCollisionExit = false;
-    public bool EventOnTriggerEnter = false;
-    public bool EventOnTriggerExit = false;
+    public bool Event_OnCollisionEnter = false;
+    public bool Event_OnCollisionExit = false;
+    public bool Event_OnTriggerEnter = false;
+    public bool Event_OnTriggerExit = false;
 
     public void UI_Update() { if (Event_UI_Update) { SendCustomEvent("Run"); } }
     void Interact() { if (EventInteract) { SendCustomEvent("Run"); } }
-    void OnCollisionEnter(Collision other) { if (EventOnCollisionEnter) { SendCustomEvent("Run"); } }
-    void OnCollisionExit(Collision other) { if (EventOnCollisionExit) { SendCustomEvent("Run"); } }
-    void OnTriggerEnter(Collider other) { if (EventOnTriggerEnter) { SendCustomEvent("Run"); } }
-    void OnTriggerExit(Collider other) { if (EventOnTriggerExit) { SendCustomEvent("Run"); } }
+    void OnCollisionEnter(Collision other) { if (Event_OnCollisionEnter) { SendCustomEvent("Run"); } }
+    void OnCollisionExit(Collision other) { if (Event_OnCollisionExit) { SendCustomEvent("Run"); } }
+    void OnTriggerEnter(Collider other) { if (Event_OnTriggerEnter) { SendCustomEvent("Run"); } }
+    void OnTriggerExit(Collider other) { if (Event_OnTriggerExit) { SendCustomEvent("Run"); } }
+
+    public void OnPlayerCollisionEnter(VRCPlayerApi player) { if (Event_OnCollisionEnter) { SendCustomEvent("Run"); } }
+    public void OnPlayerCollisionExit(VRCPlayerApi player) { if (Event_OnCollisionExit) { SendCustomEvent("Run"); } }
+    public void OnPlayerTriggerEnter(VRCPlayerApi player) { if (Event_OnTriggerEnter) { SendCustomEvent("Run"); } }
+    public void OnPlayerTriggerExit(VRCPlayerApi player) { if (Event_OnTriggerExit) { SendCustomEvent("Run"); } }
 
     void Start()
     {

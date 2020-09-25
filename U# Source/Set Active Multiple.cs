@@ -21,11 +21,22 @@ public class SetActiveMultipleUSharp : UdonSharpBehaviour
 
     [Header("Events")]
     public bool EventInteract = true;
-    public bool EventOnCollisionEnter = false;
-    public bool EventOnCollisionExit = false;
-    public bool EventOnTriggerEnter = false;
-    public bool EventOnTriggerExit = false;
+    public bool Event_OnCollisionEnter = false;
+    public bool Event_OnCollisionExit = false;
+    public bool Event_OnTriggerEnter = false;
+    public bool Event_OnTriggerExit = false;
 
+    void Interact() { if (EventInteract) { SendCustomEvent("Set"); } }
+    void OnCollisionEnter(Collision other) { if (Event_OnCollisionEnter) { SendCustomEvent("Set"); } }
+    void OnCollisionExit(Collision other) { if (Event_OnCollisionExit) { SendCustomEvent("Set"); } }
+    void OnTriggerEnter(Collider other) { if (Event_OnTriggerEnter) { SendCustomEvent("Set"); } }
+    void OnTriggerExit(Collider other) { if (Event_OnTriggerExit) { SendCustomEvent("Set"); } }
+
+    public void OnPlayerCollisionEnter(VRCPlayerApi player) { if (Event_OnCollisionEnter) { SendCustomEvent("Set"); } }
+    public void OnPlayerCollisionExit(VRCPlayerApi player) { if (Event_OnCollisionExit) { SendCustomEvent("Set"); } }
+    public void OnPlayerTriggerEnter(VRCPlayerApi player) { if (Event_OnTriggerEnter) { SendCustomEvent("Set"); } }
+    public void OnPlayerTriggerExit(VRCPlayerApi player) { if (Event_OnTriggerExit) { SendCustomEvent("Set"); } }
+    
     public void ON()
     {
         for(uint i=0;i< Set_This_ON.Length;i++)
@@ -70,11 +81,6 @@ public class SetActiveMultipleUSharp : UdonSharpBehaviour
         }
     }
 
-    void Interact() { if (EventInteract) { SendCustomEvent("Set"); } }
-    void OnCollisionEnter(Collision other) { if(EventOnCollisionEnter){ SendCustomEvent("Set"); } }
-    void OnCollisionExit(Collision other) { if (EventOnCollisionExit) { SendCustomEvent("Set"); } }
-    void OnTriggerEnter(Collider other) { if (EventOnTriggerEnter) { SendCustomEvent("Set"); } }
-    void OnTriggerExit(Collider other) { if (EventOnTriggerExit) { SendCustomEvent("Set"); } }
 
     /*
     void OnDrop() { SendCustomEvent("Set"); }

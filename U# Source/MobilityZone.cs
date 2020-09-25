@@ -32,13 +32,17 @@ public class MobilityZone : UdonSharpBehaviour
     void OnPickupUseDown() { if (Event_OnPickupUseDown) { SendCustomEvent("Enter"); } }
     void OnPickupUseUp() { if (Event_OnPickupUseDown) { SendCustomEvent("Exit"); } }
 
-    public bool Event_CollisionEnter = false;
-    void OnCollisionEnter(Collision other) { if (Event_CollisionEnter) { SendCustomEvent("Enter"); } }
-    void OnCollisionExit(Collision other) { if (Event_CollisionEnter) { SendCustomEvent("Exit"); } }
+    public bool Event_OnCollisionEnter = false;
+    void OnCollisionEnter(Collision other) { if (Event_OnCollisionEnter) { SendCustomEvent("Enter"); } }
+    void OnCollisionExit(Collision other) { if (Event_OnCollisionEnter) { SendCustomEvent("Exit"); } }
+    public void OnPlayerCollisionEnter(VRCPlayerApi player) { if (Event_OnCollisionEnter) { SendCustomEvent("Enter"); } }
+    public void OnPlayerCollisionExit(VRCPlayerApi player) { if (Event_OnCollisionEnter) { SendCustomEvent("Exit"); } }
 
-    public bool Event_TriggerEnter = true;
-    void OnTriggerEnter(Collider other) { if (Event_TriggerEnter) { SendCustomEvent("Enter"); } }
-    void OnTriggerExit(Collider other) { if (Event_TriggerEnter) { SendCustomEvent("Exit"); } }
+    public bool Event_OnTriggerEnter = true;
+    void OnTriggerEnter(Collider other) { if (Event_OnTriggerEnter) { SendCustomEvent("Enter"); } }
+    void OnTriggerExit(Collider other) { if (Event_OnTriggerEnter) { SendCustomEvent("Exit"); } }
+    public void OnPlayerTriggerEnter(VRCPlayerApi player) { if (Event_OnTriggerEnter) { SendCustomEvent("Enter"); } }
+    public void OnPlayerTriggerExit(VRCPlayerApi player) { if (Event_OnTriggerEnter) { SendCustomEvent("Exit"); } }
 
     public void Start()
     {/*this code not actually needed*/

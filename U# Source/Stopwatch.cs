@@ -63,8 +63,12 @@ public class Stopwatch : UdonSharpBehaviour
     void Interact() { if (Event_Interact) { SendCustomEvent("Stopwatch_Click"); } }
     void OnCollisionEnter(Collision other) { if (Event_OnCollisionEnter) { SendCustomEvent("Stopwatch_Click"); } }
     void OnCollisionExit(Collision other) { if (Event_OnCollisionExit) { SendCustomEvent("Stopwatch_Click"); } }
+    public void OnPlayerCollisionEnter(VRCPlayerApi player) { if (Event_OnCollisionEnter) { SendCustomEvent("Stopwatch_Click"); } }
+    public void OnPlayerCollisionExit(VRCPlayerApi player) { if (Event_OnCollisionExit) { SendCustomEvent("Stopwatch_Click"); } }
     void OnTriggerEnter(Collider other) { if (Event_OnTriggerEnter) { SendCustomEvent("Stopwatch_Click"); } }
     void OnTriggerExit(Collider other) { if (Event_OnTriggerExit) { SendCustomEvent("Stopwatch_Click"); } }
+    public void OnPlayerTriggerEnter(VRCPlayerApi player) { if (Event_OnTriggerEnter) { SendCustomEvent("Stopwatch_Click"); } }
+    public void OnPlayerTriggerExit(VRCPlayerApi player) { if (Event_OnTriggerExit) { SendCustomEvent("Stopwatch_Click"); } }
 
     [Space(6)]
     [Tooltip("Stopwatch is enabled while held/picked-up\r\n(uncheck to set always on)")]

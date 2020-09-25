@@ -37,12 +37,17 @@ public class RunZone : UdonSharpBehaviour
 
     [Header("Events")]
     public bool Event_OnCollision = false;
+    public bool Event_OnTrigger = true;
+
     void OnCollisionEnter(Collision other) { if (Event_OnCollision) { SendCustomEvent("Enter"); } }
     void OnCollisionExit(Collision other) { if (Event_OnCollision) { SendCustomEvent("Exit"); } }
+    public void OnPlayerCollisionEnter(VRCPlayerApi player) { if (Event_OnCollision) { SendCustomEvent("Enter"); } }
+    public void OnPlayerCollisionExit(VRCPlayerApi player) { if (Event_OnCollision) { SendCustomEvent("Exit"); } }
 
-    public bool Event_OnTrigger = true;
     void OnTriggerEnter(Collider other) { if (Event_OnTrigger) { SendCustomEvent("Enter"); } }
     void OnTriggerExit(Collider other) { if (Event_OnTrigger) { SendCustomEvent("Exit"); } }
+    public void OnPlayerTriggerEnter(VRCPlayerApi player) { if (Event_OnTrigger) { SendCustomEvent("Enter"); } }
+    public void OnPlayerTriggerExit(VRCPlayerApi player) { if (Event_OnTrigger) { SendCustomEvent("Exit"); } }
 
     public void Update()
     {

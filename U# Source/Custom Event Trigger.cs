@@ -59,6 +59,11 @@ public class EventTrigger : UdonSharpBehaviour
     void OnTriggerEnter(Collider other) { if (Event_OnTriggerEnter) { SendCustomEvent("Run_1"); } }
     void OnTriggerExit(Collider other) { if (Event_OnTriggerExit) { SendCustomEvent("Run_0"); } }
 
+    public void OnPlayerTriggerEnter(VRCPlayerApi player) { if (Event_OnTriggerEnter) { SendCustomEvent("Run_1"); } }
+    public void OnPlayerTriggerExit(VRCPlayerApi player) { if (Event_OnTriggerExit) { SendCustomEvent("Run_0"); } }
+    public void OnPlayerCollisionEnter(VRCPlayerApi player) { if (Event_OnCollisionEnter) { SendCustomEvent("Run_1"); } }
+    public void OnPlayerCollisionExit(VRCPlayerApi player) { if (Event_OnCollisionExit) { SendCustomEvent("Run_0"); } }
+
     void OnPickup() { if (Event_OnPickup) { SendCustomEvent("Run_1"); } }
     void OnDrop() { if (Event_OnDrop) { SendCustomEvent("Run_0"); } }
     void OnPickupUseDown() { if (Event_OnPickupUseDown) { SendCustomEvent("Run_1"); } }

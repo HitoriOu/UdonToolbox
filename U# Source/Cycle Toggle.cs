@@ -24,22 +24,27 @@ public class CycleToggle : UdonSharpBehaviour
 
     [Header("Events")]
     public bool EventInteract = true;
-    public bool EventOnCollisionEnter = false;
-    public bool EventOnCollisionExit = false;
-    public bool EventOnTriggerEnter = false;
-    public bool EventOnTriggerExit = false;
+    public bool Event_OnCollisionEnter = false;
+    public bool Event_OnCollisionExit = false;
+    public bool Event_OnTriggerEnter = false;
+    public bool Event_OnTriggerExit = false;
 
     void Interact() { if (EventInteract) { SendCustomEvent("Run"); } }
-    void OnCollisionEnter(Collision other) { if (EventOnCollisionEnter) { SendCustomEvent("Run"); } }
-    void OnCollisionExit(Collision other) { if (EventOnCollisionExit) { SendCustomEvent("Run"); } }
-    void OnTriggerEnter(Collider other) { if (EventOnTriggerEnter) { SendCustomEvent("Run"); } }
-    void OnTriggerExit(Collider other) { if (EventOnTriggerExit) { SendCustomEvent("Run"); } }
+    void OnCollisionEnter(Collision other) { if (Event_OnCollisionEnter) { SendCustomEvent("Run"); } }
+    void OnCollisionExit(Collision other) { if (Event_OnCollisionExit) { SendCustomEvent("Run"); } }
+    void OnTriggerEnter(Collider other) { if (Event_OnTriggerEnter) { SendCustomEvent("Run"); } }
+    void OnTriggerExit(Collider other) { if (Event_OnTriggerExit) { SendCustomEvent("Run"); } }
+
+    public void OnPlayerTriggerEnter(VRCPlayerApi player) { if (Event_OnTriggerEnter) { SendCustomEvent("Run"); } }
+    public void OnPlayerTriggerExit(VRCPlayerApi player) { if (Event_OnTriggerExit) { SendCustomEvent("Run"); } }
+    public void OnPlayerCollisionEnter(VRCPlayerApi player) { if (Event_OnCollisionEnter) { SendCustomEvent("Run"); } }
+    public void OnPlayerCollisionExit(VRCPlayerApi player) { if (Event_OnCollisionExit) { SendCustomEvent("Run"); } }
 
     void Start()
     {
         if (Networking.LocalPlayer == null)
          { Global_Synched = false; }
-        if (synch_mem!=-1&&Targets.Length!=0)/*"Global_Synched&&Late_Join_Synched" explicit checked by "synch_mem!=-1"*/
+        if (synch_mem != -1 && Targets.Length != 0)/*"Global_Synched&&Late_Join_Synched" explicit checked by "synch_mem!=-1"*/
         {
             if(synch_mem==0)
             { index_mem = Targets.Length - 1; }
@@ -53,7 +58,7 @@ public class CycleToggle : UdonSharpBehaviour
 
     public void Run()
     {
-        if (Targets.Length != 0&&Targets[0]!=null)
+        if (Targets.Length != 0)
         {
             if (Global_Synched)
             { SendCustomNetworkEvent(VRC.Udon.Common.Interfaces.NetworkEventTarget.All, "Cycle"); }
@@ -66,10 +71,13 @@ public class CycleToggle : UdonSharpBehaviour
     {
         for(int i=0; i<Targets.Length ; i++)
         {
-            if(i==index_mem)
-            { Targets[i].SetActive(Index_ON); }
-            else
-            { Targets[i].SetActive(!Index_ON); }
+            if(Targets[i] != null)
+            {
+                if (i == index_mem)
+                { Targets[i].SetActive(Index_ON); }
+                else
+                { Targets[i].SetActive(!Index_ON); }
+            }
         }
         SendCustomEvent("Set_next");
     }
