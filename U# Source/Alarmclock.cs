@@ -52,16 +52,16 @@ public class Alarmclock : UdonSharpBehaviour
     public bool Event_OnTriggerEnter = false;
     public bool Event_OnTriggerExit = false;
 
-    void Interact() { if (Event_Interact) { SendCustomEvent("Run"); } }
-    void OnCollisionEnter(Collision other) { if (Event_OnCollisionEnter) { SendCustomEvent("Run"); } }
-    void OnCollisionExit(Collision other) { if (Event_OnCollisionExit) { SendCustomEvent("Run"); } }
-    void OnTriggerEnter(Collider other) { if (Event_OnTriggerEnter) { SendCustomEvent("Run"); } }
-    void OnTriggerExit(Collider other) { if (Event_OnTriggerExit) { SendCustomEvent("Run"); } }
+    void OnCollisionEnter(Collision other) { if (Event_OnCollisionEnter && Networking.LocalPlayer.IsOwner(other.gameObject)) { SendCustomEvent("Run"); } }
+    void OnCollisionExit(Collision other) { if (Event_OnCollisionExit && Networking.LocalPlayer.IsOwner(other.gameObject)) { SendCustomEvent("Run"); } }
+    void OnTriggerEnter(Collider other) { if (Event_OnTriggerEnter && Networking.LocalPlayer.IsOwner(other.gameObject)) { SendCustomEvent("Run"); } }
+    void OnTriggerExit(Collider other) { if (Event_OnTriggerExit && Networking.LocalPlayer.IsOwner(other.gameObject)) { SendCustomEvent("Run"); } }
 
-    public void OnPlayerTriggerEnter(VRCPlayerApi player) { if (Event_OnTriggerEnter) { SendCustomEvent("Run"); } }
-    public void OnPlayerTriggerExit(VRCPlayerApi player) { if (Event_OnTriggerExit) { SendCustomEvent("Run"); } }
-    public void OnPlayerCollisionEnter(VRCPlayerApi player) { if (Event_OnCollisionEnter) { SendCustomEvent("Run"); } }
-    public void OnPlayerCollisionExit(VRCPlayerApi player) { if (Event_OnCollisionExit) { SendCustomEvent("Run"); } }
+    void Interact() { if (Event_Interact && Networking.LocalPlayer.isLocal) { SendCustomEvent("Run"); } }
+    public void OnPlayerTriggerEnter(VRCPlayerApi player) { if (Event_OnTriggerEnter && player.isLocal) { SendCustomEvent("Run"); } }
+    public void OnPlayerTriggerExit(VRCPlayerApi player) { if (Event_OnTriggerExit && player.isLocal) { SendCustomEvent("Run"); } }
+    public void OnPlayerCollisionEnter(VRCPlayerApi player) { if (Event_OnCollisionEnter && player.isLocal) { SendCustomEvent("Run"); } }
+    public void OnPlayerCollisionExit(VRCPlayerApi player) { if (Event_OnCollisionExit && player.isLocal) { SendCustomEvent("Run"); } }
 
     void Start()
     {

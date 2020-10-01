@@ -52,10 +52,10 @@ public class ToggleTriggerVectorized : UdonSharpBehaviour
     void OnTriggerEnter(Collider other) { if (Event_OnTriggerEnter) { getVector3Tri(other); } }
     void OnTriggerExit(Collider other) { if (Event_OnTriggerExit) { getVector3Tri(other); } }
 
-    public void OnPlayerCollisionEnter(VRCPlayerApi player) { if (Event_OnCollisionEnter) { getPlayer(); } }
-    public void OnPlayerCollisionExit(VRCPlayerApi player) { if (Event_OnCollisionExit) { getPlayer(); } }
-    public void OnPlayerTriggerEnter(VRCPlayerApi player) { if (Event_OnTriggerEnter) { getPlayer(); } }
-    public void OnPlayerTriggerExit(VRCPlayerApi player) { if (Event_OnTriggerExit) { getPlayer(); } }
+    public void OnPlayerCollisionEnter(VRCPlayerApi player) { if (Event_OnCollisionEnter) { getPlayer(player); } }
+    public void OnPlayerCollisionExit(VRCPlayerApi player) { if (Event_OnCollisionExit) { getPlayer(player); } }
+    public void OnPlayerTriggerEnter(VRCPlayerApi player) { if (Event_OnTriggerEnter) { getPlayer(player); } }
+    public void OnPlayerTriggerExit(VRCPlayerApi player) { if (Event_OnTriggerExit) { getPlayer(player); } }
     
     void Start()
     {
@@ -67,19 +67,19 @@ public class ToggleTriggerVectorized : UdonSharpBehaviour
         { SendCustomEvent("Run_Not_OnVector"); }
     }
 
-    private void getPlayer()
+    private void getPlayer(VRCPlayerApi player)
     {
-        if (Detect_Player) { Run_Vector_Check(Networking.LocalPlayer.GetPosition()); }
+        if (Detect_Player && player.isLocal) { Run_Vector_Check(Networking.LocalPlayer.GetPosition()); }
     }
 
     private void getVector3Col(Collision other)
     {
-        if (other != null && Detect_Object) { Run_Vector_Check(other.transform.position); } 
+        if (other != null && Detect_Object && Networking.LocalPlayer.IsOwner(other.gameObject)) { Run_Vector_Check(other.transform.position); } 
     }
 
     private void getVector3Tri(Collider other)
     {
-        if (other != null && Detect_Object) { Run_Vector_Check(other.transform.position); } 
+        if (other != null && Detect_Object && Networking.LocalPlayer.IsOwner(other.gameObject)) { Run_Vector_Check(other.transform.position); } 
     }
 
     private void Run_Vector_Check(Vector3 impact_point)

@@ -39,17 +39,19 @@ public class RunZone : UdonSharpBehaviour
     public bool Event_OnCollision = false;
     public bool Event_OnTrigger = true;
 
-    void OnCollisionEnter(Collision other) { if (Event_OnCollision) { SendCustomEvent("Enter"); } }
-    void OnCollisionExit(Collision other) { if (Event_OnCollision) { SendCustomEvent("Exit"); } }
-    public void OnPlayerCollisionEnter(VRCPlayerApi player) { if (Event_OnCollision) { SendCustomEvent("Enter"); } }
-    public void OnPlayerCollisionExit(VRCPlayerApi player) { if (Event_OnCollision) { SendCustomEvent("Exit"); } }
+    //void OnCollisionEnter(Collision other) { if (Event_OnCollision) { SendCustomEvent("Enter"); } }
+    //void OnCollisionExit(Collision other) { if (Event_OnCollision) { SendCustomEvent("Exit"); } }
+    public void OnPlayerCollisionEnter(VRCPlayerApi player) { if (Event_OnCollision && player.isLocal) { SendCustomEvent("Enter"); } }
+    public void OnPlayerCollisionExit(VRCPlayerApi player) { if (Event_OnCollision && player.isLocal) { SendCustomEvent("Exit"); } }
+    public void OnPlayerCollisionStay(VRCPlayerApi player) { if (player.isLocal) { set_speed(); } }
 
-    void OnTriggerEnter(Collider other) { if (Event_OnTrigger) { SendCustomEvent("Enter"); } }
-    void OnTriggerExit(Collider other) { if (Event_OnTrigger) { SendCustomEvent("Exit"); } }
-    public void OnPlayerTriggerEnter(VRCPlayerApi player) { if (Event_OnTrigger) { SendCustomEvent("Enter"); } }
-    public void OnPlayerTriggerExit(VRCPlayerApi player) { if (Event_OnTrigger) { SendCustomEvent("Exit"); } }
+    //void OnTriggerEnter(Collider other) { if (Event_OnTrigger) { SendCustomEvent("Enter"); } }
+    //void OnTriggerExit(Collider other) { if (Event_OnTrigger) { SendCustomEvent("Exit"); } }
+    public void OnPlayerTriggerEnter(VRCPlayerApi player) { if (Event_OnTrigger && player.isLocal) { SendCustomEvent("Enter"); } }
+    public void OnPlayerTriggerExit(VRCPlayerApi player) { if (Event_OnTrigger && player.isLocal) { SendCustomEvent("Exit"); } }
+    public void OnPlayerTriggerStay(VRCPlayerApi player) { if (player.isLocal) { set_speed(); } }
 
-    public void Update()
+    public void set_speed()
     {
         if(running)
         {

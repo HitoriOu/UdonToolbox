@@ -48,6 +48,27 @@ Detect_Player	= Run code if player activates it
 Detect_Object	= Run code if a object activates it
 
 ------------ Changelogs (newest first) ------------
+------------ Changelog (V2.3) ------------
+Notes:
+Added infopanels for the demo world.
+
+------ Udon files changed: ------
+RunZone [fixed shared player triggering (bug from Version 2.2.1)]
+Trigger Toggle (Vectorized) [fixed shared player triggering (bug from Version 2.2.1)]
+Trigger Toggle [Added detection options]
+
+------ Udon files added: ------
+AvatarPedestal [Script designed to handle any number of avatars needed (usefull for both avatar worlds and RolePlay mechanics)]
+
+------ Udon files removed: ------
+Note: Removed the following files as they had previously been removed (undetected update error caused it to re-introduce these files sorry about that.
+
+InputField Syncher (in progress)
+Clock (Local time)
+Date (Local time)
+Time in Game
+Time in world
+
 ------------ Changelog (V2.2.1) ------------
 
 ------ Udon files changed: ------
@@ -74,7 +95,6 @@ Modify Udon Number (float) [added support for UI input Fields & removed support 
 Vanishing Chair (pickup) [bugfix for "onstation" events (new syntax dev update), bugfix for null var being autofilled with this]
 Spawn Object (clone) [changed code to set same parent for it's clones and added option for using object pool systems]
 Cycle Toggle [fixed bug by upgrading it so it handles null Targets]
-
 
 ------ Udon files added: ------
 Trashbin [removes/disables objects based on who is it's parent when triggered]
