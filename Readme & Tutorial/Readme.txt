@@ -52,14 +52,16 @@ Detect_Object	= Run code if a object activates it
 Notes:
 Added infopanels for the demo world.
 Eliminaed override warnings.
+Added namespace "UdonToolboxV2"
 
 ------ Udon files changed: ------
 Note: Most files have been altered to check if collider/trigger was activated by localplayer (bugfix from SDK update).
+Renamed most files due to pathfinding bug
 
 RunZone [fixed shared player triggering (bug from Version 2.2.1)]
 Trigger Toggle (Vectorized) [fixed shared player triggering (bug from Version 2.2.1)]
 Trigger Toggle [Added detection options]
-TeleportPlayer
+TeleportPlayer [Added detection options]
 
 ------ Udon files added: ------
 AvatarPedestal [Script designed to handle any number of avatars needed (usefull for both avatar worlds and RolePlay mechanics)]
