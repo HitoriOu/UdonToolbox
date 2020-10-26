@@ -1,5 +1,5 @@
 Udon Toolbox (by "Hitori Ou").
-Downloaded from www.github.com/HitoriOu/UdonToolbox
+Downloaded from www.github.com/HitoriOu/UdonToolbox/releases
 
 A collection of U# scripts that are easy to understand and use (for Udon worlds on "VR Chat"). 
 For free use/modification allowed.
@@ -51,11 +51,15 @@ Detect_Object	= Run code if a object activates it
 ------------ Changelog (V2.3) ------------
 Notes:
 Added infopanels for the demo world.
+Eliminaed override warnings.
 
 ------ Udon files changed: ------
+Note: Most files have been altered to check if collider/trigger was activated by localplayer (bugfix from SDK update).
+
 RunZone [fixed shared player triggering (bug from Version 2.2.1)]
 Trigger Toggle (Vectorized) [fixed shared player triggering (bug from Version 2.2.1)]
 Trigger Toggle [Added detection options]
+TeleportPlayer
 
 ------ Udon files added: ------
 AvatarPedestal [Script designed to handle any number of avatars needed (usefull for both avatar worlds and RolePlay mechanics)]

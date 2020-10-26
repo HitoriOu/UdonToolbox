@@ -60,26 +60,26 @@ public class Stopwatch : UdonSharpBehaviour
     public bool Event_OnTriggerExit = false;
 
 
-    void Interact() { if (Event_Interact) { SendCustomEvent("Stopwatch_Click"); } }
+    public override void Interact() { if (Event_Interact) { SendCustomEvent("Stopwatch_Click"); } }
     void OnCollisionEnter(Collision other) { if (Event_OnCollisionEnter) { SendCustomEvent("Stopwatch_Click"); } }
     void OnCollisionExit(Collision other) { if (Event_OnCollisionExit) { SendCustomEvent("Stopwatch_Click"); } }
-    public void OnPlayerCollisionEnter(VRCPlayerApi player) { if (Event_OnCollisionEnter) { SendCustomEvent("Stopwatch_Click"); } }
-    public void OnPlayerCollisionExit(VRCPlayerApi player) { if (Event_OnCollisionExit) { SendCustomEvent("Stopwatch_Click"); } }
+    public override void OnPlayerCollisionEnter(VRCPlayerApi player) { if (Event_OnCollisionEnter && player.isLocal) { SendCustomEvent("Stopwatch_Click"); } }
+    public override void OnPlayerCollisionExit(VRCPlayerApi player) { if (Event_OnCollisionExit && player.isLocal) { SendCustomEvent("Stopwatch_Click"); } }
     void OnTriggerEnter(Collider other) { if (Event_OnTriggerEnter) { SendCustomEvent("Stopwatch_Click"); } }
     void OnTriggerExit(Collider other) { if (Event_OnTriggerExit) { SendCustomEvent("Stopwatch_Click"); } }
-    public void OnPlayerTriggerEnter(VRCPlayerApi player) { if (Event_OnTriggerEnter) { SendCustomEvent("Stopwatch_Click"); } }
-    public void OnPlayerTriggerExit(VRCPlayerApi player) { if (Event_OnTriggerExit) { SendCustomEvent("Stopwatch_Click"); } }
+    public override void OnPlayerTriggerEnter(VRCPlayerApi player) { if (Event_OnTriggerEnter && player.isLocal) { SendCustomEvent("Stopwatch_Click"); } }
+    public override void OnPlayerTriggerExit(VRCPlayerApi player) { if (Event_OnTriggerExit && player.isLocal) { SendCustomEvent("Stopwatch_Click"); } }
 
     [Space(6)]
     [Tooltip("Stopwatch is enabled while held/picked-up\r\n(uncheck to set always on)")]
     public bool Event_EnableOnPickup = false;
-    public void OnPickup() { if (Event_EnableOnPickup) { SendCustomEvent("run_update_start"); } }
-    public void OnDrop() { if (Event_EnableOnPickup) { SendCustomEvent("run_update_stop"); } }
+    public override void OnPickup() { if (Event_EnableOnPickup) { SendCustomEvent("run_update_start"); } }
+    public override void OnDrop() { if (Event_EnableOnPickup) { SendCustomEvent("run_update_stop"); } }
 
     public bool Event_OnPickupUseDown = false;
     public bool Event_OnPickupUseUp = false;
-    public void OnPickupUseDown() { if (Event_OnPickupUseDown) { SendCustomEvent("Stopwatch_Click"); } }
-    public void OnPickupUseUp() { if (Event_OnPickupUseUp) { SendCustomEvent("Stopwatch_Click"); } }
+    public override void OnPickupUseDown() { if (Event_OnPickupUseDown) { SendCustomEvent("Stopwatch_Click"); } }
+    public override void OnPickupUseUp() { if (Event_OnPickupUseUp) { SendCustomEvent("Stopwatch_Click"); } }
 
 
     public void Stopwatch_Click()

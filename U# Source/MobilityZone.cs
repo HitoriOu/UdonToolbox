@@ -25,24 +25,24 @@ public class MobilityZone : UdonSharpBehaviour
     public bool Invert_Events = false;
 
     public bool Event_OnPickup = false;
-    void OnPickup() { if (Event_OnPickup) { SendCustomEvent("Enter"); } }
-    void OnDrop() { if (Event_OnPickup) { SendCustomEvent("Exit"); } }
+    public override void OnPickup() { if (Event_OnPickup) { SendCustomEvent("Enter"); } }
+    public override void OnDrop() { if (Event_OnPickup) { SendCustomEvent("Exit"); } }
 
     public bool Event_OnPickupUseDown = false;
-    void OnPickupUseDown() { if (Event_OnPickupUseDown) { SendCustomEvent("Enter"); } }
-    void OnPickupUseUp() { if (Event_OnPickupUseDown) { SendCustomEvent("Exit"); } }
+    public override void OnPickupUseDown() { if (Event_OnPickupUseDown) { SendCustomEvent("Enter"); } }
+    public override void OnPickupUseUp() { if (Event_OnPickupUseDown) { SendCustomEvent("Exit"); } }
 
     public bool Event_OnCollisionEnter = false;
     void OnCollisionEnter(Collision other) { if (Event_OnCollisionEnter) { SendCustomEvent("Enter"); } }
     void OnCollisionExit(Collision other) { if (Event_OnCollisionEnter) { SendCustomEvent("Exit"); } }
-    public void OnPlayerCollisionEnter(VRCPlayerApi player) { if (Event_OnCollisionEnter) { SendCustomEvent("Enter"); } }
-    public void OnPlayerCollisionExit(VRCPlayerApi player) { if (Event_OnCollisionEnter) { SendCustomEvent("Exit"); } }
+    public override void OnPlayerCollisionEnter(VRCPlayerApi player) { if (Event_OnCollisionEnter && player.isLocal) { SendCustomEvent("Enter"); } }
+    public override void OnPlayerCollisionExit(VRCPlayerApi player) { if (Event_OnCollisionEnter && player.isLocal) { SendCustomEvent("Exit"); } }
 
     public bool Event_OnTriggerEnter = true;
     void OnTriggerEnter(Collider other) { if (Event_OnTriggerEnter) { SendCustomEvent("Enter"); } }
     void OnTriggerExit(Collider other) { if (Event_OnTriggerEnter) { SendCustomEvent("Exit"); } }
-    public void OnPlayerTriggerEnter(VRCPlayerApi player) { if (Event_OnTriggerEnter) { SendCustomEvent("Enter"); } }
-    public void OnPlayerTriggerExit(VRCPlayerApi player) { if (Event_OnTriggerEnter) { SendCustomEvent("Exit"); } }
+    public override void OnPlayerTriggerEnter(VRCPlayerApi player) { if (Event_OnTriggerEnter && player.isLocal) { SendCustomEvent("Enter"); } }
+    public override void OnPlayerTriggerExit(VRCPlayerApi player) { if (Event_OnTriggerEnter && player.isLocal) { SendCustomEvent("Exit"); } }
 
     public void Start()
     {/*this code not actually needed*/
