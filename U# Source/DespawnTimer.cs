@@ -12,7 +12,6 @@ namespace UdonToolboxV2
         bool started = false;
         bool paused = false;
 
-
         [Tooltip("Disables object instead of de-spawning")]
         public bool Pool_System = false;
         [Tooltip("Time untill despawned")]

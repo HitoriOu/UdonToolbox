@@ -6,6 +6,12 @@ using VRC.Udon;
 
 namespace UdonToolboxV2
 {
+    /// <summary>
+    /// TeleportPlayer
+    /// Teleports player when triggered
+    /// Created by Hitori Ou
+    /// Last edit: 26-10-2020 Version 2.3
+    /// </summary>
     public class TeleportPlayer : UdonSharpBehaviour
     {
         ushort count_mem = 0;
@@ -18,8 +24,8 @@ namespace UdonToolboxV2
         [Tooltip("Prevents spamming or infinite looping")]
         public float Cooldown = 1;
 
+        #region Events
         [Header("Events")]
-
         public bool Detect_Player = true;
         public bool Detect_Object = false;
 
@@ -39,6 +45,7 @@ namespace UdonToolboxV2
         //public void OnPlayerCollisionExit(VRCPlayerApi player) { if (Event_OnCollisionExit) { SendCustomEvent("Teleport"); } }
         public override void OnPlayerTriggerEnter(VRCPlayerApi player) { if (Detect_Player && Event_OnTriggerEnter && player.isLocal) { SendCustomEvent("Teleport"); } }
         public override void OnPlayerTriggerExit(VRCPlayerApi player) { if (Detect_Player && Event_OnTriggerExit && player.isLocal) { SendCustomEvent("Teleport"); } }
+        #endregion
 
         public void Teleport()
         {

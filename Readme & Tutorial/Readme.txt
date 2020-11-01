@@ -11,10 +11,10 @@ Many of these are designed to function as the old trigger system from the SDK2,
 meaning the component for buttons/triggers/colliders may have to be on the same game object the script is on and that it need collider/trigger components (or other required).
 
 ------------ Please Note the following: ------------
-Do not edit the code it self (updated versions will overwrite it).
+Do not edit the code in the original file (updated versions will overwrite it).
 If you want to modify the code then make a copy of it with a unique "class name" to edit instead.
-If you do edit the code/copy of it, please make a note of this in the code (a simple edited/modified by "name" in the dev notes will suffice).
-Updated versions might have new variable names (will be noted in the readme file if so), if this is the case you will have to redo the setup of said variable (sorry for the inconveniance).
+If you do edit the code/copy of it, please make a note of this in the code (a simple edited/modified by "name" in the dev notes/summary will suffice).
+Updated versions might have a replacement file with a updated name (will be noted in the readme file if so), in this case you have to setup using the new file version if you want/need the update.
 All codes are provided as "work in progress" i try clear all bugs and test but some issues will slip by me.
 If you want to credit the use of the toolbox feel free to do so (with link/adress to github provided).
 
@@ -50,6 +50,7 @@ Detect_Object	= Run code if a object activates it
 ------------ Changelogs (newest first) ------------
 ------------ Changelog (V2.3) ------------
 Notes:
+!Important! >>> Remove any dublicate toolbox file that has a space in it and use the updated version instead.
 Added infopanels for the demo world.
 Eliminaed override warnings.
 Added namespace "UdonToolboxV2"
@@ -62,9 +63,11 @@ RunZone [fixed shared player triggering (bug from Version 2.2.1)]
 Trigger Toggle (Vectorized) [fixed shared player triggering (bug from Version 2.2.1)]
 Trigger Toggle [Added detection options]
 TeleportPlayer [Added detection options]
+SoundPlayer [Added code for integrating Ui options (Ui checkboxes and volume slider)]
 
 ------ Udon files added: ------
 AvatarPedestal [Script designed to handle any number of avatars needed (usefull for both avatar worlds and RolePlay mechanics)]
+ScaleAdjuster [Used to resize objects scale on demand by using a pickup/handle]
 
 ------ Udon files removed: ------
 Note: Removed the following files as they had previously been removed (undetected update error caused it to re-introduce these files sorry about that.

@@ -6,6 +6,12 @@ using VRC.Udon;
 
 namespace UdonToolboxV2
 {
+    /// <summary>
+    /// ResetPositionMultiple
+    /// Used for resetting the position of multiple objects by using a second object as a position marker.
+    /// Created by Hitori Ou
+    /// Last edit: 26-10-2020 Version 2.3
+    /// </summary>
     public class ResetPositionMultiple : UdonSharpBehaviour
     {
         private VRCPlayerApi[] old_Owner;
@@ -17,6 +23,7 @@ namespace UdonToolboxV2
         public bool Global_Synched = true;
         //public bool Late_Join_Synched = true;
 
+        #region Events
         [Header("Events")]
         public bool EventInteract = true;
         public bool Event_OnCollisionEnter = false;
@@ -34,11 +41,19 @@ namespace UdonToolboxV2
         public override void OnPlayerCollisionExit(VRCPlayerApi player) { if (Event_OnCollisionExit && player.isLocal) { SendCustomEvent("Run"); } }
         public override void OnPlayerTriggerEnter(VRCPlayerApi player) { if (Event_OnTriggerEnter && player.isLocal) { SendCustomEvent("Run"); } }
         public override void OnPlayerTriggerExit(VRCPlayerApi player) { if (Event_OnTriggerExit && player.isLocal) { SendCustomEvent("Run"); } }
+        #endregion
 
         void Start()
         {
             if (Networking.LocalPlayer == null)
-            { Global_Synched = false; }
+            {
+                Global_Synched = false;
+
+                if (Reset_This != null && Place_Here != null && Reset_This.Length != Place_Here.Length)
+                {
+                    Debug.LogWarning("Variables Reset_This and Place_Here needs to be same Size!", this);
+                }
+            }
 
             if (Reset_This != null)
             { old_Owner = new VRCPlayerApi[Reset_This.Length]; }
@@ -50,12 +65,11 @@ namespace UdonToolboxV2
             { SendCustomNetworkEvent(VRC.Udon.Common.Interfaces.NetworkEventTarget.All, "Reset"); }
             else
             { SendCustomEvent("Reset"); }
-
         }
 
         public void Reset()
         {
-            if (Reset_This.Length == Place_Here.Length)
+            if (Reset_This != null && Place_Here != null && Reset_This.Length == Place_Here.Length)
             {
                 for (uint i = 0; i < Reset_This.Length; i++)
                 { Reset_This[i].transform.SetPositionAndRotation(Place_Here[i].transform.position, Place_Here[i].transform.rotation); }

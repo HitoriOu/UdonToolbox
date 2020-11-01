@@ -64,9 +64,9 @@ namespace UdonToolboxV2
             { Debug.Log("Player movement changed: Walk=" + walk_X.ToString() + " Run=" + run_X.ToString() + " Jump=" + jump_X.ToString() + " Gravity=" + grav_X.ToString()); }
         }
 
-        private void convert_sliderToInputfield(UnityEngine.UI.Slider slider, UnityEngine.UI.InputField input)
-        { input.text = slider.value.ToString(); }
-
+        // private void convert_sliderToInputfield(UnityEngine.UI.Slider slider, UnityEngine.UI.InputField input)
+        // { input.text = slider.value.ToString(); }
+       
         public void run_test()
         {
             run_update();
