@@ -86,8 +86,10 @@ namespace UdonToolboxV2
 
         private void Run_Vector_Check(Vector3 impact_point)
         {
+            // Calculate the opposite position from this to vector.
             Vector3 Not_vector_imaginary = (this.gameObject.transform.position - Vector.transform.position) + this.gameObject.transform.position;
 
+            //Get distance between opposite position and vector towards the impact point.
             float vector_to_impact_point = Vector3.Distance(Vector.transform.position, impact_point);
             float Not_vector_imaginary_to_impact_point = Vector3.Distance(Not_vector_imaginary, impact_point);
 

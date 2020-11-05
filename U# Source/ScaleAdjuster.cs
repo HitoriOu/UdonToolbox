@@ -180,11 +180,16 @@ namespace UdonToolboxV2
             }
             else if ((SnapMode && !Snapped) || !SnapMode)
             {
-
-                if(ScaleTest || LastDistance != Vector3.Distance(Targets[0].position, GrabHandle.position))
+                if (ScaleTest || LastDistance != Vector3.Distance(Targets[0].position, GrabHandle.position))
                 {
                     LastDistance = Vector3.Distance(Targets[0].position, GrabHandle.position);
                     UpdateScale();
+                }
+
+                else if (Global_Synched && Range != LastRange)
+                {
+                    LastRange = Range;
+                    SetScale(LastRange);
                 }
             }
         }
