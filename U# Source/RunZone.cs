@@ -25,6 +25,7 @@ namespace UdonToolboxV2
         [Space(6)]
         public float Exit_WalkSpeed = 2;
         public float Exit_RunSpeed = 4;
+        //public float ExitStrafeSpeed = ?;
         public float Exit_Jump = 0;
         public float Exit_Gravity = 1;
 

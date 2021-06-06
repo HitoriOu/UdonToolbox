@@ -11,7 +11,7 @@ namespace UdonToolboxV2
     /// SoundPlayer
     /// Music/sound player
     /// Created by Hitori Ou
-    /// Last edit: 1-11-2020 Version 2.3
+    /// Last edit: 25-01-2020 Version 2.4
     /// 
     /// Main features:
     /// Playback of sounds selected from a list of sound files
@@ -20,7 +20,7 @@ namespace UdonToolboxV2
     /// use of multiple audio/sound sources
     /// display of track name on multiple UI displays
     /// use of file name for text display of track or use of manual track names without file name change (Override_Audio_Clip_text)
-    /// forward and reverce time skip with variable for how much to skip
+    /// forward and reverse time skip with variable for how much to skip
     /// see function lists for full list of buttons/options
     /// Most functions are synched using "Audio_Sources Element 0"
     ///  
@@ -30,6 +30,9 @@ namespace UdonToolboxV2
     /// "Next" sets next track
     /// "Prev" Sets previous track
     /// "Forward" skips forward in time
+    /// "Reverse" skips backwards in time
+    /// 
+    ///  //Reverce is depricated will be removed next mayor update.
     /// "Reverce" skips backwards in time
     ///  
     /// List of Options functions:
@@ -53,16 +56,19 @@ namespace UdonToolboxV2
         private float expected_Latency = 0.2f + 0.25f;
 
         /*track variable & sycnhing*/
-        private uint Next_Track = 0; /*not public due to compatibillity issues*/
+        public uint Next_Track = 0; /*not public due to compatibillity issues*/
         [UdonSynced(UdonSyncMode.None)]
-        private uint current_track_synch = 0;
-        private uint current_track_synch_MEM = 0;
+        public uint current_track_synch = 0;
+        public uint current_track_synch_MEM = 0;
 
         /*status variables*/
         private bool playing = false;
         private bool Paused = false;
-        private bool skip_loop = false; /*used to disable loop behaviour when changing track in loop mode*/
+        /*used to disable loop behaviour when changing track in loop mode*/
+        private bool skip_loop = false; 
         private bool Repeat = false;
+        //Flag for RandomTrackMode cheduling
+        private bool CheduleNextRandom = false;
 
         [Header("Play options")]
         [Tooltip("Starts playing when world is loaded")]
@@ -82,8 +88,10 @@ namespace UdonToolboxV2
         [Tooltip("Volume setting between 0.0-1.0")]
         public float Volume = 0.5f;
         public bool Muted = false;
-        [Tooltip("How many seconds Forward/Reverce events skips")]
+        [Tooltip("How many seconds Forward/Reverse events skips")]
         public float Time_Forward_Reverce = 10f;
+        //TODO: implement spelling correction next mayor update 
+        //public float Time_Forward_Reverse = 10f;
 
         [Header("Player & Tracks Setup")]
         [Tooltip("Audio players\r\n(what is used to play sound)")]
@@ -152,6 +160,11 @@ namespace UdonToolboxV2
             {
                 set_text(Next_Track);
                 set_track(Next_Track);
+            }
+
+            if(Global_Synched && Networking.LocalPlayer.IsOwner(this.gameObject) && Random)
+            {
+                Next_Track = (uint)UnityEngine.Random.Range((int)0, (int)Audio_Clips.Length);
             }
 
             /* //Dev leftover code
@@ -289,6 +302,10 @@ namespace UdonToolboxV2
                 }
                 else if (Audio_Sources[0].isPlaying)//playing)
                 {
+                    if (CheduleNextRandom)
+                    {
+                        CheduleNext();
+                    }
 
                     if (Loop && Audio_Sources[0].clip != Audio_Clips[Next_Track])
                     {
@@ -335,16 +352,11 @@ namespace UdonToolboxV2
                         {
                             if (Global_Synched)
                             {
-                                if (Networking.LocalPlayer.IsOwner(this.gameObject)) /*if not playing owner sets next track*/
+                                if (Networking.LocalPlayer.IsOwner(this.gameObject) && !Repeat) /*if not playing owner sets next track*/
                                 {
-                                    if (Audio_Sources[0].clip == Audio_Clips[Next_Track])
+                                    if(!CheduleNextRandom)
                                     {
-                                        Next_Track = (uint)UnityEngine.Random.Range((int)0, (int)Audio_Clips.Length);
-                                    }
-                                    if(current_track_synch == Next_Track)
-                                    {
-                                        SendCustomNetworkEvent(VRC.Udon.Common.Interfaces.NetworkEventTarget.All, "RepeatTrack"); 
-                                        Repeat = false;
+                                        CheduleNextRandom = true;
                                     }
                                     current_track_synch = Next_Track;
                                 }
@@ -384,9 +396,38 @@ namespace UdonToolboxV2
             }
         }
 
+
+        /// <summary>
+        /// Cheduling system to prevent non-semaphoric behaviour when using Random select
+        /// </summary>
+        private void CheduleNext()
+        {
+            if (Audio_Sources[0].time > 20 || Audio_Sources[0].clip.length/4 < Audio_Sources[0].time)
+            {
+                if (Audio_Sources[0].clip == Audio_Clips[Next_Track])
+                {
+                    CheduleNextRandom = false;
+                    Next_Track = (uint)UnityEngine.Random.Range((int)0, (int)Audio_Clips.Length);
+                }
+
+                if (current_track_synch == Next_Track)
+                {
+                    SendCustomNetworkEvent(VRC.Udon.Common.Interfaces.NetworkEventTarget.All, "RepeatTrack");
+                    //Is this accurate/correct???
+                    Repeat = false;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Network cheduled repeat of last track.
+        /// </summary>
         public void RepeatTrack()
         {
-            Repeat = true;
+            if(Global_Synched)
+            {
+                Repeat = true;
+            }
         }
 
         private void set_text(uint number)
@@ -535,15 +576,23 @@ namespace UdonToolboxV2
             Set_Time(Audio_Sources[0].time + Time_Forward_Reverce);
         }
 
+        /// <summary>
+        /// Depricated: To be removed in next mayor update.
+        /// </summary>
         public void Reverce()
         {
-            if (Global_Synched)
-            { SendCustomNetworkEvent(VRC.Udon.Common.Interfaces.NetworkEventTarget.All, "Reverce_Net"); }
-            else
-            { SendCustomEvent("Reverce_Net"); }
+            this.Reverse();
         }
 
-        public void Reverce_Net()
+        public void Reverse()
+        {
+            if (Global_Synched)
+            { SendCustomNetworkEvent(VRC.Udon.Common.Interfaces.NetworkEventTarget.All, "Reverse_Net"); }
+            else
+            { SendCustomEvent("Reverse_Net"); }
+        }
+
+        public void Reverse_Net()
         {
             Set_Time(Audio_Sources[0].time - Time_Forward_Reverce);
         }

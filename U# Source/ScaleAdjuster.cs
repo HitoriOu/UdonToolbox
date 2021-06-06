@@ -10,7 +10,7 @@ namespace UdonToolboxV2
     /// ScaleAdjuster
     /// Used to resize multiple objects by dragging a handle object.
     /// Created by Hitori Ou
-    /// Last edit: 1-11-2020 Version 2.3
+    /// Last edit: 20-11-2020 Version 2.4
     /// </summary>
     public class ScaleAdjuster : UdonSharpBehaviour
     {
@@ -69,6 +69,7 @@ namespace UdonToolboxV2
         #region Events
         public override void OnPickup()
         {
+            Networking.SetOwner(Networking.LocalPlayer, this.gameObject);
             if (Global_Synched && SnapMode) { SendCustomNetworkEvent(VRC.Udon.Common.Interfaces.NetworkEventTarget.All, "NetworkSnapOff"); }
             else if (SnapMode) { Snap(false); }
         }

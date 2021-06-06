@@ -6,6 +6,13 @@ using VRC.Udon;
 
 namespace UdonToolboxV2
 {
+    /// <summary>
+    /// VanishingChair_Pickup
+    /// Station management script that hides meshes when in use and disables the pickup collider for the local user.
+    /// Created by Hitori Ou
+    /// Last edit: 26-11-2020 Version 2.4
+    /// https://docs.vrchat.com/docs/vrc_station
+    /// </summary>
     public class VanishingChair_Pickup : UdonSharpBehaviour
     {
         /*
@@ -13,10 +20,10 @@ namespace UdonToolboxV2
          Using a Menu is not mandatory
          Code removes the abillity to grab your own seat (infinite loop)
          */
+        private bool AutoEject = false;
 
         [UdonSynced(UdonSyncMode.None)]
         uint synch_mem = 2;
-        private bool debug_flag = false;
         [Tooltip("Prevents seated user from grabbing selected collider")]
         public Collider Pickup_Collider = null;
 
@@ -40,52 +47,98 @@ namespace UdonToolboxV2
         public bool Event_OnTriggerEnter = false;
         public bool Event_OnTriggerExit = false;
 
-        public override void Interact() { if (EventInteract) { SendCustomEvent("Use_Station"); } }
-        void OnTriggerEnter(Collider other) { if (Event_OnTriggerEnter) { SendCustomEvent("Use_Station"); } }
-        void OnTriggerExit(Collider other) { if (Event_OnTriggerExit) { SendCustomEvent("Use_Station"); } }
+        public override void Interact() { if (EventInteract) { SendCustomEvent("EnterStation"); } }
+        void OnTriggerEnter(Collider other) { if (Event_OnTriggerEnter) { SendCustomEvent("EnterStation"); } }
+        void OnTriggerExit(Collider other) { if (Event_OnTriggerExit) { SendCustomEvent("EnterStation"); } }
 
-        public override void OnPlayerTriggerEnter(VRCPlayerApi player) { if (Event_OnTriggerEnter && player.isLocal) { SendCustomEvent("Use_Station"); } }
-        public override void OnPlayerTriggerExit(VRCPlayerApi player) { if (Event_OnTriggerExit && player.isLocal) { SendCustomEvent("Use_Station"); } }
+        public override void OnPlayerTriggerEnter(VRCPlayerApi player) { if (Event_OnTriggerEnter && player.isLocal) { SendCustomEvent("EnterStation"); } }
+        public override void OnPlayerTriggerExit(VRCPlayerApi player) { if (Event_OnTriggerExit && player.isLocal) { SendCustomEvent("EnterStation"); } }
 
-        public override void OnPickup() { SendCustomEvent("Set_Owner"); }
-        //void OnDrop() { SendCustomEvent(""); }
+        public override void OnPickup()
+        {
+            if(Networking.LocalPlayer.isLocal)
+            {
+                SendCustomEvent("Set_Owner");
+            }
+        }
+        //public override void OnDrop() { SendCustomEvent(""); }
+        
+        public override void OnStationEntered(VRCPlayerApi player) { SendCustomEvent("Hide"); CheckAutoEject(player); }
+        public override void OnStationExited(VRCPlayerApi player) { ExitStation(player); }
 
-        /*
-         //old code (depricated bugged)
-        void OnStationEntered() { SendCustomEvent("Hide"); }
-        void OnStationExited() { SendCustomEvent("Show"); }
-         */
-        public override void OnStationEntered(VRCPlayerApi player) { SendCustomEvent("Hide"); }
-        public override void OnStationExited(VRCPlayerApi player) { SendCustomEvent("Show"); }
-
-        public void Use_Station()
+        public void EnterStation()
         {
             VRC_Pickup temp = (VRC_Pickup)this.gameObject.GetComponent(typeof(VRC_Pickup));
-            if (Networking.LocalPlayer != null)
+            if (Pickup_Collider != null && Networking.LocalPlayer.isLocal)
+            { Pickup_Collider.enabled = false; }
+            if (Networking.LocalPlayer == null || Networking.LocalPlayer.isLocal)
             {
-                if (temp != null && temp.IsHeld && temp.currentPlayer == Networking.LocalPlayer) /*Eliminates grab-seat infinite physics loop*/
-                { temp.Drop(); }
-                Networking.LocalPlayer.UseAttachedStation();
-            }
-            else
-            {
-                if (!debug_flag)
+                if (temp != null && temp.IsHeld && (Networking.LocalPlayer == null || temp.currentPlayer == Networking.LocalPlayer)) /*Eliminates grab-seat infinite physics loop*/
                 {
-                    Debug.Log("Player got in seat/station.");
-                    debug_flag = true;
-                    SendCustomEvent("Hide");
+                    temp.Drop();
                 }
-                else
+                if(Networking.LocalPlayer != null)
                 {
-                    Debug.Log("Player Exited seat/station.");
-                    debug_flag = false;
-                    SendCustomEvent("Show");
+                    Networking.LocalPlayer.UseAttachedStation();
+                }
+                    Debug.Log("Player got in seat/station.");
+                // SendCustomEvent("Hide");
+
+                Collider tempCollider = (Collider)this.gameObject.GetComponent(typeof(Collider));
+                if(tempCollider != null)
+                {
+                    tempCollider.enabled = false;
                 }
             }
         }
 
+        // Used to fix non-seated immobilize bug.
+        private void CheckAutoEject(VRCPlayerApi player)
+        {
+            if(player == Networking.LocalPlayer)
+            {
+                VRCStation tempStation = (VRCStation)this.gameObject.GetComponent(typeof(VRCStation));
+                if (tempStation != null && AutoEject)
+                {
+                    AutoEject = false;
+                    tempStation.ExitStation(player);
+                    tempStation.seated = false;
+                }
+            }
+        }
+
+        private void ExitStation(VRCPlayerApi player)
+        {
+            // Used to fix non-seated immobilize bug.
+            if (player == Networking.LocalPlayer)
+            {
+                VRCStation tempStation = (VRCStation)this.gameObject.GetComponent(typeof(VRCStation));
+                if (tempStation != null && !tempStation.seated && !AutoEject)
+                {
+                    tempStation.seated = true;
+                    AutoEject = true;
+
+                    player.UseAttachedStation();
+                }
+
+                Collider tempCollider = (Collider)this.gameObject.GetComponent(typeof(Collider));
+                if (tempCollider != null)
+                {
+                    tempCollider.enabled = true;
+                }
+            }
+
+            Debug.Log("Player Exited seat/station.");
+            SendCustomEvent("Show");
+        }
+
         public void Set_Owner()
-        { Networking.SetOwner(Networking.LocalPlayer, this.gameObject); }
+        {
+            if(Networking.GetOwner(this.gameObject) != Networking.LocalPlayer)
+            {
+                Networking.SetOwner(Networking.LocalPlayer, this.gameObject);
+            }
+        }
 
         public void Start()
         {
@@ -107,8 +160,8 @@ namespace UdonToolboxV2
 
         public void Hide()
         {
-            if (Pickup_Collider != null)
-            { Pickup_Collider.enabled = false; }
+            //if (Pickup_Collider != null && Networking.LocalPlayer.isLocal)
+            //{ Pickup_Collider.enabled = false; }
             if (Optional_Menu != null && Optional_Menu != this.gameObject)
             { Optional_Menu.SetActive(true); }
             if (Global_Synched)

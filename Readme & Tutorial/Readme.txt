@@ -19,35 +19,63 @@ All codes are provided as "work in progress" i try clear all bugs and test but s
 If you want to credit the use of the toolbox feel free to do so (with link/adress to github provided).
 
 ------------ Usefull Rules to be aware of: ------------
-1: Udon Behaviour Scripts do not work if the "Program Source" is empty, at minimum it needs a Udon file (.asset), if for Object Synch use the provided "NULL" or the official "Empty" provided by the SDK.
-2: Network synched events/scripts (global) will not work in "play mode", have to actually be inside VRchat to test those (made automated code to take care of this, so never mind this rule).
-3: When a component/object parameter for a Udon script is left empty it default to the object the script is on (can cause errors if empty, depending on script design).
-4: Udon Scripts are handeled locally according to object, network synch is also per object basis. Only exception is if a global variable targets a Udon script on a different Game object. So any duplicate using the same script are regarded as a seperate instance/script despite sharing a common Udon "Program Source".
-5: pickup object events might not trigger if Autohold is not toggeled to "Yes"
+1: Network synched events/scripts (global) will not work in "play mode", have to actually be inside VRchat to test those (made automated code to take care of this, so never mind this rule).
+2: When a component/object parameter for a Udon script is left empty it default to the object the script is on (can cause errors if empty, depending on script design).
+3: Udon Scripts are handeled locally according to object, network synch is also per object basis. Only exception is if a global variable targets a Udon script on a different Game object. So any duplicate using the same script are regarded as a seperate instance/script despite sharing a common Udon "Program Source".
+4: pickup object events might not trigger if Autohold is not toggeled to "Yes"
 
 ------------ Variable naming convention: ------------
-ON_is_default	= Sets the codes state on start (is the mirror on or off for example)
-Global_Synched	= Is the code Global and affect all players equally
+Note: Will be migrating over to a new format that does not use "_" signs (sorry if this ends up confusing people).
+
+ON_is_default		= Sets the codes state on start (is the mirror on or off for example)
+Global_Synched		= Is the code Global and affect all players equally
 Late_Join_Synched	= Does late joining players get synched.
-Event_Interact	= You want the code run when clicking/interacting with the object
+Event_Interact		= You want the code run when clicking/interacting with the object
 Event_OnCollision	= Individual code run on Enter and Exit
 Event_OnCollisionEnter	= You want the code run when hitting a collider
 Event_OnCollisionExit	= You want the code run when exiting a collider
-Event_OnTrigger	= Individual code run on Enter and Exit
+Event_OnTrigger		= Individual code run on Enter and Exit
 Event_OnTrigger_Enter	= You want the code run when hitting a Trigger
 Event_OnTrigger_Exit	= You want the code run when exiting a Trigger
 Event_OnPickup		= Run code on object Pickup
-Event_OnDrop	= Run code on object Drop
+Event_OnDrop		= Run code on object Drop
 Event_OnPickupUseDown	= Run code on PickupUseDown (controller trigger/button)
 Event_OnPickupUseUp	= Run code on PickupUseUp (controller trigger/button)
-Event_OnEnable	= Triggers when object is set active.
-Owner_Only	= Networked function calls are only made to object owner
-Cooldown	= Time in seconds that must elapse before you can use/trigger again (local)
-Timer		= Amount of time before code is activated
-Detect_Player	= Run code if player activates it
-Detect_Object	= Run code if a object activates it
+Event_OnEnable		= Triggers when object is set active.
+Owner_Only		= Networked function calls are only made to object owner
+Cooldown		= Time in seconds that must elapse before you can use/trigger again (local)
+Timer			= Amount of time before code is activated
+Detect_Player		= Run code if player activates it
+Detect_Object		= Run code if a object activates it
 
 ------------ Changelogs (newest first) ------------
+
+------------ Changelog (V2.4) ------------
+Notes: 
+New games section added.
+
+------ Udon files replaced: ------
+PlayerParamTester [replaced by PlayerParamTesterV2]
+
+------ Udon files changed: ------
+PlayerParamTesterV2 [updated to support strafe, added function to allow non-timed testing]
+ScaleAdjuster [fixed a synch issue]
+VanishingChair_Pickup [Mended/fixed bugs]
+Trashbin [improved code documentation and mended structure mistakes]
+PlayerMovementStats [Updated code to display Strafe, improved efficiency/performance and changed the editor printout]
+ToggleMultiple [Fixed improper tooltip text]
+PlayerMovement_OnStart [updated to use strafe setting as well]
+SoundPlayer [Depricated function "Reverce" to be replaced with "Reverse" (spelling error)]
+
+------ Udon files added: ------
+AudioSourceTestingTool [Used to live test audio settings for sound source components]
+JumpPad [Used to alter objects and players velocity]
+LightController [Used to change the lights intensity and color (supports negative colors)]
+SpinTheBottle [classic Social game, has features for 3 axis orientation (one axis at a time only), duplicated synching and going above default max speeds]
+
+------ Udon files removed: ------
+NULL [removed due to deprication from VRC's "VRC Object Synch" component being implemented]
+
 ------------ Changelog (V2.3) ------------
 Notes:
 !Important! >>> Remove any dublicate toolbox file that has a space in it and use the updated version instead.
@@ -79,7 +107,6 @@ Time in Game
 Time in world
 
 ------------ Changelog (V2.2.1) ------------
-
 ------ Udon files changed: ------
 Note: Almost all files had to be changed due to SDK update altering how player colliders/triggers work (files changed not listed).
 

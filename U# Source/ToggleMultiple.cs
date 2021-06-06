@@ -6,6 +6,12 @@ using VRC.Udon;
 
 namespace UdonToolboxV2
 {
+    /// <summary>
+    /// ToggleMultiple
+    /// Toggle button/script for any sum of objects.
+    /// Created by Hitori Ou
+    /// Last edit: 20-01-2021 Version 2.4
+    /// </summary>
     public class ToggleMultiple : UdonSharpBehaviour
     {
         [UdonSynced(UdonSyncMode.None)] uint Synch_memmory = 2;
@@ -16,7 +22,7 @@ namespace UdonToolboxV2
         [Header("Synching")]
         [Tooltip("All players in world are affected (if UTC zone is changed).")]
         public bool Global_Synched = false;
-        [Tooltip("Players who join will see what UTC time zone others see. \r\n(If set to Global_Synched)")]
+        [Tooltip("Players who join will have same toggle state as others. \r\n(If set to Global_Synched)")]
         public bool Late_Join_Synched = false;
 
         [Header("Events")]
